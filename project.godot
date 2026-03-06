@@ -17,12 +17,21 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [editor]
 
 naming/scene_name_casing=1
 naming/script_name_casing=1
+
+[global_group]
+
+pickable_object=""
+
+[layer_names]
+
+3d_physics/layer_2="pickable_objects"
 
 [rendering]
 

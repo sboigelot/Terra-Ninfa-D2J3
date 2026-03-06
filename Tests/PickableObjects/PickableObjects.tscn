@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dcywcpbgegmhx"]
+
+[ext_resource type="Script" uid="uid://btbapy82k738d" path="res://Tests/PickableObjects/PickableObjects.gd" id="1_s0t01"]
+[ext_resource type="Script" uid="uid://8r4kkq3srcvb" path="res://Tests/PickableObjects/PickableObject.gd" id="2_kudja"]
+[ext_resource type="Script" uid="uid://b3l0tt8aqk02u" path="res://Tests/PickableObjects/ObjectPedestal.gd" id="3_mdoks"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5454j"]
+sky_top_color = Color(0.6388706, 0.70131785, 0.7848583, 1)
+sky_horizon_color = Color(0.7182, 0.72508216, 0.7388414, 1)
+energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_jdvys"]
+sky_material = SubResource("ProceduralSkyMaterial_5454j")
+
+[sub_resource type="Environment" id="Environment_5454j"]
+background_mode = 2
+sky = SubResource("Sky_jdvys")
+ambient_light_source = 3
+ambient_light_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5454j"]
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kudja"]
+data = PackedVector3Array(-5, 0.05, -5, -5, -0.05, -5, 5, -0.05, -5, -5, 0.05, 5, -5, -0.05, 5, -5, -0.05, -5, -5, -0.05, 5, 5, -0.05, 5, -5, -0.05, -5, -5, 0.05, -5, -5, 0.05, 5, -5, -0.05, -5, -5, 0.05, 5, -5, 0.05, -5, 5, 0.05, -5, -5, 0.05, 5, 5, 0.05, 5, -5, -0.05, 5, 5, -0.05, 5, 5, -0.05, -5, -5, -0.05, -5, 5, 0.05, -5, 5, -0.05, -5, 5, -0.05, 5, 5, 0.05, 5, 5, -0.05, 5, -5, -0.05, 5, 5, 0.05, -5, -5, 0.05, -5, 5, -0.05, -5, 5, 0.05, 5, -5, 0.05, 5, 5, 0.05, -5, 5, 0.05, 5, 5, 0.05, -5, 5, -0.05, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s0t01"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s0t01"]
+data = PackedVector3Array(-0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, -0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, 0.15, -0.15, -0.15, -0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, 0.15, 0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, -0.15, -0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, -0.15, 0.15)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j35xg"]
+data = PackedVector3Array(-0.15, -0.075, -1.3113417e-08, -0.07499999, -0.075, -0.12990382, -0.07499999, 0.075, -0.12990382, -0.07499999, -0.075, -0.12990382, -0.15, -0.075, -1.3113417e-08, 0, -0.075, 0, -0.15, -0.075, -1.3113417e-08, -0.07500001, -0.075, 0.12990381, 0, -0.075, 0, -0.07500001, -0.075, 0.12990381, -0.15, -0.075, -1.3113417e-08, -0.15, 0.075, -1.3113417e-08, -0.07500001, -0.075, 0.12990381, 0.074999996, -0.075, 0.12990382, 0, -0.075, 0, 0.074999996, -0.075, 0.12990382, -0.07500001, -0.075, 0.12990381, -0.07500001, 0.075, 0.12990381, -0.07499999, 0.075, -0.12990382, -0.15, 0.075, -1.3113417e-08, -0.15, -0.075, -1.3113417e-08, 0.07499999, 0.075, -0.12990382, -0.07499999, 0.075, -0.12990382, -0.07499999, -0.075, -0.12990382, -0.15, 0.075, -1.3113417e-08, -0.07499999, 0.075, -0.12990382, 0, 0.075, 0, -0.15, 0.075, -1.3113417e-08, -0.07500001, 0.075, 0.12990381, -0.07500001, -0.075, 0.12990381, -0.07500001, 0.075, 0.12990381, -0.15, 0.075, -1.3113417e-08, 0, 0.075, 0, 0.074999996, 0.075, 0.12990382, -0.07500001, 0.075, 0.12990381, 0, 0.075, 0, 0.07499999, -0.075, -0.12990382, -0.07499999, -0.075, -0.12990382, 0, -0.075, 0, 0.15, -0.075, 0, 0.07499999, -0.075, -0.12990382, 0, -0.075, 0, -0.07499999, -0.075, -0.12990382, 0.07499999, -0.075, -0.12990382, 0.07499999, 0.075, -0.12990382, 0.07499999, -0.075, -0.12990382, 0.15, -0.075, 0, 0.15, 0.075, 0, 0.074999996, -0.075, 0.12990382, 0.15, -0.075, 0, 0, -0.075, 0, 0.15, -0.075, 0, 0.074999996, -0.075, 0.12990382, 0.074999996, 0.075, 0.12990382, -0.07499999, 0.075, -0.12990382, 0.07499999, 0.075, -0.12990382, 0, 0.075, 0, 0.07499999, 0.075, -0.12990382, 0.15, 0.075, 0, 0, 0.075, 0, 0.15, 0.075, 0, 0.07499999, 0.075, -0.12990382, 0.07499999, -0.075, -0.12990382, -0.07500001, 0.075, 0.12990381, 0.074999996, 0.075, 0.12990382, 0.074999996, -0.075, 0.12990382, 0.15, 0.075, 0, 0.074999996, 0.075, 0.12990382, 0, 0.075, 0, 0.074999996, 0.075, 0.12990382, 0.15, 0.075, 0, 0.15, -0.075, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdoks"]
+albedo_color = Color(0.32024416, 0.32024416, 0.32024413, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j35xg"]
+albedo_color = Color(0.48235294, 1, 0.4, 1)
+emission_enabled = true
+emission = Color(0, 0.8352941, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mdoks"]
+data = PackedVector3Array(-0.3535534, -0.15, -0.35355335, -0.5, -0.15, -4.371139e-08, 0, -0.15, 0, -0.5, -0.15, -4.371139e-08, -0.3535534, -0.15, -0.35355335, -0.3535534, 0.15, -0.35355335, 5.9624403e-09, -0.15, -0.5, -0.3535534, -0.15, -0.35355335, 0, -0.15, 0, -0.3535534, -0.15, -0.35355335, 5.9624403e-09, -0.15, -0.5, 5.9624403e-09, 0.15, -0.5, -0.5, -0.15, -4.371139e-08, -0.35355338, -0.15, 0.35355338, 0, -0.15, 0, -0.35355338, -0.15, 0.35355338, -0.5, -0.15, -4.371139e-08, -0.5, 0.15, -4.371139e-08, -0.35355338, -0.15, 0.35355338, -2.1855694e-08, -0.15, 0.5, 0, -0.15, 0, -2.1855694e-08, -0.15, 0.5, -0.35355338, -0.15, 0.35355338, -0.35355338, 0.15, 0.35355338, -0.3535534, 0.15, -0.35355335, -0.5, 0.15, -4.371139e-08, -0.5, -0.15, -4.371139e-08, -0.5, 0.15, -4.371139e-08, -0.3535534, 0.15, -0.35355335, 0, 0.15, 0, 5.9624403e-09, 0.15, -0.5, -0.3535534, 0.15, -0.35355335, -0.3535534, -0.15, -0.35355335, -0.3535534, 0.15, -0.35355335, 5.9624403e-09, 0.15, -0.5, 0, 0.15, 0, -0.5, 0.15, -4.371139e-08, -0.35355338, 0.15, 0.35355338, -0.35355338, -0.15, 0.35355338, -0.35355338, 0.15, 0.35355338, -0.5, 0.15, -4.371139e-08, 0, 0.15, 0, -0.35355338, 0.15, 0.35355338, -2.1855694e-08, 0.15, 0.5, -2.1855694e-08, -0.15, 0.5, -2.1855694e-08, 0.15, 0.5, -0.35355338, 0.15, 0.35355338, 0, 0.15, 0, 0.35355332, -0.15, -0.35355344, 5.9624403e-09, -0.15, -0.5, 0, -0.15, 0, 5.9624403e-09, -0.15, -0.5, 0.35355332, -0.15, -0.35355344, 0.35355332, 0.15, -0.35355344, 0.5, -0.15, 0, 0.35355332, -0.15, -0.35355344, 0, -0.15, 0, 0.35355332, -0.15, -0.35355344, 0.5, -0.15, 0, 0.5, 0.15, 0, -2.1855694e-08, -0.15, 0.5, 0.35355338, -0.15, 0.35355338, 0, -0.15, 0, 0.35355338, -0.15, 0.35355338, -2.1855694e-08, -0.15, 0.5, -2.1855694e-08, 0.15, 0.5, 0.35355338, -0.15, 0.35355338, 0.5, -0.15, 0, 0, -0.15, 0, 0.5, -0.15, 0, 0.35355338, -0.15, 0.35355338, 0.35355338, 0.15, 0.35355338, 0.35355332, 0.15, -0.35355344, 5.9624403e-09, 0.15, -0.5, 5.9624403e-09, -0.15, -0.5, 5.9624403e-09, 0.15, -0.5, 0.35355332, 0.15, -0.35355344, 0, 0.15, 0, 0.5, 0.15, 0, 0.35355332, 0.15, -0.35355344, 0.35355332, -0.15, -0.35355344, 0.35355332, 0.15, -0.35355344, 0.5, 0.15, 0, 0, 0.15, 0, -2.1855694e-08, 0.15, 0.5, 0.35355338, 0.15, 0.35355338, 0.35355338, -0.15, 0.35355338, 0.35355338, 0.15, 0.35355338, -2.1855694e-08, 0.15, 0.5, 0, 0.15, 0, 0.35355338, 0.15, 0.35355338, 0.5, 0.15, 0, 0.5, -0.15, 0, 0.5, 0.15, 0, 0.35355338, 0.15, 0.35355338, 0, 0.15, 0)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mdoks"]
+height = 0.5
+radius = 0.3
+
+[node name="PickableObjects" type="Node3D" unique_id=243812895 node_paths=PackedStringArray("mouse_3d_cursor", "picked_object_holder")]
+script = ExtResource("1_s0t01")
+mouse_3d_cursor = NodePath("Mouse3DCursor")
+picked_object_holder = NodePath("Mouse3DCursor/PickedObjectHolder")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=964353148]
+environment = SubResource("Environment_5454j")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=132377454]
+transform = Transform3D(1, 0, 0, 0, 0.8568705, 0.51553166, 0, -0.51553166, 0.8568705, 0, 1.8513032, 2.4077482)
+
+[node name="TerrainTest" type="StaticBody3D" parent="." unique_id=1911769989]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="TerrainTest" unique_id=481068423]
+mesh = SubResource("BoxMesh_5454j")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="TerrainTest" unique_id=300928512]
+shape = SubResource("ConcavePolygonShape3D_kudja")
+
+[node name="PickableCube" type="Area3D" parent="." unique_id=938999349 groups=["pickable_object"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.071014404, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_kudja")
+object_tag = "cube"
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="PickableCube" unique_id=292189324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+mesh = SubResource("BoxMesh_s0t01")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="PickableCube" unique_id=1425385565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+shape = SubResource("ConcavePolygonShape3D_s0t01")
+
+[node name="PickableHex" type="Area3D" parent="." unique_id=41404138 groups=["pickable_object"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5043, 0.080910385, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_kudja")
+object_tag = "hex"
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="PickableHex" unique_id=1807757534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+radius = 0.15
+height = 0.15
+sides = 6
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="PickableHex" unique_id=573919698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+shape = SubResource("ConcavePolygonShape3D_j35xg")
+
+[node name="Mouse3DCursor" type="CSGSphere3D" parent="." unique_id=570705607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.257654, 0)
+radius = 0.1
+
+[node name="PickedObjectHolder" type="Marker3D" parent="Mouse3DCursor" unique_id=1920404475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="ObjectPedestal" type="StaticBody3D" parent="." unique_id=748872702 node_paths=PackedStringArray("csg_mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5454206, 1.1920929e-07, -0.8801219)
+script = ExtResource("3_mdoks")
+valid_object_tags = Array[String](["hex"])
+csg_mesh = NodePath("CSGCylinder3D")
+deactivated_material = SubResource("StandardMaterial3D_mdoks")
+activated_material = SubResource("StandardMaterial3D_j35xg")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ObjectPedestal" unique_id=1747428503]
+height = 0.3
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="ObjectPedestal" unique_id=1421145733]
+shape = SubResource("ConcavePolygonShape3D_mdoks")
+
+[node name="Area3D" type="Area3D" parent="ObjectPedestal" unique_id=533992701]
+collision_mask = 2
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObjectPedestal/Area3D" unique_id=79219030]
+shape = SubResource("CylinderShape3D_mdoks")
+
+[connection signal="input_event" from="PickableCube" to="PickableCube" method="_on_input_event"]
+[connection signal="mouse_entered" from="PickableCube" to="PickableCube" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableCube" to="PickableCube" method="_on_mouse_exited"]
+[connection signal="input_event" from="PickableHex" to="PickableHex" method="_on_input_event"]
+[connection signal="mouse_entered" from="PickableHex" to="PickableHex" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableHex" to="PickableHex" method="_on_mouse_exited"]
+[connection signal="area_entered" from="ObjectPedestal/Area3D" to="ObjectPedestal" method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="ObjectPedestal/Area3D" to="ObjectPedestal" method="_on_area_3d_area_exited"]
+[connection signal="area_shape_entered" from="ObjectPedestal/Area3D" to="ObjectPedestal" method="_on_area_3d_area_shape_entered"]
