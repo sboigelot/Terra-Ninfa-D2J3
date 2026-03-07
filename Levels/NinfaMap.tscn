@@ -137,6 +137,9 @@ size = Vector3(0.6, 0.3, 4)
 
 [node name="TestMap" type="Node3D" unique_id=1400283384]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1944224997]
+environment = SubResource("Environment_j6adh")
+
 [node name="Mouse3DCursor" type="CSGSphere3D" parent="." unique_id=1911056028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.257654, 0)
 visible = false
@@ -150,9 +153,6 @@ script = ExtResource("1_elb2t")
 mouse_3d_cursor = NodePath("../Mouse3DCursor")
 picked_object_holder = NodePath("../Mouse3DCursor/PickedObjectHolder")
 metadata/_custom_type_script = "uid://btbapy82k738d"
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1944224997]
-environment = SubResource("Environment_j6adh")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=36435387]
 transform = Transform3D(0.86421335, -0.25937718, 0.4311135, 0, 0.8568705, 0.5155317, -0.5031256, -0.44552934, 0.7405189, 5.8876805, 11.768616, 9.564797)
@@ -222,7 +222,7 @@ mesh = SubResource("BoxMesh_t3fnf")
 material = SubResource("StandardMaterial3D_j6adh")
 
 [node name="CSGMesh3D54" type="CSGMesh3D" parent="TerrainTest" unique_id=1716073522]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6906, 0.81987286, 8.961536)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.164368, 0.81987286, 8.961536)
 mesh = SubResource("BoxMesh_j47b8")
 material = SubResource("StandardMaterial3D_j6adh")
 
