@@ -1,4 +1,4 @@
-class_name Plant
+class_name TestPlant
 extends ConditionalWater
 
 @export var dry_scale: Vector3 = Vector3.ZERO

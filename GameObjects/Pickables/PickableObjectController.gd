@@ -1,9 +1,12 @@
+class_name PickableObjectController
 extends Node3D
 
 @export var mouse_3d_cursor:Node3D
 @export var picked_object_holder:Marker3D
 
 func _ready() -> void:
+	assert(mouse_3d_cursor != null)
+	assert(picked_object_holder != null)
 	connect_pickable_objects()
 
 func connect_pickable_objects() -> void:

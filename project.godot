@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="D2J03"
-run/main_scene="uid://cy6vgkm2vfakh"
+run/main_scene="uid://b4hpdc0fc20kj"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 

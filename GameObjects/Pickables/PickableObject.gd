@@ -11,6 +11,14 @@ signal dropped_down(pickable_object:PickableObject)
 
 var picked:bool
 
+func _init() -> void:
+	add_to_group("pickable_object")
+	collision_layer = 2
+	collision_mask = 0
+	NodeHelper.connect_if_not_connected(input_event, _on_input_event)
+	NodeHelper.connect_if_not_connected(mouse_entered, _on_mouse_entered)
+	NodeHelper.connect_if_not_connected(mouse_exited, _on_mouse_exited)
+
 func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if (event is InputEventMouseButton and 
 		event.button_index == MOUSE_BUTTON_LEFT and 

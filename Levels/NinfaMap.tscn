@@ -1,0 +1,332 @@
+[gd_scene format=3 uid="uid://b4hpdc0fc20kj"]
+
+[ext_resource type="Script" uid="uid://btbapy82k738d" path="res://GameObjects/Pickables/PickableObjectController.gd" id="1_elb2t"]
+[ext_resource type="Script" uid="uid://8r4kkq3srcvb" path="res://GameObjects/Pickables/PickableObject.gd" id="2_8rtkp"]
+[ext_resource type="Script" uid="uid://b3l0tt8aqk02u" path="res://GameObjects/Pickables/PickableObjectPedestal.gd" id="3_8rtkp"]
+[ext_resource type="Script" uid="uid://crrnkhbt4x72v" path="res://GameObjects/Water/WaterNode3D.gd" id="4_kdrw2"]
+[ext_resource type="Material" uid="uid://c5ess1c63dadr" path="res://GameObjects/Water/default_water_material.material" id="5_ouuts"]
+[ext_resource type="Script" uid="uid://u7qd4pgx4od8" path="res://GameObjects/Mechanisms/WarerGate.gd" id="5_t3fnf"]
+[ext_resource type="Script" uid="uid://c7kn8otnohjaf" path="res://GameObjects/Mechanisms/WaterRooter.gd" id="7_4l2uk"]
+[ext_resource type="Script" uid="uid://s08fxfxe44nw" path="res://GameObjects/Plants/Plant3D.gd" id="7_6a6ga"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wsxap"]
+sky_top_color = Color(0.6388706, 0.70131785, 0.7848583, 1)
+sky_horizon_color = Color(0.7182, 0.72508216, 0.7388414, 1)
+energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_jdvys"]
+sky_material = SubResource("ProceduralSkyMaterial_wsxap")
+
+[sub_resource type="Environment" id="Environment_j6adh"]
+background_mode = 2
+sky = SubResource("Sky_jdvys")
+ambient_light_source = 3
+ambient_light_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_elb2t"]
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsxap"]
+albedo_color = Color(0.20784314, 0.35686275, 0.19215687, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8rtkp"]
+data = PackedVector3Array(-5, 0.05, -5, -5, -0.05, -5, 5, -0.05, -5, -5, 0.05, 5, -5, -0.05, 5, -5, -0.05, -5, -5, -0.05, 5, 5, -0.05, 5, -5, -0.05, -5, -5, 0.05, -5, -5, 0.05, 5, -5, -0.05, -5, -5, 0.05, 5, -5, 0.05, -5, 5, 0.05, -5, -5, 0.05, 5, 5, 0.05, 5, -5, -0.05, 5, 5, -0.05, 5, 5, -0.05, -5, -5, -0.05, -5, 5, 0.05, -5, 5, -0.05, -5, 5, -0.05, 5, 5, 0.05, 5, 5, -0.05, 5, -5, -0.05, 5, 5, 0.05, -5, -5, 0.05, -5, 5, -0.05, -5, 5, 0.05, 5, -5, 0.05, 5, 5, 0.05, -5, 5, 0.05, 5, 5, 0.05, -5, 5, -0.05, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8rtkp"]
+size = Vector3(2.2, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6adh"]
+albedo_color = Color(0.68376005, 0.74, 0.5624, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kdrw2"]
+data = PackedVector3Array(-1.1, 0.5, -0.5, -1.1, -0.5, -0.5, 1.1, -0.5, -0.5, -1.1, 0.5, 0.5, -1.1, -0.5, 0.5, -1.1, -0.5, -0.5, -1.1, -0.5, 0.5, 1.1, -0.5, 0.5, -1.1, -0.5, -0.5, -1.1, 0.5, -0.5, -1.1, 0.5, 0.5, -1.1, -0.5, -0.5, -1.1, 0.5, 0.5, -1.1, 0.5, -0.5, 1.1, 0.5, -0.5, -1.1, 0.5, 0.5, 1.1, 0.5, 0.5, -1.1, -0.5, 0.5, 1.1, -0.5, 0.5, 1.1, -0.5, -0.5, -1.1, -0.5, -0.5, 1.1, 0.5, -0.5, 1.1, -0.5, -0.5, 1.1, -0.5, 0.5, 1.1, 0.5, 0.5, 1.1, -0.5, 0.5, -1.1, -0.5, 0.5, 1.1, 0.5, -0.5, -1.1, 0.5, -0.5, 1.1, -0.5, -0.5, 1.1, 0.5, 0.5, -1.1, 0.5, 0.5, 1.1, 0.5, -0.5, 1.1, 0.5, 0.5, 1.1, 0.5, -0.5, 1.1, -0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elb2t"]
+albedo_color = Color(1, 0.33333334, 1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ouuts"]
+data = PackedVector3Array(-0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, -0.15, -0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rtkp"]
+albedo_color = Color(0.43529412, 1, 1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6a6ga"]
+data = PackedVector3Array(-0.15, -0.075, -1.3113417e-08, -0.07499999, -0.075, -0.12990382, -0.07499999, 0.075, -0.12990382, -0.07499999, -0.075, -0.12990382, -0.15, -0.075, -1.3113417e-08, 0, -0.075, 0, -0.15, -0.075, -1.3113417e-08, -0.07500001, -0.075, 0.12990381, 0, -0.075, 0, -0.07500001, -0.075, 0.12990381, -0.15, -0.075, -1.3113417e-08, -0.15, 0.075, -1.3113417e-08, -0.07500001, -0.075, 0.12990381, 0.074999996, -0.075, 0.12990382, 0, -0.075, 0, 0.074999996, -0.075, 0.12990382, -0.07500001, -0.075, 0.12990381, -0.07500001, 0.075, 0.12990381, -0.07499999, 0.075, -0.12990382, -0.15, 0.075, -1.3113417e-08, -0.15, -0.075, -1.3113417e-08, 0.07499999, 0.075, -0.12990382, -0.07499999, 0.075, -0.12990382, -0.07499999, -0.075, -0.12990382, -0.15, 0.075, -1.3113417e-08, -0.07499999, 0.075, -0.12990382, 0, 0.075, 0, -0.15, 0.075, -1.3113417e-08, -0.07500001, 0.075, 0.12990381, -0.07500001, -0.075, 0.12990381, -0.07500001, 0.075, 0.12990381, -0.15, 0.075, -1.3113417e-08, 0, 0.075, 0, 0.074999996, 0.075, 0.12990382, -0.07500001, 0.075, 0.12990381, 0, 0.075, 0, 0.07499999, -0.075, -0.12990382, -0.07499999, -0.075, -0.12990382, 0, -0.075, 0, 0.15, -0.075, 0, 0.07499999, -0.075, -0.12990382, 0, -0.075, 0, -0.07499999, -0.075, -0.12990382, 0.07499999, -0.075, -0.12990382, 0.07499999, 0.075, -0.12990382, 0.07499999, -0.075, -0.12990382, 0.15, -0.075, 0, 0.15, 0.075, 0, 0.074999996, -0.075, 0.12990382, 0.15, -0.075, 0, 0, -0.075, 0, 0.15, -0.075, 0, 0.074999996, -0.075, 0.12990382, 0.074999996, 0.075, 0.12990382, -0.07499999, 0.075, -0.12990382, 0.07499999, 0.075, -0.12990382, 0, 0.075, 0, 0.07499999, 0.075, -0.12990382, 0.15, 0.075, 0, 0, 0.075, 0, 0.15, 0.075, 0, 0.07499999, 0.075, -0.12990382, 0.07499999, -0.075, -0.12990382, -0.07500001, 0.075, 0.12990381, 0.074999996, 0.075, 0.12990382, 0.074999996, -0.075, 0.12990382, 0.15, 0.075, 0, 0.074999996, 0.075, 0.12990382, 0, 0.075, 0, 0.074999996, 0.075, 0.12990382, 0.15, 0.075, 0, 0.15, -0.075, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdrw2"]
+albedo_color = Color(0.32024416, 0.32024416, 0.32024413, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3fnf"]
+albedo_color = Color(0.48235294, 1, 0.4, 1)
+emission_enabled = true
+emission = Color(0, 0.8352941, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_elb2t"]
+data = PackedVector3Array(-1, -0.1, -8.742278e-08, -0.4999999, -0.1, -0.86602545, -0.4999999, 0.1, -0.86602545, -0.4999999, -0.1, -0.86602545, -1, -0.1, -8.742278e-08, 0, -0.1, 0, -1, -0.1, -8.742278e-08, -0.50000006, -0.1, 0.8660254, 0, -0.1, 0, -0.50000006, -0.1, 0.8660254, -1, -0.1, -8.742278e-08, -1, 0.1, -8.742278e-08, -0.50000006, -0.1, 0.8660254, 0.49999997, -0.1, 0.86602545, 0, -0.1, 0, 0.49999997, -0.1, 0.86602545, -0.50000006, -0.1, 0.8660254, -0.50000006, 0.1, 0.8660254, -0.4999999, 0.1, -0.86602545, -1, 0.1, -8.742278e-08, -1, -0.1, -8.742278e-08, 0.4999999, 0.1, -0.86602545, -0.4999999, 0.1, -0.86602545, -0.4999999, -0.1, -0.86602545, -1, 0.1, -8.742278e-08, -0.4999999, 0.1, -0.86602545, 0, 0.1, 0, -1, 0.1, -8.742278e-08, -0.50000006, 0.1, 0.8660254, -0.50000006, -0.1, 0.8660254, -0.50000006, 0.1, 0.8660254, -1, 0.1, -8.742278e-08, 0, 0.1, 0, 0.49999997, 0.1, 0.86602545, -0.50000006, 0.1, 0.8660254, 0, 0.1, 0, 0.4999999, -0.1, -0.86602545, -0.4999999, -0.1, -0.86602545, 0, -0.1, 0, 1, -0.1, 0, 0.4999999, -0.1, -0.86602545, 0, -0.1, 0, -0.4999999, -0.1, -0.86602545, 0.4999999, -0.1, -0.86602545, 0.4999999, 0.1, -0.86602545, 0.4999999, -0.1, -0.86602545, 1, -0.1, 0, 1, 0.1, 0, 0.49999997, -0.1, 0.86602545, 1, -0.1, 0, 0, -0.1, 0, 1, -0.1, 0, 0.49999997, -0.1, 0.86602545, 0.49999997, 0.1, 0.86602545, -0.4999999, 0.1, -0.86602545, 0.4999999, 0.1, -0.86602545, 0, 0.1, 0, 0.4999999, 0.1, -0.86602545, 1, 0.1, 0, 0, 0.1, 0, 1, 0.1, 0, 0.4999999, 0.1, -0.86602545, 0.4999999, -0.1, -0.86602545, -0.50000006, 0.1, 0.8660254, 0.49999997, 0.1, 0.86602545, 0.49999997, -0.1, 0.86602545, 1, 0.1, 0, 0.49999997, 0.1, 0.86602545, 0, 0.1, 0, 0.49999997, 0.1, 0.86602545, 1, 0.1, 0, 1, -0.1, 0)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8rtkp"]
+height = 0.5
+radius = 0.6
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t3fnf"]
+data = PackedVector3Array(-0.05, -0.15, 0.15, -0.05, -0.15, -0.15, -0.05, 0.15, -0.15, 0.05, -0.15, -0.15, -0.05, -0.15, -0.15, -0.05, -0.15, 0.15, -0.05, 0.15, -0.15, -0.05, -0.15, -0.15, 0.05, -0.15, -0.15, -0.05, 0.15, -0.15, -0.05, 0.15, 0.15, -0.05, -0.15, 0.15, -0.05, -0.15, 0.15, -0.05, 0.15, 0.15, 0.05, 0.15, 0.15, 0.05, 0.15, 0.15, -0.05, 0.15, 0.15, -0.05, 0.15, -0.15, -0.05, -0.15, 0.15, 0.05, -0.15, 0.15, 0.05, -0.15, -0.15, 0.05, 0.15, 0.15, 0.05, -0.15, 0.15, -0.05, -0.15, 0.15, 0.05, -0.15, -0.15, 0.05, -0.15, 0.15, 0.05, 0.15, 0.15, 0.05, -0.15, -0.15, 0.05, 0.15, -0.15, -0.05, 0.15, -0.15, -0.05, 0.15, -0.15, 0.05, 0.15, -0.15, 0.05, 0.15, 0.15, 0.05, 0.15, 0.15, 0.05, 0.15, -0.15, 0.05, -0.15, -0.15)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4l2uk"]
+data = PackedVector3Array(-0.05, -0.025, 0.15, -0.05, -0.025, -0.15, -0.05, 0.025, -0.15, 0.05, -0.025, -0.15, -0.05, -0.025, -0.15, -0.05, -0.025, 0.15, -0.05, 0.025, -0.15, -0.05, -0.025, -0.15, 0.05, -0.025, -0.15, -0.05, 0.025, -0.15, -0.05, 0.025, 0.15, -0.05, -0.025, 0.15, -0.05, -0.025, 0.15, -0.05, 0.025, 0.15, 0.05, 0.025, 0.15, 0.05, 0.025, 0.15, -0.05, 0.025, 0.15, -0.05, 0.025, -0.15, -0.05, -0.025, 0.15, 0.05, -0.025, 0.15, 0.05, -0.025, -0.15, 0.05, 0.025, 0.15, 0.05, -0.025, 0.15, -0.05, -0.025, 0.15, 0.05, -0.025, -0.15, 0.05, -0.025, 0.15, 0.05, 0.025, 0.15, 0.05, -0.025, -0.15, 0.05, 0.025, -0.15, -0.05, 0.025, -0.15, -0.05, 0.025, -0.15, 0.05, 0.025, -0.15, 0.05, 0.025, 0.15, 0.05, 0.025, 0.15, 0.05, 0.025, -0.15, 0.05, -0.025, -0.15)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4l2uk"]
+top_radius = 0.1
+bottom_radius = 0.2
+radial_segments = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22r32"]
+albedo_color = Color(0.36, 0.23328, 0.043200005, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjmpm"]
+albedo_color = Color(0, 0.58431375, 0.26666668, 1)
+
+[node name="NinfaMap" type="Node3D" unique_id=1400283384]
+
+[node name="Mouse3DCursor" type="CSGSphere3D" parent="." unique_id=1911056028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.257654, 0)
+visible = false
+radius = 0.1
+
+[node name="PickedObjectHolder" type="Marker3D" parent="Mouse3DCursor" unique_id=1455624982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="PickableObjectController" type="Node3D" parent="." unique_id=847851175 node_paths=PackedStringArray("mouse_3d_cursor", "picked_object_holder")]
+script = ExtResource("1_elb2t")
+mouse_3d_cursor = NodePath("../Mouse3DCursor")
+picked_object_holder = NodePath("../Mouse3DCursor/PickedObjectHolder")
+metadata/_custom_type_script = "uid://btbapy82k738d"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1944224997]
+environment = SubResource("Environment_j6adh")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=36435387]
+transform = Transform3D(0.86421335, -0.25937718, 0.4311135, 0, 0.8568705, 0.5155317, -0.5031256, -0.44552934, 0.7405189, 3.4869983, 4.2230053, 5.4411716)
+projection = 1
+size = 4.0
+
+[node name="TerrainTest" type="StaticBody3D" parent="." unique_id=1227992053]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="TerrainTest" unique_id=1781000955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0034086108, 0)
+mesh = SubResource("BoxMesh_elb2t")
+material = SubResource("StandardMaterial3D_wsxap")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="TerrainTest" unique_id=563512076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0034086108, 0)
+shape = SubResource("ConcavePolygonShape3D_8rtkp")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="TerrainTest" unique_id=178594392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5301865, 0, -1.8987485)
+mesh = SubResource("BoxMesh_8rtkp")
+material = SubResource("StandardMaterial3D_j6adh")
+
+[node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="TerrainTest" unique_id=2055720961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5301865, 0, -1.8987485)
+shape = SubResource("ConcavePolygonShape3D_kdrw2")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=124214002]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=704536687]
+layout_mode = 2
+
+[node name="Pickables" type="Node3D" parent="." unique_id=2018477682]
+
+[node name="PickableCube" type="Area3D" parent="Pickables" unique_id=564402864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7983456, 0, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_8rtkp")
+object_tag = "cube"
+metadata/_custom_type_script = "uid://8r4kkq3srcvb"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Pickables/PickableCube" unique_id=24889326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+size = Vector3(0.3, 0.3, 0.3)
+material = SubResource("StandardMaterial3D_elb2t")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Pickables/PickableCube" unique_id=1546461352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+shape = SubResource("ConcavePolygonShape3D_ouuts")
+
+[node name="PickableHex" type="Area3D" parent="Pickables" unique_id=1586275978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.117038965, -2.3841858e-07, 1.3923497)
+script = ExtResource("2_8rtkp")
+object_tag = "hex"
+metadata/_custom_type_script = "uid://8r4kkq3srcvb"
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Pickables/PickableHex" unique_id=560621167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+radius = 0.15
+height = 0.15
+sides = 6
+material = SubResource("StandardMaterial3D_8rtkp")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Pickables/PickableHex" unique_id=1834989242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+shape = SubResource("ConcavePolygonShape3D_6a6ga")
+
+[node name="PickableObjectPedestal" type="StaticBody3D" parent="Pickables" unique_id=153819619 node_paths=PackedStringArray("detection_area3d", "activation_visual", "controlled_water_flow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0622131, 1.1920929e-07, 1.3813138)
+script = ExtResource("3_8rtkp")
+valid_object_tags = Array[String](["hex"])
+detection_area3d = NodePath("Area3D")
+activation_visual = NodePath("CSGCylinder3D")
+deactivated_material = SubResource("StandardMaterial3D_kdrw2")
+activated_material = SubResource("StandardMaterial3D_t3fnf")
+controlled_water_flow = [NodePath("../../Waters/WaterNode3D")]
+metadata/_custom_type_script = "uid://b3l0tt8aqk02u"
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Pickables/PickableObjectPedestal" unique_id=506283281]
+radius = 1.0
+height = 0.2
+sides = 6
+material = SubResource("StandardMaterial3D_kdrw2")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Pickables/PickableObjectPedestal" unique_id=1158669204]
+shape = SubResource("ConcavePolygonShape3D_elb2t")
+
+[node name="Area3D" type="Area3D" parent="Pickables/PickableObjectPedestal" unique_id=1181265900]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Pickables/PickableObjectPedestal/Area3D" unique_id=276394602]
+shape = SubResource("CylinderShape3D_8rtkp")
+
+[node name="Waters" type="Node3D" parent="." unique_id=1937604549]
+
+[node name="WaterNode3D" type="Node3D" parent="Waters" unique_id=1999876747 node_paths=PackedStringArray("downstream", "mechanisms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2058599, 0)
+script = ExtResource("4_kdrw2")
+downstream = [NodePath("../WaterNode3D2")]
+mechanisms = [NodePath("../WaterGate")]
+water_size = Vector3(0.3, 1, 0.3)
+material = ExtResource("5_ouuts")
+falling_water = true
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
+[node name="WaterGate" type="Node3D" parent="Waters" unique_id=1128776726 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18990937, 0.8601909, 0)
+script = ExtResource("5_t3fnf")
+downstream = [NodePath("../WaterNode3D3")]
+gate_visual_open = NodePath("Area3D/OpenVisual")
+gate_visual_close = NodePath("Area3D/CloseVisual")
+mouse_control_area = NodePath("Area3D")
+metadata/_custom_type_script = "uid://u7qd4pgx4od8"
+
+[node name="Area3D" type="Area3D" parent="Waters/WaterGate" unique_id=805610017]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Waters/WaterGate/Area3D" unique_id=1718570323]
+shape = SubResource("ConcavePolygonShape3D_t3fnf")
+
+[node name="OpenVisual" type="CSGBox3D" parent="Waters/WaterGate/Area3D" unique_id=644018061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12553722, 0)
+visible = false
+size = Vector3(0.1, 0.05, 0.3)
+
+[node name="CloseVisual" type="CSGBox3D" parent="Waters/WaterGate/Area3D" unique_id=25727104]
+size = Vector3(0.1, 0.3, 0.3)
+
+[node name="WaterNode3D3" type="Node3D" parent="Waters" unique_id=438119628 node_paths=PackedStringArray("plants")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6566427, 0.86020356, 0)
+script = ExtResource("4_kdrw2")
+plants = [NodePath("../../Plant3D")]
+water_size = Vector3(1, 0.3, 0.3)
+material = ExtResource("5_ouuts")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
+[node name="WaterNode3D2" type="Node3D" parent="Waters" unique_id=631720698 node_paths=PackedStringArray("mechanisms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6488212, 0.8588651, 0)
+script = ExtResource("4_kdrw2")
+mechanisms = [NodePath("../WaterGate2")]
+water_size = Vector3(1, 0.3, 0.3)
+material = ExtResource("5_ouuts")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
+[node name="WaterGate2" type="Node3D" parent="Waters" unique_id=154023228 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1883951, 0.8601909, 0)
+script = ExtResource("5_t3fnf")
+downstream = [NodePath("../WaterNode3D4")]
+gate_visual_open = NodePath("Area3D/OpenVisual")
+gate_visual_close = NodePath("Area3D/CloseVisual")
+mouse_control_area = NodePath("Area3D")
+metadata/_custom_type_script = "uid://u7qd4pgx4od8"
+
+[node name="Area3D" type="Area3D" parent="Waters/WaterGate2" unique_id=1572897023]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Waters/WaterGate2/Area3D" unique_id=1947712501]
+shape = SubResource("ConcavePolygonShape3D_t3fnf")
+
+[node name="OpenVisual" type="CSGBox3D" parent="Waters/WaterGate2/Area3D" unique_id=2076786895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12553722, 0)
+visible = false
+size = Vector3(0.1, 0.05, 0.3)
+
+[node name="CloseVisual" type="CSGBox3D" parent="Waters/WaterGate2/Area3D" unique_id=1924507918]
+size = Vector3(0.1, 0.3, 0.3)
+
+[node name="WaterNode3D4" type="Node3D" parent="Waters" unique_id=510737009 node_paths=PackedStringArray("mechanisms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2983358, 0.5169108, 0)
+script = ExtResource("4_kdrw2")
+mechanisms = [NodePath("../WaterGate")]
+water_size = Vector3(0.3, 1, 0.3)
+material = ExtResource("5_ouuts")
+falling_water = true
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
+[node name="WaterRooter" type="Node3D" parent="Waters" unique_id=223603012 node_paths=PackedStringArray("downstream", "mouse_control_area")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.579226, 0.0850869, 0)
+script = ExtResource("7_4l2uk")
+allow_no_output = true
+output_index = -1
+downstream = [NodePath("../WaterNode3D5"), NodePath("../WaterNode3D6")]
+mouse_control_area = NodePath("Area3D")
+metadata/_custom_type_script = "uid://c7kn8otnohjaf"
+
+[node name="Area3D" type="Area3D" parent="Waters/WaterRooter" unique_id=606145632]
+
+[node name="Visual" type="CSGBox3D" parent="Waters/WaterRooter/Area3D" unique_id=274706261]
+size = Vector3(0.1, 0.05, 0.3)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Waters/WaterRooter/Area3D" unique_id=135865959]
+shape = SubResource("ConcavePolygonShape3D_4l2uk")
+
+[node name="WaterNode3D5" type="Node3D" parent="Waters" unique_id=1426257771]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6936376, 0.2692911, 0.7096985)
+script = ExtResource("4_kdrw2")
+water_size = Vector3(0.9999983, 0.3, 0.29999828)
+material = ExtResource("5_ouuts")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
+[node name="WaterNode3D6" type="Node3D" parent="Waters" unique_id=92707354]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6936375, 0.2692911, -0.71386164)
+script = ExtResource("4_kdrw2")
+water_size = Vector3(1, 0.3, 0.3)
+material = ExtResource("5_ouuts")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
+[node name="Plant3D" type="Node3D" parent="." unique_id=1050865392]
+transform = Transform3D(0.001, 0, 1.7484555e-10, 0, 0.001, 0, -1.7484555e-10, 0, 0.001, -0.33015966, 0, 0.87587196)
+script = ExtResource("7_6a6ga")
+irrigated_scale = Vector3(0.5, 0.5, 0.5)
+metadata/_custom_type_script = "uid://s08fxfxe44nw"
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Plant3D" unique_id=875667867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_4l2uk")
+material = SubResource("StandardMaterial3D_22r32")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Plant3D" unique_id=1562321679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9099684, 0)
+radius = 0.4
+material = SubResource("StandardMaterial3D_pjmpm")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Plant3D" unique_id=1442172829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9552646, 0)
+size = Vector3(0.3, 0.1, 1.5)

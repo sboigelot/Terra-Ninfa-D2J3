@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://1dcuqi77xhfr" path="res://Tests/ConditionalWaterFlow/ConditionalWaterFlow.gd" id="1_53yxc"]
 [ext_resource type="Script" uid="uid://cl2vthfuhtfpm" path="res://Tests/ConditionalWaterFlow/ConditionalWater.gd" id="1_jdvys"]
 [ext_resource type="Script" uid="uid://b4gefe2a8ic5f" path="res://Tests/ConditionalWaterFlow/TwoWayGate.gd" id="3_53yxc"]
+[ext_resource type="Material" uid="uid://c5ess1c63dadr" path="res://GameObjects/Water/default_water_material.material" id="3_qvc4y"]
 [ext_resource type="Script" uid="uid://c0p4awld1epfq" path="res://Tests/ConditionalWaterFlow/Plant.gd" id="4_yxn6c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5454j"]
@@ -33,10 +34,6 @@ data = PackedVector3Array(-5, 0.05, -5, -5, -0.05, -5, 5, -0.05, -5, -5, 0.05, 5
 
 [sub_resource type="BoxMesh" id="BoxMesh_jdvys"]
 size = Vector3(0.3, 2, 0.3)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djtva"]
-transparency = 1
-albedo_color = Color(0, 0.1254902, 0.8235294, 0.8509804)
 
 [sub_resource type="Animation" id="Animation_53yxc"]
 length = 0.001
@@ -286,7 +283,7 @@ downstream = [NodePath("../TwoWayGate")]
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="SourceConditionalWater" unique_id=1284074967]
 mesh = SubResource("BoxMesh_jdvys")
-material = SubResource("StandardMaterial3D_djtva")
+material = ExtResource("3_qvc4y")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SourceConditionalWater" unique_id=305381638]
 libraries/ = SubResource("AnimationLibrary_qvc4y")
@@ -318,7 +315,7 @@ downstream = [NodePath("../Plant")]
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="LeftConditionalWater" unique_id=2108934585]
 mesh = SubResource("BoxMesh_djtva")
-material = SubResource("StandardMaterial3D_djtva")
+material = ExtResource("3_qvc4y")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LeftConditionalWater" unique_id=2023504600]
 libraries/ = SubResource("AnimationLibrary_k3mmb")
@@ -350,7 +347,7 @@ animation_player = NodePath("AnimationPlayer")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="RightConditionalWater" unique_id=1362305181]
 mesh = SubResource("BoxMesh_djtva")
-material = SubResource("StandardMaterial3D_djtva")
+material = ExtResource("3_qvc4y")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RightConditionalWater" unique_id=1760329658]
 libraries/ = SubResource("AnimationLibrary_k3mmb")

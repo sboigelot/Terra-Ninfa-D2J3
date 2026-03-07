@@ -55,7 +55,7 @@ func _ready():																	# Add to database all samples preloaded in the In
 		sample_dictionary[sample.get_path().get_file().get_basename()] = i		# Create entry with file name to reference index in array
 	add_players(start_player_count)												# Add some players to start with
 
-func player_play(sample_name, player_id):
+func player_play(sample_name, _player_id):
 	play(sample_name)
 
 func play(sample_name:String)->void:
