@@ -2,22 +2,9 @@
 
 [ext_resource type="Script" uid="uid://1dcuqi77xhfr" path="res://Tests/ConditionalWaterFlow/ConditionalWaterFlow.gd" id="1_53yxc"]
 [ext_resource type="Script" uid="uid://cl2vthfuhtfpm" path="res://Tests/ConditionalWaterFlow/ConditionalWater.gd" id="1_jdvys"]
+[ext_resource type="Environment" uid="uid://bmueh8td3f8g" path="res://Tests/OrthoOrbitCamera/test_environment.tres" id="2_qvc4y"]
 [ext_resource type="Script" uid="uid://b4gefe2a8ic5f" path="res://Tests/ConditionalWaterFlow/TwoWayGate.gd" id="3_53yxc"]
 [ext_resource type="Script" uid="uid://c0p4awld1epfq" path="res://Tests/ConditionalWaterFlow/Plant.gd" id="4_yxn6c"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5454j"]
-sky_top_color = Color(0.6388706, 0.70131785, 0.7848583, 1)
-sky_horizon_color = Color(0.7182, 0.72508216, 0.7388414, 1)
-energy_multiplier = 2.0
-
-[sub_resource type="Sky" id="Sky_jdvys"]
-sky_material = SubResource("ProceduralSkyMaterial_5454j")
-
-[sub_resource type="Environment" id="Environment_5454j"]
-background_mode = 2
-sky = SubResource("Sky_jdvys")
-ambient_light_source = 3
-ambient_light_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_yxn6c"]
 size = Vector3(10, 0.1, 10)
@@ -244,7 +231,7 @@ source_water = NodePath("SourceConditionalWater")
 two_way_gate = NodePath("TwoWayGate")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=964353148]
-environment = SubResource("Environment_5454j")
+environment = ExtResource("2_qvc4y")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=132377454]
 transform = Transform3D(1, 0, 0, 0, 0.8568705, 0.51553166, 0, -0.51553166, 0.8568705, 0, 1.8513032, 2.4077482)

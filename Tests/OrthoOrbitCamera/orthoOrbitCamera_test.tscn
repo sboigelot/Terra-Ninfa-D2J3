@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bbwtxdn3ocbt5"]
+
+[ext_resource type="Environment" uid="uid://bmueh8td3f8g" path="res://Tests/OrthoOrbitCamera/test_environment.tres" id="1_jrqbs"]
+[ext_resource type="PackedScene" uid="uid://bcseu3wsjy24x" path="res://Tests/OrthoOrbitCamera/Camera/Camera.tscn" id="2_7jmrg"]
+[ext_resource type="Script" uid="uid://pqxjplxmcjc8" path="res://Tests/OrthoOrbitCamera/debugLabel.gd" id="3_vn3yu"]
+
+[node name="world" type="Node3D" unique_id=1975260852]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1453114580]
+environment = ExtResource("1_jrqbs")
+
+[node name="testObjects" type="Node3D" parent="." unique_id=622876752]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="testObjects" unique_id=156241984]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="testObjects" unique_id=396203559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7372707, 0)
+
+[node name="Camera" parent="." unique_id=1974494758 instance=ExtResource("2_7jmrg")]
+tilt = -0.20943951023931956
+ortho_scale_max = 10.0
+
+[node name="Label" type="Label" parent="." unique_id=1164094908]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+text = "Test"
+script = ExtResource("3_vn3yu")
