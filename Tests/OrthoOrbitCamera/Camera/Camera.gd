@@ -21,6 +21,9 @@ var ortho_scale_default : float = 4.0 # UNIT: m
 var _ortho_scale_last : float = self.ortho_scale_default # UNIT: m
 var _ortho_scale_requested : float = self.ortho_scale_default # UNIT: m
 
+var zoom_tween:Tween
+const zoom_tween_duration:float = 0.1
+
 ###############################################################################
 ###############################################################################
 ## SECTION: Private Member Functions ##########################################
@@ -34,49 +37,16 @@ func _update_position() -> void:
 	self.position.z = self.radial_offset
 	self.position.y = self.vertical_offset
 
-# TODO: Add smoothing out
-# BUG: Holding down a key leads to a sometimes a short freeze before zooming 
-# resumes
-func _manage_zoom(a_delta : float) -> void:
-	# DESCRIPTION: Only process when last and requested ortho scale are not
-	# identical
-	if self._ortho_scale_last != self._ortho_scale_requested:
-		#print("Last != requested")
-
-		# DESCRIPTION: Determine whether the requested scale is within the 
-		# the allowed range
-		var _tmp_aboveMinimum : bool = (self.ortho_scale_min <= self._ortho_scale_requested)
-		var _tmp_belowMaximum : bool = (self._ortho_scale_requested <= self.ortho_scale_max)
-
-		# DESCRIPTION: Clamp the requested scale between minimum and maximum
-		if  not _tmp_aboveMinimum:
-			self._ortho_scale_requested = self.ortho_scale_min
-
-		elif not _tmp_belowMaximum:
-			self._ortho_scale_requested = self.ortho_scale_max
-
-		# DESCRIPTION: Apply the scale change gradually by interpolating the
-		# distance to the target with variable weights
-		# TODO: Add better smoothing
-		var _tmp_scaleDistance : float = abs(self.size - self._ortho_scale_requested)
-		var _tmp_scaleDelta = a_delta * _tmp_scaleDistance
-
-		# DESCRIPTION: Ensure stop by preventing moving too small increments
-		if _tmp_scaleDistance >= 0.01:
-			var _tmp_size : Vector2 = Vector2(self.size, 0).move_toward(
-				Vector2(self._ortho_scale_requested, 0),
-				_tmp_scaleDelta
-			)
-			self.size = _tmp_size.x
-
-		else:
-			self.size = self._ortho_scale_requested
-
-		self._ortho_scale_last = self.size
-
-	else:
-		self._ortho_scale_requested = self.size
-		self._ortho_scale_last = self.size
+func _manage_zoom(_delta : float) -> void:
+	_ortho_scale_requested = clamp(_ortho_scale_requested, ortho_scale_min, ortho_scale_max)
+	if _ortho_scale_last != _ortho_scale_requested:
+		_ortho_scale_last = _ortho_scale_requested
+		
+		if zoom_tween != null and zoom_tween.is_running():
+			zoom_tween.stop()
+			
+		zoom_tween = create_tween()
+		zoom_tween.tween_property(self, "size", _ortho_scale_last, zoom_tween_duration)
 
 ###############################################################################
 ###############################################################################
