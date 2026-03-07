@@ -209,6 +209,7 @@ metadata/_custom_type_script = "uid://crrnkhbt4x72v"
 [node name="WaterGate" type="Node3D" parent="Waters" unique_id=1128776726 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18990937, 0.8601909, 0)
 script = ExtResource("6_mwdbx")
+gate_open = true
 downstream = [NodePath("../WaterNode3D3")]
 gate_visual_open = NodePath("Area3D/OpenVisual")
 gate_visual_close = NodePath("Area3D/CloseVisual")
@@ -222,10 +223,10 @@ shape = SubResource("ConcavePolygonShape3D_t3fnf")
 
 [node name="OpenVisual" type="CSGBox3D" parent="Waters/WaterGate/Area3D" unique_id=644018061]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12553722, 0)
-visible = false
 size = Vector3(0.1, 0.05, 0.3)
 
 [node name="CloseVisual" type="CSGBox3D" parent="Waters/WaterGate/Area3D" unique_id=25727104]
+visible = false
 size = Vector3(0.1, 0.3, 0.3)
 
 [node name="WaterNode3D3" type="Node3D" parent="Waters" unique_id=438119628 node_paths=PackedStringArray("plants")]
@@ -291,9 +292,10 @@ size = Vector3(0.1, 0.05, 0.3)
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Waters/WaterRooter/Area3D" unique_id=135865959]
 shape = SubResource("ConcavePolygonShape3D_4l2uk")
 
-[node name="WaterNode3D5" type="Node3D" parent="Waters" unique_id=1426257771]
+[node name="WaterNode3D5" type="Node3D" parent="Waters" unique_id=1426257771 node_paths=PackedStringArray("downstream")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6936376, 0.2692911, 0.7096985)
 script = ExtResource("4_c4nwi")
+downstream = [NodePath("../WaterNode3D7")]
 water_size = Vector3(0.9999983, 0.3, 0.29999828)
 material = ExtResource("5_ir5mb")
 metadata/_custom_type_script = "uid://crrnkhbt4x72v"
@@ -334,13 +336,20 @@ rotating_speeds = Vector3(0, 0, -25)
 metadata/_custom_type_script = "uid://bx6piiv1nqig0"
 
 [node name="RotatingNode3D" type="Node3D" parent="Waters/WaterWheel" unique_id=506645232]
-transform = Transform3D(-0.91624045, 0.40062878, 0, -0.40062878, -0.91624045, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-0.16767567, -0.9858422, 0, 0.9858422, -0.16767567, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Waters/WaterWheel/RotatingNode3D" unique_id=1497095397]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 radius = 0.3
 height = 0.1
 sides = 5
+
+[node name="WaterNode3D7" type="Node3D" parent="Waters" unique_id=1925168702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.296179, 0.27830327, 1.3929102)
+script = ExtResource("4_c4nwi")
+water_size = Vector3(1, 0.3, 0.3)
+material = ExtResource("5_ir5mb")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
 
 [node name="Plant3D" type="Node3D" parent="." unique_id=1050865392]
 transform = Transform3D(0.001, 0, 1.7484555e-10, 0, 0.001, 0, -1.7484555e-10, 0, 0.001, -0.33015966, 0, 0.87587196)
