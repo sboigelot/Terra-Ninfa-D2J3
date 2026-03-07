@@ -17,10 +17,22 @@ ambient_light_source = 3
 ambient_light_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_elb2t"]
-size = Vector3(25, 1, 25)
+size = Vector3(28, 1, 14)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsxap"]
 albedo_color = Color(0.20784314, 0.35686275, 0.19215687, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hf6v2"]
+size = Vector3(18, 1, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_htwqe"]
+size = Vector3(8.5, 1, 7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1c3qa"]
+size = Vector3(6, 1, 7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e1fsn"]
+size = Vector3(10, 1, 15)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8rtkp"]
 size = Vector3(4, 5, 4)
@@ -43,6 +55,9 @@ albedo_color = Color(0, 0, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_t3fnf"]
 size = Vector3(14, 2, 10)
 
+[sub_resource type="BoxMesh" id="BoxMesh_j47b8"]
+size = Vector3(8, 5, 8)
+
 [sub_resource type="BoxMesh" id="BoxMesh_ouuts"]
 size = Vector3(1, 3.5, 2)
 
@@ -64,6 +79,16 @@ size = Vector3(1, 3.5, 4)
 [sub_resource type="BoxMesh" id="BoxMesh_22r32"]
 size = Vector3(0.6, 0.3, 4)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vgw30"]
+transparency = 1
+albedo_color = Color(0.68376005, 0.74, 0.5624, 0.3529412)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0xqdu"]
+top_radius = 1.5
+bottom_radius = 1.5
+height = 3.0
+radial_segments = 16
+
 [sub_resource type="BoxMesh" id="BoxMesh_pjmpm"]
 size = Vector3(0.6, 0.3, 2)
 
@@ -76,11 +101,27 @@ size = Vector3(0.6, 0.3, 6)
 [sub_resource type="BoxMesh" id="BoxMesh_unkgr"]
 size = Vector3(0.6, 0.3, 3)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_elb2t"]
+top_radius = 3.0
+bottom_radius = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btstg"]
+albedo_color = Color(0, 0.84, 0.54600006, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjc3e"]
+albedo_color = Color(0, 0.84, 0.54600006, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r4rhq"]
+size = Vector3(0.6, 0.3, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adm7q"]
+albedo_color = Color(0.261644, 0.05093965, 0.049716577, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1pso7"]
+size = Vector3(0.6, 0.3, 7)
+
 [sub_resource type="BoxMesh" id="BoxMesh_m7op7"]
 size = Vector3(0.6, 0.3, 4)
-
-[sub_resource type="BoxMesh" id="BoxMesh_htwqe"]
-size = Vector3(0.6, 0.3, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tnwec"]
 size = Vector3(0.6, 0.3, 8)
@@ -90,6 +131,9 @@ size = Vector3(0.6, 0.3, 5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_j6adh"]
 size = Vector3(0.6, 0.3, 8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i8sri"]
+size = Vector3(0.6, 0.3, 4)
 
 [node name="TestMap" type="Node3D" unique_id=1400283384]
 
@@ -117,14 +161,29 @@ size = 15.0
 
 [node name="TerrainTest" type="StaticBody3D" parent="." unique_id=1227992053]
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="TerrainTest" unique_id=1781000955]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044260025, -0.47947693, -0.006398201)
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="TerrainTest" unique_id=226235524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7968621, -0.5, 7.0797043)
 mesh = SubResource("BoxMesh_elb2t")
 material = SubResource("StandardMaterial3D_wsxap")
 
-[node name="CSGMesh3D5" type="CSGMesh3D" parent="TerrainTest" unique_id=226235524]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044260025, -0.47947693, -0.006398201)
-mesh = SubResource("BoxMesh_elb2t")
+[node name="CSGMesh3D36" type="CSGMesh3D" parent="TerrainTest" unique_id=1677061110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3216484, -0.5, -7.3708105)
+mesh = SubResource("BoxMesh_hf6v2")
+material = SubResource("StandardMaterial3D_wsxap")
+
+[node name="CSGMesh3D39" type="CSGMesh3D" parent="TerrainTest" unique_id=1453455662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8007555, -0.553898, -3.4462404)
+mesh = SubResource("BoxMesh_htwqe")
+material = SubResource("StandardMaterial3D_wsxap")
+
+[node name="CSGMesh3D40" type="CSGMesh3D" parent="TerrainTest" unique_id=1252004172]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.011999, -0.482265, -11.878521)
+mesh = SubResource("BoxMesh_1c3qa")
+material = SubResource("StandardMaterial3D_wsxap")
+
+[node name="CSGMesh3D35" type="CSGMesh3D" parent="TerrainTest" unique_id=82820075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.071334, -1.2891088, -7.379096)
+mesh = SubResource("BoxMesh_e1fsn")
 material = SubResource("StandardMaterial3D_wsxap")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="TerrainTest" unique_id=178594392]
@@ -148,7 +207,7 @@ mesh = SubResource("BoxMesh_kdrw2")
 material = SubResource("StandardMaterial3D_t3fnf")
 
 [node name="CSGMesh3D9" type="CSGMesh3D" parent="TerrainTest/CSGMesh3D2" unique_id=1469470774]
-transform = Transform3D(-0.99998707, 0, 0.005096283, 0, 1, 0, -0.005096283, 0, -0.99998707, 0.12810808, 2.6736135, -1.4508647)
+transform = Transform3D(0.0050963266, 0, 0.99998707, 0, 1, 0, -0.99998707, 0, 0.0050963266, 1.2552848, 2.6736135, -0.14519298)
 mesh = SubResource("BoxMesh_kdrw2")
 material = SubResource("StandardMaterial3D_t3fnf")
 
@@ -162,13 +221,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29950333, 0.81987286, 8.156
 mesh = SubResource("BoxMesh_t3fnf")
 material = SubResource("StandardMaterial3D_j6adh")
 
+[node name="CSGMesh3D54" type="CSGMesh3D" parent="TerrainTest" unique_id=1716073522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6906, 0.81987286, 8.961536)
+mesh = SubResource("BoxMesh_j47b8")
+material = SubResource("StandardMaterial3D_j6adh")
+
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="TerrainTest" unique_id=1031295083]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3978634, -1.6118323)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.6546397, -0.3978634, 0.79505205)
 mesh = SubResource("BoxMesh_ouuts")
 material = SubResource("StandardMaterial3D_j6adh")
 
 [node name="CSGMesh3D7" type="CSGMesh3D" parent="TerrainTest" unique_id=1488140103]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -3.5914392)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.634247, 1.75, 0.79505205)
 mesh = SubResource("BoxMesh_ouuts")
 material = SubResource("StandardMaterial3D_j6adh")
 
@@ -178,22 +242,22 @@ mesh = SubResource("BoxMesh_6a6ga")
 material = SubResource("StandardMaterial3D_t3fnf")
 
 [node name="CSGMesh3D8" type="CSGMesh3D" parent="TerrainTest" unique_id=343566467]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5522375, -5.6034737)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.6462812, 0.5522375, 0.79505205)
 mesh = SubResource("BoxMesh_ouuts")
 material = SubResource("StandardMaterial3D_j6adh")
 
 [node name="CSGMesh3D26" type="CSGMesh3D" parent="TerrainTest" unique_id=1087297578]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.262672, 0.5522375, -6.7344284)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.681461, -0.62339187, -6.7344284)
 mesh = SubResource("BoxMesh_mkd14")
 material = SubResource("StandardMaterial3D_j6adh")
 
 [node name="CSGMesh3D22" type="CSGMesh3D" parent="TerrainTest" unique_id=313197480]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.136417, 0.5522375, -3.1771095)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3607025, -0.016846657, -3.1771095)
 mesh = SubResource("BoxMesh_q6g4c")
 material = SubResource("StandardMaterial3D_hf6v2")
 
 [node name="CSGMesh3D4" type="CSGMesh3D" parent="TerrainTest" unique_id=2131888495]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -8.5639925)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.6068, 1.75, 0.79505205)
 mesh = SubResource("BoxMesh_4l2uk")
 material = SubResource("StandardMaterial3D_j6adh")
 
@@ -202,8 +266,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8525734, 0)
 mesh = SubResource("BoxMesh_22r32")
 material = SubResource("StandardMaterial3D_t3fnf")
 
+[node name="CSGMesh3D57" type="CSGMesh3D" parent="TerrainTest" unique_id=2017177620]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.140546, 1.400253, 3.4392104)
+mesh = SubResource("BoxMesh_4l2uk")
+material = SubResource("StandardMaterial3D_vgw30")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="TerrainTest/CSGMesh3D57" unique_id=64524165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8525734, 0)
+mesh = SubResource("BoxMesh_22r32")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D58" type="CSGMesh3D" parent="TerrainTest" unique_id=1714463687]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.140546, 1.400253, 3.4392104)
+mesh = SubResource("BoxMesh_4l2uk")
+material = SubResource("StandardMaterial3D_vgw30")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="TerrainTest/CSGMesh3D58" unique_id=1278426292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8525734, 0)
+mesh = SubResource("BoxMesh_22r32")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D51" type="CSGMesh3D" parent="TerrainTest" unique_id=1254335343]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.955578, 1.4879048, 0.79505205)
+mesh = SubResource("CylinderMesh_0xqdu")
+material = SubResource("StandardMaterial3D_j6adh")
+
+[node name="CSGMesh3D59" type="CSGMesh3D" parent="TerrainTest" unique_id=1153922452]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.140546, 3.2528265, 7.14469)
+mesh = SubResource("BoxMesh_22r32")
+material = SubResource("StandardMaterial3D_t3fnf")
+
 [node name="CSGMesh3D6" type="CSGMesh3D" parent="TerrainTest" unique_id=1872904792]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 3.3110745, 3.348219)
+mesh = SubResource("BoxMesh_pjmpm")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D31" type="CSGMesh3D" parent="TerrainTest" unique_id=290116765]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.7335448, 0.4008224, 0.08252478)
+mesh = SubResource("BoxMesh_pjmpm")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D48" type="CSGMesh3D" parent="TerrainTest" unique_id=756241308]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 5.7904673, -0.59873414, -5.741524)
+mesh = SubResource("BoxMesh_pjmpm")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D34" type="CSGMesh3D" parent="TerrainTest" unique_id=115851884]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 6.6164103, 0.3552673, 0.08252478)
 mesh = SubResource("BoxMesh_pjmpm")
 material = SubResource("StandardMaterial3D_t3fnf")
 
@@ -213,12 +322,12 @@ mesh = SubResource("BoxMesh_pjmpm")
 material = SubResource("StandardMaterial3D_t3fnf")
 
 [node name="CSGMesh3D25" type="CSGMesh3D" parent="TerrainTest" unique_id=1195316692]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -8.6396675, 1.0888472, -6.5702934)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -9.576139, 0.5084226, -6.7090073)
 mesh = SubResource("BoxMesh_pjmpm")
 material = SubResource("StandardMaterial3D_e1fsn")
 
 [node name="CSGMesh3D14" type="CSGMesh3D" parent="TerrainTest" unique_id=1323665502]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -2.1989064, 2.1468945, 1.3880754)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -2.1989064, 2.3548698, 1.3880754)
 mesh = SubResource("BoxMesh_22r32")
 material = SubResource("StandardMaterial3D_t3fnf")
 
@@ -232,24 +341,124 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.8
 mesh = SubResource("BoxMesh_41a05")
 material = SubResource("StandardMaterial3D_t3fnf")
 
+[node name="CSGMesh3D20" type="CSGMesh3D" parent="TerrainTest" unique_id=782275027]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.447636, 0.22395611, 1.381958)
+mesh = SubResource("BoxMesh_41a05")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D32" type="CSGMesh3D" parent="TerrainTest" unique_id=987962730]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.05440998, 0.22395611, -0.3386593)
+mesh = SubResource("BoxMesh_41a05")
+material = SubResource("StandardMaterial3D_t3fnf")
+
 [node name="CSGMesh3D21" type="CSGMesh3D" parent="TerrainTest" unique_id=1473680971]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.1567335, 0.22395611, -1.2367499)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.327627, 0.22395611, -1.2367499)
 mesh = SubResource("BoxMesh_41a05")
 material = SubResource("StandardMaterial3D_t3fnf")
 
 [node name="CSGMesh3D23" type="CSGMesh3D" parent="TerrainTest" unique_id=100919874]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.1567335, 0.22395611, -5.613592)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.327627, 0.22395611, -5.613592)
 mesh = SubResource("BoxMesh_unkgr")
 material = SubResource("StandardMaterial3D_t3fnf")
 
-[node name="CSGMesh3D24" type="CSGMesh3D" parent="TerrainTest" unique_id=898526505]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -10.480375, 2.495376, -6.826558)
-mesh = SubResource("BoxMesh_m7op7")
+[node name="CSGMesh3D42" type="CSGMesh3D" parent="TerrainTest" unique_id=1126260318]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3.5092816, 0.22395611, -10.243832)
+mesh = SubResource("BoxMesh_unkgr")
 material = SubResource("StandardMaterial3D_t3fnf")
 
-[node name="CSGMesh3D20" type="CSGMesh3D" parent="TerrainTest" unique_id=1455379050]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.2680197, 0.22395611, 7.695112)
-mesh = SubResource("BoxMesh_htwqe")
+[node name="CSGMesh3D43" type="CSGMesh3D" parent="TerrainTest" unique_id=1206839122]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -0.49665785, 0.22395611, -10.243832)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D44" type="CSGMesh3D" parent="TerrainTest" unique_id=674876278]
+transform = Transform3D(0.99999976, -0.00068162626, -1.6331609e-07, 0.00068162614, 0.9999994, 0.00089637656, -4.4767785e-07, -0.00089637644, 0.99999964, 0.70642614, 0.22395611, -8.512335)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D60" type="CSGMesh3D" parent="TerrainTest" unique_id=326089341]
+transform = Transform3D(0.99999976, -0.00068162626, -1.6331609e-07, 0.00068162614, 0.9999994, 0.00089637656, -4.4767785e-07, -0.00089637644, 0.99999964, 0.9947667, -0.67435265, -8.085366)
+mesh = SubResource("CylinderMesh_elb2t")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D52" type="CSGMesh3D" parent="TerrainTest" unique_id=1160577119]
+transform = Transform3D(0.99999976, -0.00068162626, -1.6331609e-07, 0.00068162614, 0.9999994, 0.00089637656, -4.4767785e-07, -0.00089637644, 0.99999964, 13.104725, 0.22395611, 2.5645547)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D56" type="CSGMesh3D" parent="TerrainTest" unique_id=2140232003]
+transform = Transform3D(0.99999976, -0.00068162626, -1.6331609e-07, 0.00068162614, 0.9999994, 0.00089637656, -4.4767785e-07, -0.00089637644, 0.99999964, 1.4017577, 1.936501, 3.0946846)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_btstg")
+
+[node name="CSGMesh3D53" type="CSGMesh3D" parent="TerrainTest" unique_id=1794764551]
+transform = Transform3D(4.0396642e-07, 0.00089637644, -0.99999964, 0.00068162614, 0.9999995, 0.0008963767, 0.9999999, -0.00068162626, -2.0702757e-07, 11.166885, 0.22395611, 3.8553843)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D55" type="CSGMesh3D" parent="TerrainTest" unique_id=195589737]
+transform = Transform3D(4.0396642e-07, 0.00089637644, -0.99999964, 0.00068162614, 0.9999995, 0.0008963767, 0.9999999, -0.00068162626, -2.0702757e-07, 8.271032, 0.22395611, 3.8553843)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_cjc3e")
+
+[node name="CSGMesh3D45" type="CSGMesh3D" parent="TerrainTest" unique_id=360846794]
+transform = Transform3D(0.99999976, -0.00068162626, -1.6331609e-07, 0.00068162614, 0.9999994, 0.00089637656, -4.4767785e-07, -0.00089637644, 0.99999964, 0.70642614, 0.22395611, -6.9542046)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D46" type="CSGMesh3D" parent="TerrainTest" unique_id=1085323780]
+transform = Transform3D(-4.913892e-07, -0.00089637644, 0.99999964, 0.00068162614, 0.9999995, 0.0008963767, -0.9999999, 0.00068162626, 1.1960469e-07, 2.5206542, 0.22395611, -5.7211018)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D47" type="CSGMesh3D" parent="TerrainTest" unique_id=811550367]
+transform = Transform3D(-4.913892e-07, -0.00089637644, 0.99999964, 0.00068162614, 0.9999995, 0.0008963767, -0.9999999, 0.00068162626, 1.1960469e-07, 4.139611, 0.22395611, -5.7211018)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D28" type="CSGMesh3D" parent="TerrainTest" unique_id=1757415747]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.327627, 0.22395611, -8.514572)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D37" type="CSGMesh3D" parent="TerrainTest" unique_id=1899334441]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.575946, -0.63436794, -4.007499)
+mesh = SubResource("BoxMesh_r4rhq")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D29" type="CSGMesh3D" parent="TerrainTest" unique_id=689795587]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.327627, 0.22395611, -11.509402)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D49" type="CSGMesh3D" parent="TerrainTest" unique_id=992810627]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.2756987, 0.22395611, -13.4673605)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D30" type="CSGMesh3D" parent="TerrainTest" unique_id=737065787]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -5.1848955, 0.22395611, -10.231032)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D41" type="CSGMesh3D" parent="TerrainTest" unique_id=1322438414]
+transform = Transform3D(9.272585e-08, 0.70710677, 0.70710677, -9.272585e-08, 0.70710677, -0.70710677, -1, 0, 1.3113416e-07, 6.6450453, 0.96539795, -3.7477837)
+mesh = SubResource("BoxMesh_unkgr")
+material = SubResource("StandardMaterial3D_adm7q")
+
+[node name="CSGMesh3D38" type="CSGMesh3D" parent="TerrainTest" unique_id=720356377]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 10.11629, -0.71086025, -7.8096795)
+mesh = SubResource("BoxMesh_1pso7")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D50" type="CSGMesh3D" parent="TerrainTest" unique_id=696087957]
+transform = Transform3D(-0.99984264, -0.004892754, -0.017053217, -0.0050531644, 0.99994344, 0.0093755275, 0.01700641, 0.009460241, -0.9998107, 13.415164, -0.71086025, -11.414072)
+mesh = SubResource("BoxMesh_1pso7")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D24" type="CSGMesh3D" parent="TerrainTest" unique_id=898526505]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -11.707269, 1.4392662, -6.826558)
+mesh = SubResource("BoxMesh_m7op7")
 material = SubResource("StandardMaterial3D_t3fnf")
 
 [node name="CSGMesh3D13" type="CSGMesh3D" parent="TerrainTest" unique_id=1849390822]
@@ -286,7 +495,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46709728, 2.2672668, 7.806
 size = Vector3(0.3, 0.6, 0.6)
 
 [node name="CloseVisual4" type="CSGBox3D" parent="TerrainTest" unique_id=1163148942]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8228235, 0.3504238, 1.4016161)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.3321667, 0.3504238, 0.95747733)
+size = Vector3(0.3, 0.6, 0.6)
+
+[node name="CloseVisual5" type="CSGBox3D" parent="TerrainTest" unique_id=1088218421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9826785, 0.3504238, -10.255087)
+size = Vector3(0.3, 0.6, 0.6)
+
+[node name="CloseVisual6" type="CSGBox3D" parent="TerrainTest" unique_id=600839623]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.184967, 3.5572371, 1.7847826)
 size = Vector3(0.3, 0.6, 0.6)
 
 [node name="CloseVisual2" type="CSGBox3D" parent="TerrainTest" unique_id=1203247888]
@@ -296,6 +513,16 @@ size = Vector3(0.3, 0.6, 0.6)
 [node name="CSGMesh3D19" type="CSGMesh3D" parent="TerrainTest" unique_id=1247859004]
 transform = Transform3D(-0.99998707, 0, 0.005096283, 0, 1, 0, -0.005096283, 0, -0.99998707, -4.5921855, 0.22114563, 2.327622)
 mesh = SubResource("BoxMesh_kdrw2")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D33" type="CSGMesh3D" parent="TerrainTest" unique_id=939986772]
+transform = Transform3D(-0.99998707, 0, 0.005096283, 0, 1, 0, -0.005096283, 0, -0.99998707, -2.7776275, 0.22114563, 0.49972367)
+mesh = SubResource("BoxMesh_kdrw2")
+material = SubResource("StandardMaterial3D_t3fnf")
+
+[node name="CSGMesh3D27" type="CSGMesh3D" parent="TerrainTest" unique_id=87211693]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.068729, 0.1910435, -6.731389)
+mesh = SubResource("BoxMesh_i8sri")
 material = SubResource("StandardMaterial3D_t3fnf")
 
 [node name="RotatingNode3D" type="Node3D" parent="TerrainTest" unique_id=299065141]
@@ -311,7 +538,16 @@ sides = 5
 transform = Transform3D(0.4064763, -0.91338956, -0.022281066, -0.90800524, -0.40113056, -0.12091674, 0.10150644, 0.0693811, -0.9924127, -10.831448, 1.1803703, -6.8673625)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="TerrainTest/RotatingNode3D2" unique_id=1376229122]
-transform = Transform3D(1, 7.450581e-09, -3.8649887e-08, 1.3038516e-08, -5.2154064e-08, -1, 7.450581e-09, 1, -5.2154064e-08, -2.0349255, -0.89897156, -0.2709856)
+transform = Transform3D(1, 2.2351742e-08, -3.8649887e-08, 1.21071935e-08, -8.195639e-08, -1, 2.2351742e-08, 1, -5.2154064e-08, -1.574676, 0.645298, -0.11594868)
+radius = 1.0
+height = 0.1
+sides = 5
+
+[node name="RotatingNode3D3" type="Node3D" parent="TerrainTest" unique_id=639903524]
+transform = Transform3D(0.4064763, -0.91338956, -0.022281066, -0.90800524, -0.40113056, -0.12091674, 0.10150644, 0.0693811, -0.9924127, 11.128993, -1.0347452, -7.689467)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="TerrainTest/RotatingNode3D3" unique_id=1940021262]
+transform = Transform3D(1, 2.2351742e-08, -3.8649887e-08, 1.21071935e-08, -8.195639e-08, -1, 2.2351742e-08, 1, -5.2154064e-08, -1.574676, 0.645298, -0.11594868)
 radius = 1.0
 height = 0.1
 sides = 5
