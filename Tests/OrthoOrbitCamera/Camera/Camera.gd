@@ -1,5 +1,7 @@
 extends Camera3D
 
+const zoom_tween_duration : float = 0.2 # 0.1
+
 ###############################################################################
 ###############################################################################
 ## SECTION: Public Member Variables ###########################################
@@ -12,6 +14,7 @@ var tilt : float = 0 # UNIT: Radians
 var ortho_scale_min : float = 0.1 # UNIT: m
 var ortho_scale_max : float = 4.0 # UNIT: m
 var ortho_scale_default : float = 4.0 # UNIT: m
+var ortho_scale_requested : float = self.ortho_scale_default # UNIT: m
 
 ###############################################################################
 ###############################################################################
@@ -19,17 +22,13 @@ var ortho_scale_default : float = 4.0 # UNIT: m
 ###############################################################################
 ###############################################################################
 var _ortho_scale_last : float = self.ortho_scale_default # UNIT: m
-var _ortho_scale_requested : float = self.ortho_scale_default # UNIT: m
-
-var zoom_tween:Tween
-const zoom_tween_duration:float = 0.1
+var _zoom_tween : Tween
 
 ###############################################################################
 ###############################################################################
 ## SECTION: Private Member Functions ##########################################
 ###############################################################################
 ###############################################################################
-
 func _update_tilt() -> void:
 	self.rotation.x = self.tilt
 
@@ -37,16 +36,31 @@ func _update_position() -> void:
 	self.position.z = self.radial_offset
 	self.position.y = self.vertical_offset
 
-func _manage_zoom(_delta : float) -> void:
-	_ortho_scale_requested = clamp(_ortho_scale_requested, ortho_scale_min, ortho_scale_max)
-	if _ortho_scale_last != _ortho_scale_requested:
-		_ortho_scale_last = _ortho_scale_requested
+###############################################################################
+###############################################################################
+## SECTION: Public Member Functions ###########################################
+###############################################################################
+###############################################################################
+func manage_zoom(_delta : float) -> void:
+	# DESCRIPTION: Make sure that the requested ortho scale is within the range
+	ortho_scale_requested = clamp(
+		ortho_scale_requested, ortho_scale_min, ortho_scale_max
+	)
+
+	# DESCRIPTION: If the last scale is different to the requested one, create
+	# a tweened transition.
+	if _ortho_scale_last != ortho_scale_requested:
+		_ortho_scale_last = ortho_scale_requested
 		
-		if zoom_tween != null and zoom_tween.is_running():
-			zoom_tween.stop()
-			
-		zoom_tween = create_tween()
-		zoom_tween.tween_property(self, "size", _ortho_scale_last, zoom_tween_duration)
+		# DESCRIPTION: Make sure that tween is not already running
+		if _zoom_tween != null and _zoom_tween.is_running():
+			_zoom_tween.stop()
+		
+		# DESCRIPTION: Create, configure and start tween
+		_zoom_tween = create_tween()
+		_zoom_tween.tween_property(
+			self, "size", ortho_scale_requested, zoom_tween_duration
+		)
 
 ###############################################################################
 ###############################################################################
@@ -88,7 +102,6 @@ func get_tilt() -> float:
 ## SECTION: Public Member Functions ###########################################
 ###############################################################################
 ###############################################################################
-
 func initialize(a_data : Dictionary) -> void:
 	print("Camera init")
 	if a_data.has("radial_offset"):
@@ -117,7 +130,7 @@ func initialize(a_data : Dictionary) -> void:
 func _ready() -> void:
 	# DESCRIPTION: Initialize the current and last orthographic scale values
 	self._ortho_scale_last = self.ortho_scale_default
-	self._ortho_scale_requested = self.ortho_scale_default
+	self.ortho_scale_requested = self.ortho_scale_default
 
 	# DESCRIPTION: Set default orthographic scale
 	self.set_zoom_level(self.ortho_scale_default)
