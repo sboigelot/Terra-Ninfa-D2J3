@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://0duqpkvibc7t"]
+
+[ext_resource type="Script" uid="uid://bufviy28tvkhc" path="res://Tests/TestSfx.gd" id="1_fjyqj"]
+
+[node name="TestSfx" type="Node2D" unique_id=1344135313]
+script = ExtResource("1_fjyqj")
+
+[node name="Button" type="Button" parent="." unique_id=1264917262]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Test Sfx"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

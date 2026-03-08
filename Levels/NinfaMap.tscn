@@ -9,6 +9,8 @@
 [ext_resource type="Material" uid="uid://c6qjsy8br0scm" path="res://Assets/Materials/canal.material" id="7_6a6ga"]
 [ext_resource type="Script" uid="uid://crrnkhbt4x72v" path="res://GameObjects/Water/WaterNode3D.gd" id="8_22r32"]
 [ext_resource type="Material" uid="uid://c5ess1c63dadr" path="res://GameObjects/Water/default_water_material.material" id="9_pjmpm"]
+[ext_resource type="Script" uid="uid://c7kn8otnohjaf" path="res://GameObjects/Mechanisms/WaterRooter.gd" id="10_pjmpm"]
+[ext_resource type="Script" uid="uid://u7qd4pgx4od8" path="res://GameObjects/Mechanisms/WarerGate.gd" id="10_tnwec"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wsxap"]
 sky_top_color = Color(0.6388706, 0.70131785, 0.7848583, 1)
@@ -198,6 +200,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AACgQAAAgL8AAIA/AACgQAAAAAAAAKBAAACgQAAAgL8AAEBAAACgQAAAAAAAAIA/AACgQAAAAAAAAKBAAACgQAAAgL8AAIA/AAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f///AAAAAP9///8AAAAA/3///wAA")
 }]
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tnwec"]
+data = PackedVector3Array(-0.1, -0.2, 0.325, -0.1, -0.2, -0.325, -0.1, 0.2, -0.325, 0.1, -0.2, -0.325, -0.1, -0.2, -0.325, -0.1, -0.2, 0.325, -0.1, 0.2, -0.325, -0.1, -0.2, -0.325, 0.1, -0.2, -0.325, -0.1, 0.2, -0.325, -0.1, 0.2, 0.325, -0.1, -0.2, 0.325, -0.1, -0.2, 0.325, -0.1, 0.2, 0.325, 0.1, 0.2, 0.325, 0.1, 0.2, 0.325, -0.1, 0.2, 0.325, -0.1, 0.2, -0.325, -0.1, -0.2, 0.325, 0.1, -0.2, 0.325, 0.1, -0.2, -0.325, 0.1, 0.2, 0.325, 0.1, -0.2, 0.325, -0.1, -0.2, 0.325, 0.1, -0.2, -0.325, 0.1, -0.2, 0.325, 0.1, 0.2, 0.325, 0.1, -0.2, -0.325, 0.1, 0.2, -0.325, -0.1, 0.2, -0.325, -0.1, 0.2, -0.325, 0.1, 0.2, -0.325, 0.1, 0.2, 0.325, 0.1, 0.2, 0.325, 0.1, 0.2, -0.325, 0.1, -0.2, -0.325)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pjmpm"]
+data = PackedVector3Array(-0.7071068, -0.25, -0.7071067, -0.9238795, -0.25, -0.38268343, 0, -0.25, 0, -0.9238795, -0.25, -0.38268343, -1, -0.25, -8.742278e-08, 0, -0.25, 0, -0.9238795, -0.25, -0.38268343, -0.7071068, -0.25, -0.7071067, -0.7071068, 0.25, -0.7071067, -1, -0.25, -8.742278e-08, -0.9238795, -0.25, -0.38268343, -0.9238795, 0.25, -0.38268343, -0.38268358, -0.25, -0.9238795, -0.7071068, -0.25, -0.7071067, 0, -0.25, 0, 1.1924881e-08, -0.25, -1, -0.38268358, -0.25, -0.9238795, 0, -0.25, 0, -0.7071068, -0.25, -0.7071067, -0.38268358, -0.25, -0.9238795, -0.38268358, 0.25, -0.9238795, -0.38268358, -0.25, -0.9238795, 1.1924881e-08, -0.25, -1, 1.1924881e-08, 0.25, -1, -1, -0.25, -8.742278e-08, -0.9238795, -0.25, 0.3826835, 0, -0.25, 0, -0.9238795, -0.25, 0.3826835, -0.70710677, -0.25, 0.70710677, 0, -0.25, 0, -0.9238795, -0.25, 0.3826835, -1, -0.25, -8.742278e-08, -1, 0.25, -8.742278e-08, -0.70710677, -0.25, 0.70710677, -0.9238795, -0.25, 0.3826835, -0.9238795, 0.25, 0.3826835, -0.3826834, -0.25, 0.92387956, -0.70710677, -0.25, 0.70710677, -0.70710677, 0.25, 0.70710677, -0.70710677, -0.25, 0.70710677, -0.3826834, -0.25, 0.92387956, 0, -0.25, 0, -0.3826834, -0.25, 0.92387956, -4.371139e-08, -0.25, 1, 0, -0.25, 0, -4.371139e-08, -0.25, 1, -0.3826834, -0.25, 0.92387956, -0.3826834, 0.25, 0.92387956, -0.38268358, 0.25, -0.9238795, -0.7071068, 0.25, -0.7071067, -0.7071068, -0.25, -0.7071067, -0.7071068, 0.25, -0.7071067, -0.9238795, 0.25, -0.38268343, -0.9238795, -0.25, -0.38268343, -0.9238795, 0.25, -0.38268343, -1, 0.25, -8.742278e-08, -1, -0.25, -8.742278e-08, -0.9238795, 0.25, -0.38268343, -0.7071068, 0.25, -0.7071067, 0, 0.25, 0, -1, 0.25, -8.742278e-08, -0.9238795, 0.25, -0.38268343, 0, 0.25, 0, 1.1924881e-08, 0.25, -1, -0.38268358, 0.25, -0.9238795, -0.38268358, -0.25, -0.9238795, -0.7071068, 0.25, -0.7071067, -0.38268358, 0.25, -0.9238795, 0, 0.25, 0, -0.38268358, 0.25, -0.9238795, 1.1924881e-08, 0.25, -1, 0, 0.25, 0, -1, 0.25, -8.742278e-08, -0.9238795, 0.25, 0.3826835, -0.9238795, -0.25, 0.3826835, -0.9238795, 0.25, 0.3826835, -0.70710677, 0.25, 0.70710677, -0.70710677, -0.25, 0.70710677, -0.9238795, 0.25, 0.3826835, -1, 0.25, -8.742278e-08, 0, 0.25, 0, -0.70710677, 0.25, 0.70710677, -0.9238795, 0.25, 0.3826835, 0, 0.25, 0, -0.70710677, 0.25, 0.70710677, -0.3826834, 0.25, 0.92387956, -0.3826834, -0.25, 0.92387956, -0.3826834, 0.25, 0.92387956, -4.371139e-08, 0.25, 1, -4.371139e-08, -0.25, 1, -0.3826834, 0.25, 0.92387956, -0.70710677, 0.25, 0.70710677, 0, 0.25, 0, -4.371139e-08, 0.25, 1, -0.3826834, 0.25, 0.92387956, 0, 0.25, 0, 0.3826836, -0.25, -0.92387944, 1.1924881e-08, -0.25, -1, 0, -0.25, 0, 0.70710665, -0.25, -0.7071069, 0.3826836, -0.25, -0.92387944, 0, -0.25, 0, 1.1924881e-08, -0.25, -1, 0.3826836, -0.25, -0.92387944, 0.3826836, 0.25, -0.92387944, 0.92387956, -0.25, -0.38268343, 0.70710665, -0.25, -0.7071069, 0, -0.25, 0, 1, -0.25, 0, 0.92387956, -0.25, -0.38268343, 0, -0.25, 0, 0.3826836, -0.25, -0.92387944, 0.70710665, -0.25, -0.7071069, 0.70710665, 0.25, -0.7071069, 0.70710665, -0.25, -0.7071069, 0.92387956, -0.25, -0.38268343, 0.92387956, 0.25, -0.38268343, 0.92387956, -0.25, -0.38268343, 1, -0.25, 0, 1, 0.25, 0, -4.371139e-08, -0.25, 1, 0.38268343, -0.25, 0.9238795, 0, -0.25, 0, 0.38268343, -0.25, 0.9238795, 0.70710677, -0.25, 0.70710677, 0, -0.25, 0, 0.38268343, -0.25, 0.9238795, -4.371139e-08, -0.25, 1, -4.371139e-08, 0.25, 1, 0.70710677, -0.25, 0.70710677, 0.38268343, -0.25, 0.9238795, 0.38268343, 0.25, 0.9238795, 0.9238795, -0.25, 0.38268346, 1, -0.25, 0, 0, -0.25, 0, 0.70710677, -0.25, 0.70710677, 0.9238795, -0.25, 0.38268346, 0, -0.25, 0, 1, -0.25, 0, 0.9238795, -0.25, 0.38268346, 0.9238795, 0.25, 0.38268346, 0.9238795, -0.25, 0.38268346, 0.70710677, -0.25, 0.70710677, 0.70710677, 0.25, 0.70710677, 0.3826836, 0.25, -0.92387944, 1.1924881e-08, 0.25, -1, 1.1924881e-08, -0.25, -1, 0.70710665, 0.25, -0.7071069, 0.3826836, 0.25, -0.92387944, 0.3826836, -0.25, -0.92387944, 1.1924881e-08, 0.25, -1, 0.3826836, 0.25, -0.92387944, 0, 0.25, 0, 0.3826836, 0.25, -0.92387944, 0.70710665, 0.25, -0.7071069, 0, 0.25, 0, 0.92387956, 0.25, -0.38268343, 0.70710665, 0.25, -0.7071069, 0.70710665, -0.25, -0.7071069, 1, 0.25, 0, 0.92387956, 0.25, -0.38268343, 0.92387956, -0.25, -0.38268343, 0.70710665, 0.25, -0.7071069, 0.92387956, 0.25, -0.38268343, 0, 0.25, 0, 0.92387956, 0.25, -0.38268343, 1, 0.25, 0, 0, 0.25, 0, -4.371139e-08, 0.25, 1, 0.38268343, 0.25, 0.9238795, 0.38268343, -0.25, 0.9238795, 0.38268343, 0.25, 0.9238795, -4.371139e-08, 0.25, 1, 0, 0.25, 0, 0.70710677, 0.25, 0.70710677, 0.38268343, 0.25, 0.9238795, 0, 0.25, 0, 0.9238795, 0.25, 0.38268346, 1, 0.25, 0, 1, -0.25, 0, 0.70710677, 0.25, 0.70710677, 0.9238795, 0.25, 0.38268346, 0.9238795, -0.25, 0.38268346, 0.38268343, 0.25, 0.9238795, 0.70710677, 0.25, 0.70710677, 0.70710677, -0.25, 0.70710677, 1, 0.25, 0, 0.9238795, 0.25, 0.38268346, 0, 0.25, 0, 0.9238795, 0.25, 0.38268346, 0.70710677, 0.25, 0.70710677, 0, 0.25, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a6ga"]
 albedo_color = Color(0.25, 0.25, 0.25, 1)
 
@@ -214,7 +222,7 @@ directional_shadow_mode = 0
 transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, 0, 5.189912, 0)
 script = ExtResource("2_elb2t")
 camera = NodePath("ToolCamera3D2")
-camera_position = Vector3(75, 45, -15)
+camera_position = Vector3(63.865814, 45.091053, -12.278686)
 camera_rotation = Vector3(0.61086524, -1.7627826, 0)
 size_max = 50.0
 size = 25.0
@@ -223,7 +231,7 @@ camera_rotation_keyboard_speed = 1.5
 metadata/_custom_type_script = "uid://co0xkfphq1e30"
 
 [node name="ToolCamera3D2" type="Camera3D" parent="NinfaCameraController" unique_id=1897780768]
-transform = Transform3D(-0.19080903, -0.56303823, 0.8041019, 0, 0.81915206, 0.57357645, -0.98162717, 0.10944357, -0.1563016, 75, 45, -15)
+transform = Transform3D(-0.19080903, -0.56303823, 0.8041019, 0, 0.81915206, 0.57357645, -0.98162717, 0.10944357, -0.1563016, 63.865814, 45.091053, -12.278686)
 fov = 25.0
 size = 30.0
 script = ExtResource("3_8rtkp")
@@ -634,11 +642,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.4608574, 0)
 size = Vector3(30, 5, 30)
 material = ExtResource("4_t3fnf")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/LandBase/BottomGroundLayer" unique_id=576916075]
-script = ExtResource("8_22r32")
-water_size = Vector3(30, 5, 30)
-material = ExtResource("9_pjmpm")
-
 [node name="BottomDarkGrassLayer" type="CSGCombiner3D" parent="Terrain/CSGCombiner3D/LandBase" unique_id=1409246558]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.75, 0)
 
@@ -778,19 +781,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6000001, 4.85, 0)
 size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D" unique_id=1427242570]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D" unique_id=1427242570 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../Fall/water_node")]
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D32" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=1838557368]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7940386, 4.85, -1.473496)
-size = Vector3(1, 0.31, 0.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7129534, 4.85, -1.473496)
+size = Vector3(0.8378296, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D32" unique_id=553393935]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D32" unique_id=1884271616 node_paths=PackedStringArray("mechanisms")]
 script = ExtResource("8_22r32")
-water_size = Vector3(1, 0.31, 0.6)
+flowing = true
+mechanisms = [NodePath("../../../../../Mecanisms/WaterGate")]
+water_size = Vector3(0.8378296, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D33" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=747188729]
@@ -798,8 +804,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 4
 size = Vector3(1.4, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D33" unique_id=1054890799]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D33" unique_id=1054890799 node_paths=PackedStringArray("mechanisms")]
 script = ExtResource("8_22r32")
+mechanisms = [NodePath("../../../../../Mecanisms/WaterRooter")]
 water_size = Vector3(1.4, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -808,8 +815,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.767351, -0.15, 0)
 size = Vector3(12.529297, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D4" unique_id=1491117231]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D4" unique_id=1491117231 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../FallOffMap2/water_node")]
 water_size = Vector3(12.529297, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -898,8 +906,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 4
 size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D2" unique_id=72245591]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D2" unique_id=72245591 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../Fall4/water_node")]
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -908,8 +917,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1
 size = Vector3(5.7216034, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D5" unique_id=1516884490]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D5" unique_id=1516884490 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../CSGBox3D6/water_node")]
 water_size = Vector3(5.7216034, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -944,7 +954,7 @@ water_size = Vector3(3.6000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D23" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=942287233]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7, 4.1, 0.024406824)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7, 4.1, 0.012421643)
 size = Vector3(3, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -954,7 +964,7 @@ water_size = Vector3(3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D28" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=1397857135]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 4.1, 0.024406824)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 4.1, 0.012421643)
 size = Vector3(3, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -964,7 +974,7 @@ water_size = Vector3(3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D29" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=1745420840]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10, 4.1, 0.024406824)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10, 4.1, 0.012421643)
 size = Vector3(3, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -974,7 +984,7 @@ water_size = Vector3(3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=359730734]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.4, 2.7999997, 0.024406772)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.4, 2.7999997, 0.012421591)
 size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -994,7 +1004,7 @@ water_size = Vector3(1.0147705, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D26" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=827361090]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.367625, 2.7999997, 0.024406772)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.367625, 2.7999997, 0.012421591)
 size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -1058,8 +1068,9 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.3
 size = Vector3(15.3, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D6" unique_id=62806638]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D6" unique_id=62806638 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../FallOffMap3/water_node")]
 water_size = Vector3(15.3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1118,22 +1129,24 @@ water_size = Vector3(7.610315, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=94825777]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.0008135, -0.15, -1.247852)
-size = Vector3(0.5511719, 0.31, 0.6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.0008135, -0.15, -1.3803349)
+size = Vector3(0.28620607, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D21" unique_id=668362634]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D21" unique_id=1462609814]
 script = ExtResource("8_22r32")
-water_size = Vector3(0.5511719, 0.31, 0.6)
+water_size = Vector3(0.28620607, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
+falling_water = true
 
 [node name="Fall" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=537333519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5953047, 2.3958006, 0)
 size = Vector3(0.31, 5.2000003, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall" unique_id=1156282576]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall" unique_id=1156282576 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../CSGBox3D4/water_node"), NodePath("../../CSGBox3D10/water_node")]
 water_size = Vector3(0.31, 5.2000003, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1259,6 +1272,17 @@ water_size = Vector3(0.31, 3.9, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
 
+[node name="Fall10" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=715661103]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.005368, 1.3073364, -1.1000003)
+size = Vector3(0.31, 3.224341, 0.6)
+material = ExtResource("7_6a6ga")
+
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall10" unique_id=1480267337]
+script = ExtResource("8_22r32")
+water_size = Vector3(0.31, 3.224341, 0.6)
+material = ExtResource("9_pjmpm")
+falling_water = true
+
 [node name="Fall9" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=1568302836]
 transform = Transform3D(-0.99999994, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -0.99999994, 8.793588, -0.55419946, -8.066664)
 size = Vector3(0.31, 1.1, 0.59296876)
@@ -1271,7 +1295,7 @@ material = ExtResource("9_pjmpm")
 falling_water = true
 
 [node name="Fall2" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=948299271]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5734372, 3.8458009, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5734372, 3.8458009, 0.011985181)
 size = Vector3(0.31, 2.3, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -1286,14 +1310,15 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3
 size = Vector3(0.31, 3.3, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall4" unique_id=1007071644]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall4" unique_id=1007071644 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../CSGBox3D5/water_node")]
 water_size = Vector3(0.31, 3.3, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
 
 [node name="Fall6" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=334463710]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.09527464, 2.5958009, 7.254243)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.1569251, 2.5958009, 7.254243)
 size = Vector3(0.31, 1.8000001, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -1304,7 +1329,7 @@ material = ExtResource("9_pjmpm")
 falling_water = true
 
 [node name="Fall3" type="CSGBox3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=2017149887]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.673437, 3.4458008, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.673437, 3.4458008, 0.011985181)
 size = Vector3(0.31, 1.5, 0.6)
 material = ExtResource("7_6a6ga")
 
@@ -1325,6 +1350,20 @@ water_size = Vector3(0.31, 1.0631714, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
 
+[node name="SourceCSGCylinder3D5" type="CSGCylinder3D" parent="Terrain/CSGCombiner3D/Canals" unique_id=2056347506]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 1.5216628, 4.85, -1.47135)
+height = 0.31
+sides = 16
+material = ExtResource("7_6a6ga")
+
+[node name="source_water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/SourceCSGCylinder3D5" unique_id=270994287 node_paths=PackedStringArray("downstream")]
+script = ExtResource("8_22r32")
+flowing = true
+downstream = [NodePath("../../CSGBox3D32/water_node")]
+water_size = Vector3(1, 0.29, 1)
+material = ExtResource("9_pjmpm")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Terrain" unique_id=1428181409]
 visible = false
 shape = SubResource("ConcavePolygonShape3D_hf6v2")
@@ -1335,16 +1374,21 @@ mesh = SubResource("ArrayMesh_e1fsn")
 
 [node name="Waters" type="Node3D" parent="." unique_id=1937604549]
 
+[node name="SourceWaterNode3D" type="Node3D" parent="Waters" unique_id=1489679853]
+script = ExtResource("8_22r32")
+material = ExtResource("9_pjmpm")
+metadata/_custom_type_script = "uid://crrnkhbt4x72v"
+
 [node name="lake_water_node" type="Node3D" parent="Waters" unique_id=2096743608]
 transform = Transform3D(0.9277842, 0, -0.37311727, 0, 1, 0, 0.37311727, 0, 0.9277842, 2.9738781, -0.15, -8.551546)
 script = ExtResource("8_22r32")
-flowing = true
 water_size = Vector3(6.64, 0.29, 6.7)
 material = ExtResource("9_pjmpm")
 
 [node name="water_node" type="Node3D" parent="Waters" unique_id=997135057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.1000001, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.780328, 0)
 script = ExtResource("8_22r32")
+flowing = true
 water_size = Vector3(2.5, 4.2000003, 2.5)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1355,13 +1399,47 @@ falling_water = true
 
 [node name="Mecanisms" type="Node3D" parent="." unique_id=1458215954]
 
-[node name="TopTurnTable" type="Node3D" parent="Mecanisms" unique_id=1591178709]
+[node name="WaterGate" type="Node3D" parent="Mecanisms" unique_id=1353394419 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41009066, 4.9322643, -1.5)
+script = ExtResource("10_tnwec")
+downstream = [NodePath("../../Terrain/CSGCombiner3D/Canals/CSGBox3D33/water_node")]
+gate_visual_open = NodePath("Area3D/OpenVisual")
+gate_visual_close = NodePath("Area3D/CloseVisual")
+mouse_control_area = NodePath("Area3D")
+metadata/_custom_type_script = "uid://u7qd4pgx4od8"
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Mecanisms/TopTurnTable" unique_id=1680660407]
+[node name="Area3D" type="Area3D" parent="Mecanisms/WaterGate" unique_id=1221953801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021960974, -0.1, 0.020236492)
+
+[node name="OpenVisual" type="CSGBox3D" parent="Mecanisms/WaterGate/Area3D" unique_id=1106690041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12553722, 0)
+visible = false
+size = Vector3(0.2, 0.05, 0.65)
+
+[node name="CloseVisual" type="CSGBox3D" parent="Mecanisms/WaterGate/Area3D" unique_id=1556734561]
+size = Vector3(0.2, 0.4, 0.65)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Mecanisms/WaterGate/Area3D" unique_id=819587924]
+shape = SubResource("ConcavePolygonShape3D_tnwec")
+
+[node name="WaterRooter" type="Node3D" parent="Mecanisms" unique_id=210180083 node_paths=PackedStringArray("downstream", "mouse_control_area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+script = ExtResource("10_pjmpm")
+allow_no_output = true
+output_index = -1
+downstream = [NodePath("../../Terrain/CSGCombiner3D/Canals/CSGBox3D3/water_node"), NodePath("../../Terrain/CSGCombiner3D/Canals/CSGBox3D2/water_node"), NodePath("../../Terrain/CSGCombiner3D/Canals/CSGBox3D/water_node")]
+mouse_control_area = NodePath("Area3D")
+metadata/_custom_type_script = "uid://c7kn8otnohjaf"
+
+[node name="Area3D" type="Area3D" parent="Mecanisms/WaterRooter" unique_id=276288382]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Mecanisms/WaterRooter/Area3D" unique_id=1680660407]
 radius = 1.0
 height = 0.5
 sides = 16
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Mecanisms/WaterRooter/Area3D" unique_id=1414162450]
+shape = SubResource("ConcavePolygonShape3D_pjmpm")
 
 [node name="DigSite" type="Node3D" parent="Mecanisms" unique_id=1214953215]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6000004, 0, -6.4)
@@ -1384,7 +1462,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3266163, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Mecanisms/Aquaduct/Part1" unique_id=1088239825]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5012107, 2.0000002, -0.002688408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4998152, 2.0000007, 0.0028071404)
 size = Vector3(3, 4, 2)
 
 [node name="Part2" type="Node3D" parent="Mecanisms/Aquaduct" unique_id=1761862378]
@@ -1408,12 +1486,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2, 0)
 radius = 2.0
 height = 4.0
-sides = 12
+sides = 10
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Mecanisms/Aquaduct/Reservoir/CSGBox3D" unique_id=852197939]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10000014, 0)
+[node name="CSGBox3D" type="CSGCylinder3D" parent="Mecanisms/Aquaduct/Reservoir/CSGBox3D" unique_id=211241240]
 operation = 2
-size = Vector3(2.5, 4.2000003, 2.5)
+radius = 1.16
+height = 4.0
+sides = 10
 
 [node name="Part4" type="Node3D" parent="Mecanisms/Aquaduct" unique_id=947226244]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9, 0, 3.2)

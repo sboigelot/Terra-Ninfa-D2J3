@@ -19,36 +19,6 @@ func add_players(value:int)->void:
 		players.append(player)
 		add_child(player)
 
-func load_samples(list:Array)->void:											# Let the manager handle loading sample - async if possible
-	var samples:Array
-	if loader.can_async:
-		samples = await loader.load_start( list )
-	else:
-		samples = (await loader.load_start( list ))[0]
-	for sample in samples:
-		var key:String = sample.get_path().get_file().get_basename()
-		if !sample_dictionary.has(key):
-			sample_collection.append(sample)
-			sample_dictionary[key] = sample_collection.size() -1
-		else:
-			print("SFXmanager already has: ", key)
-
-func add_samples(list:Array)->void:												# You handle loading and just add already loaded sample
-	for sample in list:
-		var key:String = sample.get_path().get_file().get_basename()
-		sample_collection.append(sample)
-		sample_dictionary[key] = sample_collection.size() -1
-
-func remove_samples(list:Array)->void:											# Clear up memory if there are unnecessary samples loaded
-	var array_positions: = []
-	for key in list:
-		array_positions.append(sample_dictionary[key])
-		sample_dictionary.erase(key)
-	array_positions.sort()
-	array_positions.reverse()
-	for i in array_positions:
-		sample_collection.remove_at(i)
-
 func _ready():																	# Add to database all samples preloaded in the Inspector
 	for i in sample_collection.size():
 		var sample:AudioStreamOggVorbis = sample_collection[i]						# RefCounted sample
@@ -80,7 +50,6 @@ func play(sample_name:String)->void:
 			player.stream = sample_collection[ sample_dictionary[sample_name] ]
 			player.play()
 			player.connect("finished", Callable(self, "sample_finished").bind(sample_name))
-
 
 func sample_finished(sample_name:String)->void:									# Triggered when player is finished sample and not retriggered while playing.
 	var player:AudioStreamPlayer = active_players[sample_name]
