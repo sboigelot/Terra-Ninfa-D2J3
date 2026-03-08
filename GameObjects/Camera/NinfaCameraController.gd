@@ -3,7 +3,6 @@ class_name NinfaCameraController
 extends Node3D
 
 @export var camera:ToolCamera3D
-@export var camera_focus:Marker3D
 
 @export_category("Camera Position")
 @export var camera_position : Vector3:
@@ -14,13 +13,13 @@ extends Node3D
 		if camera == null: return Vector3.ZERO
 		return camera.position
 		
-@export_range(0, 90, 0.1) var tilt : float = 0:
+@export var camera_rotation : Vector3:
 	set(value):
 		if camera == null: return
-		camera.rotation_degrees.x = -value
+		camera.rotation = value
 	get():
-		if camera == null: return 0
-		return -camera.rotation_degrees.x
+		if camera == null: return Vector3.ZERO
+		return -camera.rotation
 
 @export_category("Camera Zoom")
 @export_range(0, 10, 0.1, "suffix:m") var size_min : float = 3.0
@@ -64,9 +63,6 @@ var _zoom_tween:Tween
 var _size_last : float = size # UNIT: m
 		
 func _process(delta : float) -> void:
-	if camera_focus != null:
-		camera.look_at(camera_focus.global_position)
-		
 	if Engine.is_editor_hint():
 		return
 		
