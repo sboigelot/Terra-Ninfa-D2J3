@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dqq7gwpjgt0re"]
 
 [ext_resource type="Script" uid="uid://btbapy82k738d" path="res://GameObjects/Pickables/PickableObjectController.gd" id="1_elb2t"]
+[ext_resource type="Script" uid="uid://co0xkfphq1e30" path="res://GameObjects/Camera/NinfaCameraController.gd" id="2_elb2t"]
+[ext_resource type="Script" uid="uid://bjsf6caogbjsg" path="res://GameObjects/Camera/ToolCamera3D.gd" id="3_8rtkp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wsxap"]
 sky_top_color = Color(0.6388706, 0.70131785, 0.7848583, 1)
@@ -11,7 +13,8 @@ energy_multiplier = 2.0
 sky_material = SubResource("ProceduralSkyMaterial_wsxap")
 
 [sub_resource type="Environment" id="Environment_j6adh"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.30588236, 0.39607844, 0.5254902, 1)
 sky = SubResource("Sky_jdvys")
 ambient_light_source = 3
 ambient_light_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
@@ -140,6 +143,28 @@ size = Vector3(0.6, 0.3, 4)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1944224997]
 environment = SubResource("Environment_j6adh")
 
+[node name="NinfaCameraController" type="Node3D" parent="." unique_id=359219323 node_paths=PackedStringArray("camera", "camera_focus")]
+script = ExtResource("2_elb2t")
+camera = NodePath("ToolCamera3D2")
+camera_focus = NodePath("CameraFocusMarker3D")
+camera_position = Vector3(0, 50, 45)
+tilt = 45.14288
+size_max = 50.0
+size = 18.9
+zoom_speed = 20.0
+camera_rotation_keyboard_speed = 1.5
+metadata/_custom_type_script = "uid://co0xkfphq1e30"
+
+[node name="ToolCamera3D2" type="Camera3D" parent="NinfaCameraController" unique_id=1897780768]
+transform = Transform3D(1, 0, 0, 0, 0.7053412, 0.7088679, 0, -0.7088679, 0.7053412, 0, 50, 45)
+fov = 18.9
+size = 30.0
+script = ExtResource("3_8rtkp")
+metadata/_custom_type_script = "uid://bjsf6caogbjsg"
+
+[node name="CameraFocusMarker3D" type="Marker3D" parent="NinfaCameraController" unique_id=2026129443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.775, 0)
+
 [node name="Mouse3DCursor" type="CSGSphere3D" parent="." unique_id=1911056028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.257654, 0)
 visible = false
@@ -153,11 +178,6 @@ script = ExtResource("1_elb2t")
 mouse_3d_cursor = NodePath("../Mouse3DCursor")
 picked_object_holder = NodePath("../Mouse3DCursor/PickedObjectHolder")
 metadata/_custom_type_script = "uid://btbapy82k738d"
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=36435387]
-transform = Transform3D(0.86421335, -0.25937718, 0.4311135, 0, 0.8568705, 0.5155317, -0.5031256, -0.44552934, 0.7405189, 5.8876805, 11.768616, 9.564797)
-projection = 1
-size = 15.0
 
 [node name="TerrainTest" type="StaticBody3D" parent="." unique_id=1227992053]
 
