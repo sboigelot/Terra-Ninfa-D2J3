@@ -4,9 +4,11 @@ extends ProceduralWaterShape
 		
 @export var flowing:bool:
 	set(value):
-		if flowing == value:
+		var new_value = not prevent_flowing and value
+		if flowing == new_value:
 			return
-		flowing = value
+			
+		flowing = new_value
 		
 		if flowing:
 			start_flowing_tween()
@@ -15,6 +17,14 @@ extends ProceduralWaterShape
 
 	get():
 		return flowing
+
+@export var prevent_flowing:bool = false:
+	set(value):
+		if prevent_flowing == value:
+			return
+			
+		prevent_flowing = value
+		flowing = _flowing_upstream.size() > 0
 
 @export var downstream: Array[WaterNode3D]
 @export var mechanisms: Array[Mechanism3D]

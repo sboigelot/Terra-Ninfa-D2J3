@@ -16,10 +16,14 @@ signal output_index_changed()
 		output_index = value
 		if output_index >= downstream.size():
 			output_index = -1 if allow_no_output else 0
-		propagate_water_downstream()
 		output_index_changed.emit()
+		_start_change_rotation()
 		
 @export var downstream: Array[WaterNode3D]
+
+@export var rotation_degree_per_index:float = 0
+
+var rotation_tween:Tween
 
 func _on_water_intake_changed() -> void:
 	propagate_water_downstream()
@@ -36,3 +40,22 @@ func _on_player_click() -> void:
 	
 func on_mechanism_activated(_activated: bool) -> void:
 	output_index += 1
+	
+func _start_change_rotation() -> void:
+	if rotation_degree_per_index == 0:
+		propagate_water_downstream()
+		return
+		
+	if rotation_tween != null and rotation_tween.is_running():
+		rotation_tween.stop()
+	
+	var desired_rotation_y:float = 0.0
+	if output_index != -1:
+		desired_rotation_y = rotation_degree_per_index * (output_index + 1.0)
+	var desired_rotation = Vector3(0, desired_rotation_y, 0)
+	
+	rotation_tween = create_tween()
+	rotation_tween.tween_property(self, "rotation_degrees", desired_rotation, 1.0)\
+					.set_ease(Tween.EASE_OUT)\
+					.set_trans(Tween.TRANS_LINEAR)
+	rotation_tween.finished.connect(propagate_water_downstream)

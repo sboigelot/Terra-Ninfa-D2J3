@@ -20,6 +20,7 @@ signal powered_down()
 @export var rotating_speeds:Vector3 = Vector3(0,0,1)
 
 @export var controlled_mechanisms:Array[Mechanism3D]
+@export var controlled_repairables:Array[RepairableNode3D]
 
 func _on_water_intake_changed() -> void:
 	powered = _water_intakes.size() > 0
@@ -28,6 +29,9 @@ func _on_water_intake_changed() -> void:
 func propagate_water_downstream() -> void:
 	for mechanism:Mechanism3D in controlled_mechanisms:
 		mechanism.on_mechanism_activated(powered)
+		
+	for repairable:RepairableNode3D in controlled_repairables:
+		repairable.broken = not powered
 	
 func _on_player_click() -> void:
 	pass

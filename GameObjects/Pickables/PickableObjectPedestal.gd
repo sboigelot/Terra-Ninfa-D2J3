@@ -9,6 +9,22 @@ signal deactivated(object_pedestal:PickableObjectPedestal)
 
 @export var valid_object_tags:Array[String]
 @export var target_object_count:int = 1
+@export var is_activated:bool:
+	set(value):
+		if is_activated == value:
+			return
+		is_activated = value
+		
+		if is_activated:
+			if activation_visual != null:
+				activation_visual.material = activated_material
+			activated_no_params.emit()
+		else:
+			if activation_visual != null:
+				activation_visual.material = deactivated_material
+			deactivated_no_params.emit()
+		
+		propagate_activation()
 
 @export var detection_area3d: Area3D:
 	set(value):
@@ -30,23 +46,11 @@ signal deactivated(object_pedestal:PickableObjectPedestal)
 
 @export var controlled_water_flow:Array[WaterNode3D]
 @export var controlled_mechanisms:Array[Mechanism3D]
+@export var controlled_repairables:Array[RepairableNode3D]
+@export var prevent_flowing_when_not_activated: Array[WaterNode3D]
 
-@export var is_activated:bool:
-	set(value):
-		if is_activated == value:
-			return
-		is_activated = value
-		
-		if is_activated:
-			if activation_visual != null:
-				activation_visual.material = activated_material
-			activated_no_params.emit()
-		else:
-			if activation_visual != null:
-				activation_visual.material = deactivated_material
-			deactivated_no_params.emit()
-		
-		propagate_activation()
+@export var destroy_token_on_activated:bool = false
+@export var destroy_self_on_activated:bool = false
 
 var activating_objects: Array[PickableObject]
 
@@ -78,6 +82,8 @@ func _ready() -> void:
 		NodeHelper.connect_if_not_connected(detection_area3d.area_entered, _on_area_3d_area_entered)
 		NodeHelper.connect_if_not_connected(detection_area3d.area_exited, _on_area_3d_area_exited)
 	
+	propagate_activation()
+	
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	#print("Another area entered:", area.name)
 	if area is PickableObject:
@@ -86,8 +92,17 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 			if activating_objects.size() == target_object_count:
 				is_activated = true
 				activated.emit(self, area)
+				
+				if destroy_token_on_activated:
+					if area is PickableObject:
+						area.queue_free()
+						
+				if destroy_self_on_activated:
+					queue_free()
 
 func _on_area_3d_area_exited(area: Area3D) -> void:
+	if is_queued_for_deletion():
+		return
 	if activating_objects.has(area): 
 		activating_objects.erase(area)
 		if activating_objects.size() < target_object_count:
@@ -97,5 +112,12 @@ func _on_area_3d_area_exited(area: Area3D) -> void:
 func propagate_activation() -> void:
 	for water_node:WaterNode3D in controlled_water_flow:
 		water_node.set_upstream_flow(self, is_activated)
+		
 	for mechanism:Mechanism3D in controlled_mechanisms:
 		mechanism.on_mechanism_activated(is_activated)
+		
+	for repairable:RepairableNode3D in controlled_repairables:
+		repairable.broken = not is_activated
+		
+	for water_node:WaterNode3D in prevent_flowing_when_not_activated:
+		water_node.prevent_flowing = not is_activated

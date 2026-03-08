@@ -138,9 +138,30 @@ func _list_upstreams(water_node:WaterNode3D) -> void:
 	for csg in csg_parent.get_children():
 		if csg.get_child_count() == 0:
 			continue
+	
 		var csg_child = csg.get_child(0)
 		if csg_child is WaterNode3D:
 			var other_water_node:WaterNode3D = csg_child
 			if other_water_node.downstream.has(water_node):
 				print("\t%s/%s is upstream" % [csg.name, other_water_node.name])
+	
+	var terrain = csg_parent.get_parent().get_parent()
+	var testmap = terrain.get_parent()
+	var mechanisms = testmap.get_node("Mecanisms")
+	_list_upstreams_in_mechanisms(mechanisms, water_node)
+	
 	print("done")
+
+func _list_upstreams_in_mechanisms(node:Node3D, water_node:WaterNode3D) -> void:
+	if node is WaterGate:
+		var mech:WaterGate = node
+		if mech.downstream.has(water_node):
+			print("\t%s is upstream" % [mech.name])
+			
+	if node is WaterRooter:
+		var mech:WaterRooter = node
+		if mech.downstream.has(water_node):
+			print("\t%s is upstream" % [mech.name])
+
+	for child in node.get_children():
+		_list_upstreams_in_mechanisms(child, water_node)

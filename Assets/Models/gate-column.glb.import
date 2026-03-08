@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b65064ni5rs5v"
-path="res://.godot/imported/aquaduct-broken.glb-480ad4692b965bc07ada6d11f7ecd412.scn"
+uid="uid://b5cfyaxjl87g8"
+path="res://.godot/imported/gate-column.glb-c06a853cdf3ab857b9c628b887bd8cb8.scn"
 
 [deps]
 
-source_file="res://Assets/Models/aquaduct-broken.glb"
-dest_files=["res://.godot/imported/aquaduct-broken.glb-480ad4692b965bc07ada6d11f7ecd412.scn"]
+source_file="res://Assets/Models/gate-column.glb"
+dest_files=["res://.godot/imported/gate-column.glb-c06a853cdf3ab857b9c628b887bd8cb8.scn"]
 
 [params]
 
@@ -37,15 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:broken-aquaduct/arch": {
-"generate/physics": true
-},
-"PATH:broken-aquaduct/plane": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

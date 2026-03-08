@@ -45,7 +45,8 @@ extends Node3D
 			
 		return 0
 		
-@export_range(0, 30, 0.1, "suffix:m/s") var zoom_speed : float = 6.0
+@export_range(0, 30, 0.1, "suffix:m/s") var zoom_speed_mouse : float = 5.0
+@export_range(0, 30, 0.1, "suffix:m/s") var zoom_speed_keyboard : float = 10.0
 
 @export_category("Camera Rotation")
 @export var camera_rotation_keyboard_speed:float = 5.0
@@ -56,6 +57,7 @@ extends Node3D
 var _mouse_left_button_dragged : bool = false
 var _mouse_right_button_dragged : bool = false
 var _lastMousePosition = Vector2(0, 0)
+var _last_mouse_world_position = Vector3.ZERO
 
 @onready var size_requested : float = size # UNIT: m
 
@@ -77,6 +79,7 @@ func _process(delta : float) -> void:
 		
 	_process_zoom(delta)
 	_process_rotation(delta)
+	_process_movement(delta)
 	
 func _unhandled_input(event: InputEvent) -> void:
 	_mouse_wheel = 0
@@ -88,13 +91,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 func _process_zoom(delta : float) -> void:
 	
-	size_requested -= _mouse_wheel * delta * zoom_speed
+	size_requested -= _mouse_wheel * delta * zoom_speed_mouse
+	_mouse_wheel = 0.0
 		
 	if Input.is_action_pressed("camera_zoom_in"):
-		size_requested -= delta * zoom_speed
+		size_requested -= delta * zoom_speed_mouse
 		
 	if Input.is_action_pressed("camera_zoom_out"):
-		size_requested += delta * zoom_speed
+		size_requested += delta * zoom_speed_keyboard
 
 	size_requested = clamp(size_requested, size_min, size_max)
 	if _size_last != size_requested:
@@ -127,19 +131,37 @@ func _process_rotation(delta : float) -> void:
 	if Input.is_action_pressed("camera_rotate_counterclockwise"):
 		rotation.y -= delta * camera_rotation_keyboard_speed
 		
+func _process_movement(_delta : float) -> void:
 	if Input.is_action_pressed("camera_mouse_move"):
-		var mouse_position = get_viewport().get_mouse_position()
 		if not _mouse_right_button_dragged:
+			_last_mouse_world_position = get_mouse_world_position()
 			_mouse_right_button_dragged = true
 		else:
-			var mouse_movement:Vector2 = _lastMousePosition - mouse_position
-			var displacement: Vector3 = Vector3(-mouse_movement.x, 0, mouse_movement.y) * delta * camera_move_mouse_speed #Vector3(mouse_movement.y, 0, mouse_movement.x) * delta * camera_move_mouse_speed
-			displacement = displacement.rotated(Vector3.UP, camera.rotation.y)
-			position = Vector3(
-				clamp(position.x + displacement.x, min_pivot_center.x, max_pivot_center.x),
-				clamp(position.y + displacement.y, min_pivot_center.y, max_pivot_center.y),
-				clamp(position.z + displacement.z, min_pivot_center.z, max_pivot_center.z)
-			) #clamp(position + displacement, min_pivot_center, max_pivot_center)
-			#if allow_elevation_change:
-				#position.y += delta * mouse_movement.y * elevation_speed
-		_lastMousePosition = mouse_position
+			var mouse_world_position = get_mouse_world_position()
+			if mouse_world_position != Vector3.ZERO:
+				var mouse_movement:Vector3 = _last_mouse_world_position - mouse_world_position
+				position = Vector3(
+					clamp(position.x + mouse_movement.x, min_pivot_center.x, max_pivot_center.x),
+					clamp(position.y + mouse_movement.y, min_pivot_center.y, max_pivot_center.y),
+					clamp(position.z + mouse_movement.z, min_pivot_center.z, max_pivot_center.z)
+				)
+			_last_mouse_world_position = get_mouse_world_position()
+
+	if Input.is_action_just_released("camera_mouse_move"):
+		_mouse_right_button_dragged = false
+		
+func get_mouse_world_position() -> Vector3:
+	var mouse_position = get_viewport().get_mouse_position()
+	var origin := camera.project_ray_origin(mouse_position)
+	var direction := camera.project_ray_normal(mouse_position)
+	var ray_length := camera.far
+	var end := origin + direction * ray_length
+	var query := PhysicsRayQueryParameters3D.create(origin, end)
+	var space_state := get_world_3d().direct_space_state
+	var result := space_state.intersect_ray(query)
+	var collided = result.has("collider") 
+	if collided:
+		var mouse_position_3D = result.get("position", end)
+		return mouse_position_3D
+	return Vector3.ZERO
+	

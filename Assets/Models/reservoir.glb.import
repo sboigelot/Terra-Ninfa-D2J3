@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b65064ni5rs5v"
-path="res://.godot/imported/aquaduct-broken.glb-480ad4692b965bc07ada6d11f7ecd412.scn"
+uid="uid://bw788s4upjxvd"
+path="res://.godot/imported/reservoir.glb-ea128c80ba175c425e74dd9fe787c137.scn"
 
 [deps]
 
-source_file="res://Assets/Models/aquaduct-broken.glb"
-dest_files=["res://.godot/imported/aquaduct-broken.glb-480ad4692b965bc07ada6d11f7ecd412.scn"]
+source_file="res://Assets/Models/reservoir.glb"
+dest_files=["res://.godot/imported/reservoir.glb-ea128c80ba175c425e74dd9fe787c137.scn"]
 
 [params]
 
@@ -39,10 +39,19 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:broken-aquaduct/arch": {
+"PATH:reservoir/column": {
 "generate/physics": true
 },
-"PATH:broken-aquaduct/plane": {
+"PATH:reservoir/column2": {
+"generate/physics": true
+},
+"PATH:reservoir/column3": {
+"generate/physics": true
+},
+"PATH:reservoir/column4": {
+"generate/physics": true
+},
+"PATH:reservoir/reservoirhole": {
 "generate/physics": true
 }
 }
