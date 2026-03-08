@@ -785,6 +785,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D" unique_id=1427242570 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Fall/water_node")]
+debug_hook = null
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -797,6 +798,7 @@ material = ExtResource("7_6a6ga")
 script = ExtResource("8_22r32")
 flowing = true
 mechanisms = [NodePath("../../../../../Mecanisms/Peak/WaterGate1")]
+debug_hook = null
 water_size = Vector3(0.8378296, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -808,6 +810,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D33" unique_id=1054890799 node_paths=PackedStringArray("mechanisms")]
 script = ExtResource("8_22r32")
 mechanisms = [NodePath("../../../../../Mecanisms/Peak/WaterRooter")]
+debug_hook = null
 water_size = Vector3(1.4, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -819,6 +822,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D4" unique_id=1491117231 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../FallOffMap2/water_node"), NodePath("../../CSGBox3D10/water_node")]
+debug_hook = null
 water_size = Vector3(12.529297, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -830,6 +834,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D9" unique_id=1900577168 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D4/water_node")]
+debug_hook = null
 water_size = Vector3(0.75166017, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -840,6 +845,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D11" unique_id=1927351147]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(4.2000003, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -850,6 +856,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D13" unique_id=553196021]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(4.2000003, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -860,6 +867,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D12" unique_id=1731346736]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(6, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -870,6 +878,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D10" unique_id=1471125230]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(6, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -880,6 +889,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D30" unique_id=1016628562]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(4.135803, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -890,6 +900,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D31" unique_id=1445521155]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(14, 0.15, 1.9)
 material = ExtResource("9_pjmpm")
 
@@ -900,6 +911,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D3" unique_id=353586107]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -911,6 +923,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D2" unique_id=72245591 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Fall4/water_node")]
+debug_hook = null
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -922,6 +935,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D5" unique_id=1516884490 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D36/water_node")]
+debug_hook = null
 water_size = Vector3(5.7216034, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -930,10 +944,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.1
 size = Vector3(6.2197266, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D8" unique_id=177215455 node_paths=PackedStringArray("downstream", "mechanisms")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D8" unique_id=177215455 node_paths=PackedStringArray("mechanisms")]
 script = ExtResource("8_22r32")
-downstream = [NodePath("../../CSGBox3D6/water_node")]
 mechanisms = [NodePath("../../../../../Mecanisms/Plateau/WaterGate4WaterWheel")]
+debug_hook = null
 water_size = Vector3(6.2197266, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -944,6 +958,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D16" unique_id=571685142]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(9.8359375, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -954,6 +969,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D22" unique_id=1206407175]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(3.6000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -964,6 +980,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D23" unique_id=1299579919]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -974,6 +991,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D28" unique_id=911497986]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -984,6 +1002,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D29" unique_id=1591392288]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(3, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -994,6 +1013,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D24" unique_id=1766292762]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1004,6 +1024,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D25" unique_id=1128854917]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(1.0147705, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1014,6 +1035,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D26" unique_id=265673510]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1024,6 +1046,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D27" unique_id=1559447987]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(1.0147705, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1034,6 +1057,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D17" unique_id=567322600]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(7.5, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1044,6 +1068,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D19" unique_id=1192992458]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(7.5, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1054,6 +1079,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D20" unique_id=604413297]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(12.6640625, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1065,6 +1091,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D7" unique_id=205240101 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Fall7/water_node")]
+debug_hook = null
 water_size = Vector3(7.2338867, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1073,7 +1100,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.6
 size = Vector3(12.7, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D6" unique_id=62806638 node_paths=PackedStringArray("downstream", "mechanisms")]
+[node name="plateau_exit_water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D6" unique_id=62806638 node_paths=PackedStringArray("downstream", "mechanisms")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../FallOffMap3/water_node")]
 mechanisms = [NodePath("../../../../../Mecanisms/Plateau/WaterGate3"), NodePath("../../../../../Mecanisms/Plateau/WaterGate4")]
@@ -1089,6 +1116,7 @@ material = ExtResource("7_6a6ga")
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D35/water_node")]
 mechanisms = [NodePath("../../../../../Mecanisms/Plateau/WaterGate2")]
+debug_hook = null
 water_size = Vector3(2.690503, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1099,6 +1127,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D14" unique_id=741745854]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(3.7570312, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1109,6 +1138,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D15" unique_id=572942229]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(2.7, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1143,6 +1173,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D18" unique_id=1360200137]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(6.9, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1153,6 +1184,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D34" unique_id=367703229]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(1.8000001, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1163,6 +1195,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D21" unique_id=1462609814]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.28620607, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1175,6 +1208,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall" unique_id=1156282576 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D4/water_node")]
+debug_hook = null
 water_size = Vector3(0.31, 5.2000003, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1186,6 +1220,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap" unique_id=575048056]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 32.14038, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1197,6 +1232,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap5" unique_id=1698412642]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 29.018585, 1.8898926)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1208,6 +1244,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap4" unique_id=1578840989]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 30, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1219,6 +1256,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap3" unique_id=1932521310]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 32.014404, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1230,6 +1268,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap6" unique_id=1479735337]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 32.014404, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1242,6 +1281,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D35" unique_id=1151299525 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../FallOffMap10/water_node")]
+debug_hook = null
 water_size = Vector3(6.2197266, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1252,6 +1292,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap10" unique_id=1891658961]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 32.014404, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1263,6 +1304,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap7" unique_id=767454921]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 33.489746, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1274,6 +1316,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap8" unique_id=855105893]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 33.489746, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1285,6 +1328,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap9" unique_id=687603374]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 33.489746, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1296,6 +1340,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/FallOffMap2" unique_id=1773215556]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 30.072021, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1308,6 +1353,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall7" unique_id=309071407 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D9/water_node")]
+debug_hook = null
 water_size = Vector3(0.31, 2.2, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1319,7 +1365,8 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall11" unique_id=1464388401 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
-downstream = [NodePath("../../CSGBox3D6/water_node")]
+downstream = [NodePath("../../CSGBox3D4/water_node")]
+debug_hook = null
 water_size = Vector3(0.31, 0.6922119, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1331,6 +1378,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall5" unique_id=1963249701]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 3.9, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1342,6 +1390,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall10" unique_id=1480267337]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 2.7, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1353,6 +1402,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall9" unique_id=371899790]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 1.1, 0.59296876)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1364,6 +1414,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall2" unique_id=245533363]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 2.3, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1376,6 +1427,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall4" unique_id=1007071644 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D5/water_node")]
+debug_hook = null
 water_size = Vector3(0.31, 3.3, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1387,6 +1439,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall6" unique_id=523854150]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 1.8000001, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1398,6 +1451,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall3" unique_id=1172272048]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 1.5, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1409,6 +1463,7 @@ material = ExtResource("7_6a6ga")
 
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall8" unique_id=1613268776]
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(0.31, 1.0631714, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1423,6 +1478,7 @@ material = ExtResource("7_6a6ga")
 script = ExtResource("8_22r32")
 flowing = true
 downstream = [NodePath("../../CSGBox3D32/water_node")]
+debug_hook = null
 water_size = Vector3(1, 0.29, 1)
 material = ExtResource("9_pjmpm")
 metadata/_custom_type_script = "uid://crrnkhbt4x72v"
@@ -1436,12 +1492,14 @@ metadata/_edit_lock_ = true
 
 [node name="SourceWaterNode3D" type="Node3D" parent="Waters" unique_id=1489679853]
 script = ExtResource("8_22r32")
+debug_hook = null
 material = ExtResource("9_pjmpm")
 metadata/_custom_type_script = "uid://crrnkhbt4x72v"
 
 [node name="lake_water_node" type="Node3D" parent="Waters" unique_id=2096743608]
 transform = Transform3D(0.9277842, 0, -0.37311727, 0, 1, 0, 0.37311727, 0, 0.9277842, 2.9738781, -0.15, -8.551546)
 script = ExtResource("8_22r32")
+debug_hook = null
 water_size = Vector3(6.64, 0.29, 6.7)
 material = ExtResource("9_pjmpm")
 
@@ -1449,6 +1507,7 @@ material = ExtResource("9_pjmpm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.780328, 0)
 script = ExtResource("8_22r32")
 flowing = true
+debug_hook = null
 water_size = Vector3(2.5, 4.2000003, 2.5)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1527,7 +1586,7 @@ shape = SubResource("ConcavePolygonShape3D_pjmpm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4780471, 1.9459068, 8.480103)
 script = ExtResource("10_tnwec")
 open_on_player_click = null
-downstream = [NodePath("../../../Terrain/CSGCombiner3D/Canals/CSGBox3D6/water_node")]
+downstream = [NodePath("../../../Terrain/CSGCombiner3D/Canals/CSGBox3D6/plateau_exit_water_node")]
 gate_visual_open = NodePath("Area3D/OpenVisual")
 gate_visual_close = NodePath("Area3D/CloseVisual")
 mouse_control_area = NodePath("Area3D")

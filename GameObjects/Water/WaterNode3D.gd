@@ -20,9 +20,17 @@ extends ProceduralWaterShape
 @export var mechanisms: Array[Mechanism3D]
 @export var plants: Array[Plant3D]
 
-var _flowing_upstream: Array[Variant]
+@export var debug_hook:bool = false
+
+var _flowing_upstream: Array
 
 func set_upstream_flow(upstream:Variant, upstream_flowing:bool) -> void:
+	if debug_hook:
+		pass
+		
+	if _flowing_upstream == null:
+		_flowing_upstream = []
+	
 	if not upstream_flowing:
 		if _flowing_upstream.has(upstream):
 			_flowing_upstream.erase(upstream)
