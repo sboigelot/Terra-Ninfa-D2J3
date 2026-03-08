@@ -38,4 +38,4 @@ func _on_mouse_control_area_mouse_exited() -> void:
 @abstract func _on_water_intake_changed() -> void
 @abstract func propagate_water_downstream() -> void
 @abstract func _on_player_click() -> void
-	
+@abstract func on_mechanism_activated(activated: bool) -> void

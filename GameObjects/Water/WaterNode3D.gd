@@ -20,6 +20,19 @@ extends ProceduralWaterShape
 @export var mechanisms: Array[Mechanism3D]
 @export var plants: Array[Plant3D]
 
+var _flowing_upstream: Array[Variant]
+
+func set_upstream_flow(upstream:Variant, upstream_flowing:bool) -> void:
+	if not upstream_flowing:
+		if _flowing_upstream.has(upstream):
+			_flowing_upstream.erase(upstream)
+			propagate_water_downstream()
+	else:
+		if not _flowing_upstream.has(upstream):
+			_flowing_upstream.append(upstream)
+			propagate_water_downstream()
+	flowing = _flowing_upstream.size() > 0
+	
 func _ready() -> void:
 	super()
 	if not flowing:
@@ -30,7 +43,7 @@ func _ready() -> void:
 
 func propagate_water_downstream() -> void:
 	for water:WaterNode3D in downstream:
-		water.flowing = flowing
+		water.set_upstream_flow(self, flowing)
 	for mechanism:Mechanism3D in mechanisms:
 		mechanism.set_water_intake(self)
 	for plant:Plant3D in plants:

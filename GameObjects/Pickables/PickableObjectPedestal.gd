@@ -96,8 +96,6 @@ func _on_area_3d_area_exited(area: Area3D) -> void:
 				
 func propagate_activation() -> void:
 	for water_node:WaterNode3D in controlled_water_flow:
-		water_node.flowing = is_activated
+		water_node.set_upstream_flow(self, is_activated)
 	for mechanism:Mechanism3D in controlled_mechanisms:
-		#mechanism.set_pedestal_intake(self,is_activated)
-		printerr("Not implemented: #mechanism.set_pedestal_intake(self,is_activated)")
-		pass
+		mechanism.on_mechanism_activated(is_activated)

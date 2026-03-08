@@ -52,7 +52,7 @@ func _parse_begin(object: Object):
 			_add_button("Remove from source downstream", 
 				func(): 
 					source_water_node_3d.downstream.erase(object)
-					object.flowing = false
+					object.set_upstream_flow(source_water_node_3d, false)
 					_update_source_info()
 			)
 		if object is Mechanism3D:
@@ -87,7 +87,7 @@ func _parse_begin(object: Object):
 		_add_button("Remove from mechanism downstream", 
 			func(): 
 				source_mechanism_3d.downstream.erase(object)
-				object.flowing = false
+				object.set_upstream_flow(source_mechanism_3d, false)
 				_update_source_info()
 		)
 		

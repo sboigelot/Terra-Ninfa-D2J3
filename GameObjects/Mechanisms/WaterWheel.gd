@@ -19,11 +19,15 @@ signal powered_down()
 @export var rotating_visual:Node3D
 @export var rotating_speeds:Vector3 = Vector3(0,0,1)
 
+@export var controlled_mechanisms:Array[Mechanism3D]
+
 func _on_water_intake_changed() -> void:
 	powered = _water_intakes.size() > 0
+	propagate_water_downstream()
 	
 func propagate_water_downstream() -> void:
-	pass
+	for mechanism:Mechanism3D in controlled_mechanisms:
+		mechanism.on_mechanism_activated(powered)
 	
 func _on_player_click() -> void:
 	pass
@@ -39,3 +43,6 @@ func rotate_wheel(delta: float) -> void:
 		return
 	
 	rotating_visual.rotation_degrees += rotating_speeds * delta
+
+func on_mechanism_activated(_activated: bool) -> void:
+	pass

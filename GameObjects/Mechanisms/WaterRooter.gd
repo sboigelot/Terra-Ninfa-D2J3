@@ -26,8 +26,13 @@ func _on_water_intake_changed() -> void:
 
 func propagate_water_downstream() -> void:
 	for index in downstream.size():
-		var water:WaterNode3D = downstream[index]
-		water.flowing = index == output_index and _water_intakes.size() > 0
+		var water_activated = index == output_index and _water_intakes.size() > 0
+		var water_node:WaterNode3D = downstream[index]
+		water_node.set_upstream_flow(self, water_activated)
 
 func _on_player_click() -> void:
+	SfxManager.play("click")
+	output_index += 1
+	
+func on_mechanism_activated(_activated: bool) -> void:
 	output_index += 1

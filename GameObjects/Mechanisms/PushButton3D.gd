@@ -43,3 +43,6 @@ func _on_water_intake_changed() -> void:
 
 func _on_player_click() -> void:
 	is_pressed = true
+
+func on_mechanism_activated(activated: bool) -> void:
+	is_pressed = activated

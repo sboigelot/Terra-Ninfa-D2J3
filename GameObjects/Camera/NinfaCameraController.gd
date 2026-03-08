@@ -53,7 +53,8 @@ extends Node3D
 @export var allow_elevation_change:bool
 @export var elevation_speed:float = 5.0
 
-var _mouse_dragged : bool = false
+var _mouse_left_button_dragged : bool = false
+var _mouse_right_button_dragged : bool = false
 var _lastMousePosition = Vector2(0, 0)
 
 @onready var size_requested : float = size # UNIT: m
@@ -63,7 +64,13 @@ var _zoom_tween:Tween
 var _size_last : float = size # UNIT: m
 
 var _mouse_wheel: float
-		
+
+@export_category("Camera Movement")
+@export var allow_pivot_movement: bool = true
+@export var camera_move_mouse_speed:float = 5
+@export var min_pivot_center: Vector3 = Vector3(-15, 0, -15)
+@export var max_pivot_center: Vector3 = Vector3(15, 0, 15)
+
 func _process(delta : float) -> void:
 	if Engine.is_editor_hint():
 		return
@@ -100,10 +107,10 @@ func _process_zoom(delta : float) -> void:
 		_zoom_tween.tween_property(self, "size", _size_last, zoom_tween_duration)
 
 func _process_rotation(delta : float) -> void:
-	if Input.is_action_pressed("camera_drag"):
+	if Input.is_action_pressed("camera_mouse_rotate"):
 		var mouse_position = get_viewport().get_mouse_position()
-		if not _mouse_dragged:
-			_mouse_dragged = true
+		if not _mouse_left_button_dragged:
+			_mouse_left_button_dragged = true
 		else:
 			var mouse_movement:Vector2 = _lastMousePosition - mouse_position
 			rotation.y += delta * mouse_movement.x * camera_rotation_mouse_speed
@@ -111,11 +118,24 @@ func _process_rotation(delta : float) -> void:
 				position.y += delta * mouse_movement.y * elevation_speed
 		_lastMousePosition = mouse_position
 		
-	if Input.is_action_just_released("camera_drag"):
-		_mouse_dragged = false
+	if Input.is_action_just_released("camera_mouse_rotate"):
+		_mouse_left_button_dragged = false
 		
 	if Input.is_action_pressed("camera_rotate_clockwise"):
 		rotation.y += delta * camera_rotation_keyboard_speed
 		
 	if Input.is_action_pressed("camera_rotate_counterclockwise"):
 		rotation.y -= delta * camera_rotation_keyboard_speed
+		
+	if Input.is_action_pressed("camera_mouse_move"):
+		var mouse_position = get_viewport().get_mouse_position()
+		if not _mouse_right_button_dragged:
+			_mouse_right_button_dragged = true
+		else:
+			var mouse_movement:Vector2 = _lastMousePosition - mouse_position
+			var displacement: Vector3 = Vector3(mouse_movement.y, 0, mouse_movement.x) * delta * camera_move_mouse_speed
+			displacement = displacement.rotated(Vector3.UP, camera.rotation.y)
+			position = clamp(position + displacement, min_pivot_center, max_pivot_center)
+			#if allow_elevation_change:
+				#position.y += delta * mouse_movement.y * elevation_speed
+		_lastMousePosition = mouse_position
