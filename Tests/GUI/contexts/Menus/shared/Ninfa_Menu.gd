@@ -2,7 +2,7 @@ extends Control
 
 class_name NinfaMenu
 
-signal gui_fsm_request
+signal ninfa_gui_fsm_request
 
 var _tween : Tween
 
@@ -13,4 +13,7 @@ func _tween_initialize() -> void:
     self._tween = create_tween()
 
 func hide_transition() -> void:
-    _tween_initialize()
+    self._tween_initialize()
+
+func reveal_transition() -> void:
+    self._tween_initialize()

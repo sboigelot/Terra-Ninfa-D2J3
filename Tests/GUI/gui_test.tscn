@@ -11,3 +11,8 @@ script = ExtResource("1_57b8u")
 [node name="mainMenu" parent="." unique_id=279321132 instance=ExtResource("2_57b8u")]
 
 [node name="inGameMenu" parent="." unique_id=52351211 instance=ExtResource("3_irysh")]
+
+[node name="Button" type="Button" parent="." unique_id=2145938385]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Reveal Menu"

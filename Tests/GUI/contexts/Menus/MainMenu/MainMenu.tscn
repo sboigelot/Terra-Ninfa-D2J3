@@ -5,32 +5,32 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aubbo"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4fjg"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k4fjg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cp7q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cp7q"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
 
 [node name="mainMenu" type="Control" unique_id=279321132]
 layout_mode = 3
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aubbo")
 
-[node name="hpos" type="HBoxContainer" parent="." unique_id=73844858]
+[node name="root" type="HBoxContainer" parent="." unique_id=73844858]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -43,51 +43,95 @@ offset_bottom = 124.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="vpos" type="VBoxContainer" parent="hpos" unique_id=1064092065]
+[node name="vpos" type="VBoxContainer" parent="root" unique_id=1064092065]
 layout_mode = 2
 
-[node name="title" type="CenterContainer" parent="hpos/vpos" unique_id=1053731470]
+[node name="title" type="CenterContainer" parent="root/vpos" unique_id=1053731470]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="hpos/vpos/title" unique_id=417956620]
+[node name="Label" type="Label" parent="root/vpos/title" unique_id=417956620]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Ninfa"
 
-[node name="HSeparator" type="HSeparator" parent="hpos/vpos" unique_id=1163778077]
+[node name="HSeparator" type="HSeparator" parent="root/vpos" unique_id=1163778077]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_aubbo")
 
-[node name="rootButtons" type="CenterContainer" parent="hpos/vpos" unique_id=142155006]
+[node name="rootButtons" type="CenterContainer" parent="root/vpos" unique_id=142155006]
 layout_mode = 2
 
-[node name="bg" type="PanelContainer" parent="hpos/vpos/rootButtons" unique_id=1322907218]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_k4fjg")
-
-[node name="vpos" type="VBoxContainer" parent="hpos/vpos/rootButtons/bg" unique_id=1069361202]
+[node name="vpos" type="VBoxContainer" parent="root/vpos/rootButtons" unique_id=1069361202]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="start" parent="hpos/vpos/rootButtons/bg/vpos" unique_id=1788893900 instance=ExtResource("1_5aubx")]
+[node name="start" parent="root/vpos/rootButtons/vpos" unique_id=1788893900 instance=ExtResource("1_5aubx")]
 layout_mode = 2
 text = "Start"
 
-[node name="settings" parent="hpos/vpos/rootButtons/bg/vpos" unique_id=596878436 instance=ExtResource("1_5aubx")]
+[node name="settings" parent="root/vpos/rootButtons/vpos" unique_id=596878436 instance=ExtResource("1_5aubx")]
 layout_mode = 2
 text = "Settings"
 
-[node name="credits" parent="hpos/vpos/rootButtons/bg/vpos" unique_id=537092526 instance=ExtResource("1_5aubx")]
+[node name="credits" parent="root/vpos/rootButtons/vpos" unique_id=537092526 instance=ExtResource("1_5aubx")]
 layout_mode = 2
 text = "Credits"
 
-[node name="exit" parent="hpos/vpos/rootButtons/bg/vpos" unique_id=32177567 instance=ExtResource("1_5aubx")]
+[node name="exit" parent="root/vpos/rootButtons/vpos" unique_id=32177567 instance=ExtResource("1_5aubx")]
 layout_mode = 2
 text = "Exit"
 
-[node name="VSeparator" type="VSeparator" parent="hpos" unique_id=356090344]
+[node name="VSeparator" type="VSeparator" parent="root" unique_id=356090344]
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 42
 theme_override_styles/separator = SubResource("StyleBoxEmpty_k4fjg")
+
+[node name="credits" type="CenterContainer" parent="." unique_id=1593899036]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 200.0
+grow_vertical = 2
+
+[node name="hpos" type="HBoxContainer" parent="credits" unique_id=658777344]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="credits/hpos" unique_id=880380400]
+layout_mode = 2
+theme_override_constants/separation = 24
+theme_override_styles/separator = SubResource("StyleBoxEmpty_6cp7q")
+
+[node name="bg" type="PanelContainer" parent="credits/hpos" unique_id=1135544042]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6cp7q")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credits/hpos/bg" unique_id=136768113]
+custom_minimum_size = Vector2(600, 560)
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Contributors[/u][/b]
+[u]Togis:[/u]
+	- Idea
+	- Puzzle Design
+	- Level Design
+	- Lead Programmer
+
+[u]Bu:[/u]
+	- 3D Modelling
+	- Level Design
+
+[u]Dan:[/u]
+	- Additional Programming
+	- User Interface
+	- Music
+	- SFX Curation and Preparation
+
+[b][u]Assets[/u][/b]
+[u]SFX[/u]
+- Kenney: \"Interface Sounds\",
+  https://opengameart.org/content/interface-sounds
+  License: CC0  
+			drop_003.ogg
+			switch_005.ogg"
