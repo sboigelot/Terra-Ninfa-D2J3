@@ -55,6 +55,11 @@ func _parse_begin(object: Object):
 					object.set_upstream_flow(source_water_node_3d, false)
 					_update_source_info()
 			)
+			
+			_add_button("List upstreams", 
+				func(): _list_upstreams(object)
+			)
+			
 		if object is Mechanism3D:
 			_add_button("Add to source mechanisms", 
 				func(): 
@@ -126,3 +131,16 @@ func _update_source_info() -> void:
 			detail_text += "\n\t\t- %s" % water_node.name
 		
 		source_details.text = detail_text
+
+func _list_upstreams(water_node:WaterNode3D) -> void:
+	print("Searching for %s upstreams..." % water_node.name)
+	var csg_parent = water_node.get_parent().get_parent()
+	for csg in csg_parent.get_children():
+		if csg.get_child_count() == 0:
+			continue
+		var csg_child = csg.get_child(0)
+		if csg_child is WaterNode3D:
+			var other_water_node:WaterNode3D = csg_child
+			if other_water_node.downstream.has(water_node):
+				print("\t%s/%s is upstream" % [csg.name, other_water_node.name])
+	print("done")
