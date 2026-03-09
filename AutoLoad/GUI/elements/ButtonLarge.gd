@@ -15,5 +15,12 @@ func _ready() -> void:
 	# DESCRIPTION: Signal management
 	self.mouse_entered.connect(_on_mouse_entered)
 	self.pressed.connect(_on_pressed)
+	self.visibility_changed.connect(_on_visibility_changed)
+	
+func _on_visibility_changed() -> void:
+	if visible and is_visible_in_tree():
+		mouse_filter = Control.MOUSE_FILTER_STOP
+	else:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 	

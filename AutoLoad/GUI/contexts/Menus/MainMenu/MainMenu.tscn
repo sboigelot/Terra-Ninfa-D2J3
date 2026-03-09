@@ -29,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_aubbo")
 
 [node name="root" type="HBoxContainer" parent="." unique_id=73844858]
@@ -43,13 +44,16 @@ offset_top = -124.0
 offset_bottom = 124.0
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="vpos" type="VBoxContainer" parent="root" unique_id=1064092065]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="title" type="CenterContainer" parent="root/vpos" unique_id=1053731470]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="root/vpos/title" unique_id=417956620]
 layout_mode = 2
@@ -60,13 +64,16 @@ Ninfa"
 [node name="HSeparator" type="HSeparator" parent="root/vpos" unique_id=1163778077]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_aubbo")
 
 [node name="rootButtons" type="CenterContainer" parent="root/vpos" unique_id=142155006]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="vpos" type="VBoxContainer" parent="root/vpos/rootButtons" unique_id=1069361202]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="start" parent="root/vpos/rootButtons/vpos" unique_id=1788893900 instance=ExtResource("1_5aubx")]
@@ -87,6 +94,7 @@ text = "Exit"
 
 [node name="VSeparator" type="VSeparator" parent="root" unique_id=356090344]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 42
 theme_override_styles/separator = SubResource("StyleBoxEmpty_k4fjg")
 
@@ -97,22 +105,27 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 200.0
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="hpos" type="HBoxContainer" parent="credits" unique_id=658777344]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="VSeparator" type="VSeparator" parent="credits/hpos" unique_id=880380400]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 24
 theme_override_styles/separator = SubResource("StyleBoxEmpty_6cp7q")
 
 [node name="bg" type="PanelContainer" parent="credits/hpos" unique_id=1135544042]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6cp7q")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="credits/hpos/bg" unique_id=136768113]
 custom_minimum_size = Vector2(600, 560)
 layout_mode = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[b][u]Contributors[/u][/b]
 [u]Togis:[/u]
@@ -145,24 +158,30 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 200.0
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="hpos" type="HBoxContainer" parent="settings" unique_id=753787880]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="VSeparator" type="VSeparator" parent="settings/hpos" unique_id=1440423106]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 24
 theme_override_styles/separator = SubResource("StyleBoxEmpty_6cp7q")
 
 [node name="bg" type="PanelContainer" parent="settings/hpos" unique_id=265720331]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6cp7q")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="settings/hpos/bg" unique_id=1976213187]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="settings/hpos/bg/VBoxContainer" unique_id=2039540723]
 layout_mode = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "Settings"
 fit_content = true
