@@ -106,7 +106,6 @@ theme_override_constants/separation = 42
 theme_override_styles/separator = SubResource("StyleBoxEmpty_k4fjg")
 
 [node name="credits" type="CenterContainer" parent="." unique_id=1593899036]
-visible = false
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -156,7 +155,39 @@ text = "[b][u]Contributors[/u][/b]
   https://opengameart.org/content/interface-sounds
   License: CC0  
 			drop_003.ogg
-			switch_005.ogg"
+			switch_005.ogg
+- juskiddink: \"Stream5.wav\"
+  https://freesound.org/people/juskiddink/sounds/71522/
+  License: CC BY 4.0
+- juskiddink: \"Frogs in June.wav\"
+  https://freesound.org/people/juskiddink/sounds/122055/
+  License: CC BY 4.0
+- _deleted_user_9900733: \"water wheel mill in the forest 2\"
+   https://freesound.org/people/deleted_user_9900733/sounds/724849/
+ License: CC0
+- SuperStudioBR: \"Brazilian_Waterfall_River .wav\"
+  https://freesound.org/people/SuperStudioBR/sounds/669180/
+  License: CC BY 4.0
+- bonebrah: \"stone_door.ogg\"
+  https://opengameart.org/content/stone-door
+  License: CC0
+- Czarcazas: \"Metal Gate\"
+   https://freesound.org/people/Czarcazas/sounds/330793/
+   License: CC BY 3.0
+- franzzle: \"Paper crumble\"
+   https://freesound.org/people/franzzle/sounds/713220/
+   License: CC0
+- Versilian Studios: \"VSCO 2\"
+   https://versilian-studios.com/vsco-community/
+   License: CC0
+        - snare3_rimshot_f_1.wav
+        - windchimes_asc1.wav
+- basoap: \"Growing bulbous nose\"
+   https://freesound.org/people/basoap/sounds/233201/
+   License: CC0
+- AudioPapkin: \"Old hand pump\"
+   https://freesound.org/people/AudioPapkin/sounds/815126/
+   License: CC0"
 
 [node name="settings" type="CenterContainer" parent="." unique_id=1877202391]
 visible = false
