@@ -9,7 +9,7 @@ signal animation_finished()
 		water_size = value
 		change_csg_box_size()
 
-var _material:StandardMaterial3D = preload("res://GameObjects/Water/default_water_material.material")
+var _material:StandardMaterial3D = preload("res://Assets/Materials/water_material.material")
 @export var material: StandardMaterial3D:
 	set(value):
 		_material = value

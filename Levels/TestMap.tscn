@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://8r4kkq3srcvb" path="res://GameObjects/Pickables/PickableObject.gd" id="2_8tcy4"]
 [ext_resource type="Script" uid="uid://b3l0tt8aqk02u" path="res://GameObjects/Pickables/PickableObjectPedestal.gd" id="3_g5kg7"]
 [ext_resource type="Script" uid="uid://crrnkhbt4x72v" path="res://GameObjects/Water/WaterNode3D.gd" id="4_c4nwi"]
-[ext_resource type="Material" uid="uid://c5ess1c63dadr" path="res://GameObjects/Water/default_water_material.material" id="5_ir5mb"]
+[ext_resource type="Material" uid="uid://c5ess1c63dadr" path="res://Assets/Materials/water_material.material" id="5_ir5mb"]
 [ext_resource type="Script" uid="uid://u7qd4pgx4od8" path="res://GameObjects/Mechanisms/WarerGate.gd" id="6_mwdbx"]
 [ext_resource type="Script" uid="uid://c7kn8otnohjaf" path="res://GameObjects/Mechanisms/WaterRooter.gd" id="7_r6b63"]
 [ext_resource type="Script" uid="uid://cbwwrx07v5ddy" path="res://GameObjects/Mechanisms/PushButton3D.gd" id="8_7x7iy"]
