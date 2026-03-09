@@ -17,9 +17,9 @@ var state : int = NINFA_GUI.STATES.MAIN_MENU
 ###############################################################################
 func _gui_fsm(a_sender, a_request) -> void:
 	var _tmp_actionKey = NINFA_GUI.ACTIONS.find_key(a_request)
-	print(
-		"Ninfa GUI: Received Request from \"%s\": %s" % [a_sender, _tmp_actionKey]
-	)
+	# print(
+	# 	"Ninfa GUI: Received Request from \"%s\": %s" % [a_sender, _tmp_actionKey]
+	# )
 
 	match a_request:
 		NINFA_GUI.ACTIONS.START_GAME:
