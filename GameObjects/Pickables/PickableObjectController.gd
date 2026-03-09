@@ -16,6 +16,8 @@ func connect_pickable_objects() -> void:
 
 func _on_pickable_object_picked_up(pickable_object:PickableObject) -> void:
 	pickable_object.original_parent.remove_child(pickable_object)
+	if pickable_object.get_parent() != null:
+		pickable_object.get_parent().remove_child(pickable_object)
 	picked_object_holder.add_child(pickable_object)
 	pickable_object.position = Vector3.ZERO
 
