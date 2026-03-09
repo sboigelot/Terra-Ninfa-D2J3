@@ -30,6 +30,14 @@ var _settingsDefaultPosition : Vector2 = Vector2(0, 0)
 @onready var _credits = $credits
 @onready var _settings = $settings
 
+func _set_root_buttons_to_active() -> void:
+	for _key in self._buttonReferences.keys():
+		self._buttonReferences[_key].reference.set_to_active()
+
+func _set_root_buttons_to_inactive() -> void:
+	for _key in self._buttonReferences.keys():
+		self._buttonReferences[_key].reference.set_to_inactive()
+
 func _initialize_credits() -> void:
 	self._credits.position.x -= self._credits.size.x + 48
 	self._credits.visible = false
@@ -101,8 +109,10 @@ func reveal_transition() -> void:
 	self._tween.set_ease(Tween.EASE_OUT)
 
 	await self._tween.finished
+	self._set_root_buttons_to_active()
 
 func hide_transition() -> void:
+	self._set_root_buttons_to_inactive()
 	super.hide_transition()
 			
 	self._tween.tween_property(self, "modulate", Color(1, 1, 1, 0), 1)
@@ -148,3 +158,5 @@ func _ready() -> void:
 		self._buttonReferences[_key].reference.initialize(
 			self._buttonReferences[_key].callback
 		)
+
+	self._set_root_buttons_to_active()
