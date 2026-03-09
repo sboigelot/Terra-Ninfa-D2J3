@@ -1,20 +1,102 @@
-Kenney: "Interface Sounds",
-license: https://creativecommons.org/publicdomain/zero/1.0/  
-https://opengameart.org/content/interface-sounds, 
+[Kenney]
+[Kenney."Interface Sounds"]
+author = "Kenney"
+title = "Interface Sounds"
+license = "CC0"
+source = "https://opengameart.org/content/interface-sounds"
 	drop_003.ogg
 	switch_005.ogg
 
-Robin Lamp: "UI Sound Effects (Button Clicks, User Feedback, Notifications)", 
-license: https://creativecommons.org/publicdomain/zero/1.0/
-https://opengameart.org/content/ui-sound-effects-button-clicks-user-feedback-notifications
-	alarm.ogg
-	Ding.ogg
-	ding_deep.ogg
+[juskiddink]
+[juskiddink."Stream5.wav"]
+author = "juskiddink"
+title = "Stream5.wav"
+license = "CC BY 4.0"
+source = "https://freesound.org/people/juskiddink/sounds/71522/"
+orginial = "71522__juskiddink__stream5.wav"
+derivatives = ["water/stream/water_stream_flow_variant1.wav"]
 
-Versilian Studios: "VSCO 2"
-license: https://creativecommons.org/publicdomain/zero/1.0/  
-https://versilian-studios.com/vsco-community/
-	wood_click_pp_1.wav
-	ratchet1.wav / ratchet1.ogg
-	snare3_rimshot_f_1.wav
-	windchimes_asc1.wav
+[juskiddink."Frogs in June.wav"]
+author = "juskiddink"
+title = "Frogs in June.wav"
+license = "CC BY 4.0"
+source = "https://freesound.org/people/juskiddink/sounds/122055/"
+original = "122055__juskiddink__frogs-in-june.wav"
+derivatives = [""]
+
+[_deleted_user_9900733]
+[_deleted_user_9900733."water wheel mill in the forest 2"]
+author = "_deleted_user_9900733"
+title = "water wheel mill in the forest 2"
+license = "CC0"
+source = "https://freesound.org/people/deleted_user_9900733/sounds/724849/"
+orginial = "724849__deleted_user_9900733__water-wheel-mill-in-the-forest-2.wav"
+derivatives = ["objects/waterwheel/waterwheel_running_loop.wav"]
+
+[SuperStudioBR]
+[SuperStudioBR."Brazilian_Waterfall_River .wav"]
+author = "SuperStudioBR"
+title = "Brazilian_Waterfall_River .wav"
+license = "CC BY 4.0"
+source = "https://freesound.org/people/SuperStudioBR/sounds/669180/"
+original = "669180__superstudiobr__brazilian_waterfall_river.wav"
+derivatives = ["water/waterfall/waterfall_flowing_loop.wav"]
+
+[bonebrah]
+[bonebrah."stone_door.ogg"]
+author = "bonebrah"
+title = "stone_door.ogg"
+license = "CC0"
+source = "https://opengameart.org/content/stone-door"
+original = "stone_door.ogg"
+
+[Czarcazas]
+[Czarcazas."Metal Gate"]
+author = "Czarcazas"
+title = "Metal Gate"
+license = "CC BY 3.0"
+source = "https://freesound.org/people/Czarcazas/sounds/330793/"
+original = "330793__czarcazas__metal-gate.mp3"
+derivatives = ["objects/metal-gate_open.mp3"]
+
+[franzzle]
+[franzzle."Paper crumble"]
+author = "franzzle"
+title = "Paper crumble"
+license = "CC0"
+source = "https://freesound.org/people/franzzle/sounds/713220/"
+original = "713220__franzzle__paper-crumble.wav"
+derivatives = ["objects/ruins_destroy.wav"]
+derivatives = ["objects/ruin_destroy.wav"]
+
+[Versilian Studios]
+[Versilian Studios."VSCO 2"]
+author = "Versilian Studios"
+title = "VSCO 2"
+license = "CC0"
+source = "https://versilian-studios.com/vsco-community/"
+[Versilian Studios."VSCO 2"."snare3_rimshot_f_1.wav"]
+original = "snare3_rimshot_f_1.wav"
+derivatives = ["interactions/item_pickup.wav"]
+[Versilian Studios."VSCO 2"."windchimes_asc1.wav"]
+original = "windchimes_asc1.wav"
+derivatives = ["notifications/achievement.wav"]
+
+[basoap]
+[basoap."Growing bulbous nose"]
+author = "basoap"
+title = "Growing bulbous nose"
+license = "CC0"
+source = "https://freesound.org/people/basoap/sounds/233201/"
+original = "233201__basoap__growing-bulbous-nose.wav"
+derivatives = ["notifications/plants_grow.wav"]
+
+[AudioPapkin]
+[AudioPapkin."Old hand pump"]
+author = "AudioPapkin"
+title = "Old hand pump"
+license = "CC0"
+source = "https://freesound.org/people/AudioPapkin/sounds/815126/"
+original = "815126__audiopapkin__old-hand-pump.wav"
+derivatives = ["objects/waterpump_loop.wav"]
+
