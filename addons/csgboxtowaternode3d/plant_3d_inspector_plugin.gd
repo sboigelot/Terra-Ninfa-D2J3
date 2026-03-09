@@ -36,12 +36,7 @@ func _relink_plants(sample_plant:Plant3D) -> void:
 func _show_plants(sample_plant:Plant3D, visible:bool) -> void:
 	var plant_placeholder = sample_plant.get_parent()
 	for plant:Plant3D in plant_placeholder.get_children():
-		plant.disable_sfx = true
 		plant.irrigated = visible
-		
-	await sample_plant.get_tree().create_timer(5.0).timeout
-	for plant:Plant3D in plant_placeholder.get_children():
-		plant.disable_sfx = false
 		
 func _random_visual(plant:Plant3D) -> void:
 	plant.get_child(0).position = Vector3.ZERO

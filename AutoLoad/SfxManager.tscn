@@ -16,11 +16,12 @@
 [ext_resource type="AudioStream" uid="uid://cq55jve4eqw2s" path="res://Assets/SoundFx/water/stream/water_stream_flow_variant1_loop.wav" id="14_r3ret"]
 [ext_resource type="AudioStream" uid="uid://15ljd3cn2sba" path="res://Assets/SoundFx/water/waterfall/waterfall_flowing_loop.wav" id="15_fbpgx"]
 [ext_resource type="AudioStream" uid="uid://bfkkjtb6qx5p1" path="res://Assets/SoundFx/explosion.ogg" id="16_83qlj"]
+[ext_resource type="AudioStream" uid="uid://caon37kec1vub" path="res://Assets/SoundFx/dynamite.wav" id="17_y4g05"]
 
 [node name="SfxManager" type="Node" unique_id=561477171]
 process_mode = 3
 script = ExtResource("1")
-sample_collection = Array[AudioStream]([ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("4_gxvsj"), ExtResource("5_rnf1x"), ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("6_83qlj"), ExtResource("7_y4g05"), ExtResource("8_gqb14"), ExtResource("9_ilsao"), ExtResource("10_2qdq5"), ExtResource("11_xa5va"), ExtResource("12_w1q08"), ExtResource("13_taapa"), ExtResource("4_gxvsj"), ExtResource("14_r3ret"), ExtResource("15_fbpgx"), ExtResource("16_83qlj")])
+sample_collection = Array[AudioStream]([ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("4_gxvsj"), ExtResource("5_rnf1x"), ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("6_83qlj"), ExtResource("7_y4g05"), ExtResource("8_gqb14"), ExtResource("9_ilsao"), ExtResource("10_2qdq5"), ExtResource("11_xa5va"), ExtResource("12_w1q08"), ExtResource("13_taapa"), ExtResource("4_gxvsj"), ExtResource("14_r3ret"), ExtResource("15_fbpgx"), ExtResource("16_83qlj"), ExtResource("17_y4g05")])
 ambiance_first_min_ferquency_sec = 10.0
 ambiance_first_max_ferquency_sec = 25.0
 ambiance_min_ferquency_sec = 120.0

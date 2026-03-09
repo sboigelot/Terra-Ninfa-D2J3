@@ -16,7 +16,8 @@ signal deactivated(object_pedestal:PickableObjectPedestal)
 		is_activated = value
 		
 		if is_activated:
-			SfxManager.play(activated_sfx)
+			if not destroy_token_on_activated:
+				SfxManager.play(activated_sfx)
 			if activation_visual != null:
 				activation_visual.material = activated_material
 			activated_no_params.emit()
@@ -118,6 +119,10 @@ func start_deletion_tween():
 	tween.tween_property(self, "scale", Vector3.ONE * 1.1, 0.2).set_trans(Tween.TRANS_BOUNCE)
 	tween.tween_property(self, "scale", Vector3.ONE * 0.9, 0.2).set_trans(Tween.TRANS_BOUNCE)
 	tween.tween_property(self, "scale", Vector3.ONE * 1.2, 0.2).set_trans(Tween.TRANS_BOUNCE)
+	await tween.finished
+	
+	SfxManager.play(activated_sfx)
+	tween = create_tween()
 	tween.tween_property(self, "scale", Vector3.ONE * 0.8, 0.2).set_trans(Tween.TRANS_BOUNCE)
 	tween.tween_property(self, "scale", Vector3.ONE * 1.5, 0.2).set_trans(Tween.TRANS_BOUNCE)
 	tween.tween_property(self, "scale", Vector3.ONE * 0.1, 0.2).set_trans(Tween.TRANS_BOUNCE)

@@ -12,6 +12,7 @@ var irrigated_plants:Array[Plant3D]
 var max_plants:int
 
 var progress_tween: Tween
+var victory_triggered:bool = false
 
 func _ready() -> void:
 	Gui.ninfa_gui_menu_active.connect(_on_menu_menu_active_changed)
@@ -71,7 +72,12 @@ func update_irrigation_progress() -> void:
 		victory()
 		
 func victory():
+	if victory_triggered:
+		return
+	victory_triggered = true
 	SfxManager.play("achievement")
+	
+	await get_tree().create_timer(10.0).timeout
 	Gui.trigger_victory()
 
 func _on_lake_water_node_flowing_changed() -> void:

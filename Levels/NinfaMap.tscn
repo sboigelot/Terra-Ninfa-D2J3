@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://k05drf1eukxj" path="res://Assets/Materials/ground_grass_light.material.tres" id="4_ouuts"]
 [ext_resource type="Material" uid="uid://c3lyyf8c62x0k" path="res://Assets/Materials/ground_dirt.material" id="4_t3fnf"]
 [ext_resource type="Material" uid="uid://dhk24ey8i2e48" path="res://Assets/Materials/ground_grass_dark.material.tres" id="5_ouuts"]
+[ext_resource type="Texture2D" uid="uid://ckd6xst3hcqtb" path="res://icon.svg" id="5_syhl1"]
 [ext_resource type="Material" uid="uid://c6qjsy8br0scm" path="res://Assets/Materials/canal.material" id="7_6a6ga"]
 [ext_resource type="Material" uid="uid://vcn7qg3u051a" path="res://Assets/Materials/ground_grass_half.material.tres" id="7_yku8m"]
 [ext_resource type="Script" uid="uid://crrnkhbt4x72v" path="res://GameObjects/Water/WaterNode3D.gd" id="8_22r32"]
@@ -509,15 +510,6 @@ texture = ExtResource("4_gbwou")
 
 [node name="ControlInfos" type="Node3D" parent="." unique_id=1631137494]
 
-[node name="Label3D" type="Label3D" parent="ControlInfos" unique_id=45746856]
-transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, 8.742278e-08, 4.371139e-08, 1, 0, 1, -4.371139e-08, 0, -7.1, -20.6414)
-text = "LMB: Move camera 
-MMW: Zoom (+/-)
-RMB: Rotate (Q/E)
-Click: Interract"
-font_size = 256
-outline_size = 0
-
 [node name="Label3D2" type="Label3D" parent="ControlInfos" unique_id=700826654]
 transform = Transform3D(4.371139e-08, -1, 4.3711385e-08, 8.742278e-08, 4.371139e-08, 1, -1, -4.3711385e-08, 8.742278e-08, 20, -7.1, 0)
 text = "Manipulate the water
@@ -525,6 +517,62 @@ Irrigate all the plants
 Start at the center"
 font_size = 256
 outline_size = 0
+
+[node name="Node3D" type="Node3D" parent="ControlInfos" unique_id=1707266953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.847, -7, -18)
+
+[node name="Sprite3D" type="Sprite3D" parent="ControlInfos/Node3D" unique_id=851710776]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0)
+texture = ExtResource("5_syhl1")
+
+[node name="Label3D" type="Label3D" parent="ControlInfos/Node3D" unique_id=45746856]
+transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, 8.742278e-08, 4.371139e-08, 1, 0, 1, -4.371139e-08, -1.797426, 0, -0.0035858154)
+text = "Move"
+font_size = 256
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="Node3D3" type="Node3D" parent="ControlInfos" unique_id=1562867387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.847, -7, -21)
+
+[node name="Sprite3D" type="Sprite3D" parent="ControlInfos/Node3D3" unique_id=243899162]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0)
+texture = ExtResource("5_syhl1")
+
+[node name="Label3D" type="Label3D" parent="ControlInfos/Node3D3" unique_id=1566877780]
+transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, 8.742278e-08, 4.371139e-08, 1, 0, 1, -4.371139e-08, -1.797426, 0, -0.0035858154)
+text = "Zoom (+/-)"
+font_size = 256
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="Node3D4" type="Node3D" parent="ControlInfos" unique_id=415144248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1529999, -7, -18)
+
+[node name="Sprite3D" type="Sprite3D" parent="ControlInfos/Node3D4" unique_id=1116043951]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0)
+texture = ExtResource("5_syhl1")
+
+[node name="Label3D" type="Label3D" parent="ControlInfos/Node3D4" unique_id=376566576]
+transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, 8.742278e-08, 4.371139e-08, 1, 0, 1, -4.371139e-08, -1.797426, 0, -0.0035858154)
+text = "Rotate (Q/E)"
+font_size = 256
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="Node3D5" type="Node3D" parent="ControlInfos" unique_id=615388715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1529999, -7, -21)
+
+[node name="Sprite3D" type="Sprite3D" parent="ControlInfos/Node3D5" unique_id=2046805674]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0)
+texture = ExtResource("5_syhl1")
+
+[node name="Label3D" type="Label3D" parent="ControlInfos/Node3D5" unique_id=88249499]
+transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, 8.742278e-08, 4.371139e-08, 1, 0, 1, -4.371139e-08, -1.797426, 0, -0.0035858154)
+text = "Interract"
+font_size = 256
+outline_size = 0
+horizontal_alignment = 0
 
 [node name="Mouse3DCursor" type="CSGSphere3D" parent="." unique_id=1911056028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.257654, 0)
@@ -1818,7 +1866,7 @@ material = ExtResource("9_pjmpm")
 metadata/_custom_type_script = "uid://crrnkhbt4x72v"
 
 [node name="LakeWaterNode" type="Node3D" parent="Waters" unique_id=2096743608 node_paths=PackedStringArray("downstream")]
-transform = Transform3D(0.9277842, 0, -0.37311727, 0, 1, 0, 0.37311727, 0, 0.9277842, 2.9738781, -0.15, -8.551546)
+transform = Transform3D(0.9277842, 0, -0.37311727, 0, 1, 0, 0.37311727, 0, 0.9277842, 2.974, -0.16, -8.552)
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Terrain/CSGCombiner3D/Canals/CSGBox3D14/water_node"), NodePath("../../Terrain/CSGCombiner3D/Canals/CSGBox3D15/water_node")]
 water_size = Vector3(6.64, 0.29, 6.7)
@@ -1909,6 +1957,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03699994, 0.14999998, 0)
 shape = SubResource("ConcavePolygonShape3D_ieoe3")
 
 [node name="blockbench_export" parent="Pickables/dynamite" unique_id=1040976183 instance=ExtResource("17_m7etr")]
+
+[node name="dynamite2" type="Area3D" parent="Pickables" unique_id=1622001723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2148416, 0, -7.7813597)
+script = ExtResource("11_q6g4c")
+object_tag = "dynamite"
+metadata/_custom_type_script = "uid://8r4kkq3srcvb"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickables/dynamite2" unique_id=1742137457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24705887, -0.05000019)
+shape = SubResource("ConcavePolygonShape3D_pfjnu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Pickables/dynamite2" unique_id=884057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24705887, 0.05000019)
+shape = SubResource("ConcavePolygonShape3D_n5huw")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Pickables/dynamite2" unique_id=243078793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099999905, 0.24705887, 0)
+shape = SubResource("ConcavePolygonShape3D_0g83p")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Pickables/dynamite2" unique_id=1971155792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03699994, 0.14999998, 0)
+shape = SubResource("ConcavePolygonShape3D_ieoe3")
+
+[node name="blockbench_export" parent="Pickables/dynamite2" unique_id=790489927 instance=ExtResource("17_m7etr")]
 
 [node name="Mecanisms" type="Node3D" parent="." unique_id=1458215954]
 
@@ -2486,6 +2558,9 @@ visible = false
 [node name="support2" parent="Mecanisms/LowLandEast/DrawBridgeWaterWheel/blockbench_export/wheel" parent_id_path=PackedInt32Array(1560375005, 2056711831) index="1" unique_id=987100940]
 visible = false
 
+[node name="water" parent="Mecanisms/LowLandEast/DrawBridgeWaterWheel/blockbench_export/wheel" parent_id_path=PackedInt32Array(1560375005, 2056711831) index="2" unique_id=457105444]
+transform = Transform3D(-0.35518813, -0.93479484, 0, 0.93479484, -0.35518813, 0, 0, 0, 1, -3.6924883e-17, 0, 0.6497942)
+
 [node name="CSGBox3D8" type="CSGBox3D" parent="Mecanisms/LowLandEast" unique_id=1980053347]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.013774, 0.026110172, -10.516675)
 size = Vector3(0.05, 0.05, 0.5574951)
@@ -2600,7 +2675,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig" unique_id=15569629 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig2" type="Node3D" parent="Plants" unique_id=122390878]
 transform = Transform3D(-0.9729882, 0, -0.49831894, 0, 1.0931733, 0, 0.49831894, 0, -0.9729882, -7.045672, 2.0000005, 7.3163123)
@@ -2608,7 +2683,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig2" unique_id=1031053489 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig10" type="Node3D" parent="Plants" unique_id=55445350]
 transform = Transform3D(-0.57242066, 0, -0.89916694, 0, 1.0659112, 0, 0.89916694, 0, -0.57242066, -14.04157, 2.0000005, 11.014963)
@@ -2616,7 +2691,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig10" unique_id=2123102237 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig11" type="Node3D" parent="Plants" unique_id=793389252]
 transform = Transform3D(-0.8295859, 0, 0.017706681, 0, 0.82977486, 0, -0.017706681, 0, -0.8295859, -5.1103315, 2.0000005, 13.036319)
@@ -2624,7 +2699,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig11" unique_id=486158381 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-0.93687785, 0, 0.34965688, 0, 1, 0, -0.34965688, 0, -0.93687785, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig12" type="Node3D" parent="Plants" unique_id=1813753133]
 transform = Transform3D(-1.1628267, 0, -0.05345462, 0, 1.1640546, 0, 0.05345462, 0, -1.1628267, -5.1103315, 2.0000005, 6.036319)
@@ -2632,7 +2707,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig12" unique_id=1336180157 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig3" type="Node3D" parent="Plants" unique_id=1783903711]
 transform = Transform3D(-0.021243699, 0, 0.7801032, 0, 0.7803924, 0, -0.7801032, 0, -0.021243699, -3.045672, 2.0000005, 3.3163123)
@@ -2640,7 +2715,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig3" unique_id=630346869 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig4" type="Node3D" parent="Plants" unique_id=766021906]
 transform = Transform3D(-0.14827017, 0, -0.86402184, 0, 0.87665147, 0, 0.86402184, 0, -0.14827017, 0.9906144, 2.0000005, 2.9506764)
@@ -2648,7 +2723,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig4" unique_id=1543904406 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig5" type="Node3D" parent="Plants" unique_id=481587547]
 transform = Transform3D(0.9316854, 0, 0.71466273, 0, 1.1742148, 0, -0.71466273, 0, 0.9316854, -3.0093856, 2.0000005, 10.950676)
@@ -2656,7 +2731,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig5" unique_id=1978931277 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig6" type="Node3D" parent="Plants" unique_id=2137388653]
 transform = Transform3D(0.7845153, 0, 0.8974375, 0, 1.1919976, 0, -0.8974375, 0, 0.7845153, -0.9334856, 2.0000005, 9.960632)
@@ -2664,7 +2739,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig6" unique_id=608046868 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig7" type="Node3D" parent="Plants" unique_id=1621055981]
 transform = Transform3D(-1.0013834, 0, -0.14014766, 0, 1.011143, 0, 0.14014766, 0, -1.0013834, -3.6199598, 2.0000005, 9.413723)
@@ -2672,7 +2747,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig7" unique_id=1169933681 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig8" type="Node3D" parent="Plants" unique_id=431025874]
 transform = Transform3D(0.3985261, 0, -0.66761374, 0, 0.777516, 0, 0.66761374, 0, 0.3985261, -7.552986, 2.0000005, 10.869085)
@@ -2680,7 +2755,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig8" unique_id=1429669028 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig53" type="Node3D" parent="Plants" unique_id=1792034684]
 transform = Transform3D(-0.040423505, 0, -1.2149078, 0, 1.2155801, 0, 1.2149078, 0, -0.040423505, 5.726207, 3.5153947, 10.869085)
@@ -2688,7 +2763,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig53" unique_id=616025966 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig54" type="Node3D" parent="Plants" unique_id=1345875831]
 transform = Transform3D(0.12878232, 0, -1.1255393, 0, 1.1328828, 0, 1.1255393, 0, 0.12878232, 11.932712, 3.5153947, 8.25582)
@@ -2696,7 +2771,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig54" unique_id=1667093475 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig55" type="Node3D" parent="Plants" unique_id=117943176]
 transform = Transform3D(0.887039, 0, -0.48427358, 0, 1.0106231, 0, 0.48427358, 0, 0.887039, 8.002276, 3.5153947, 6.3380203)
@@ -2704,7 +2779,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig55" unique_id=2081098339 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig56" type="Node3D" parent="Plants" unique_id=1530066493]
 transform = Transform3D(0.24371812, 0, -1.144952, 0, 1.170604, 0, 1.144952, 0, 0.24371812, 9.003325, 3.5153947, 5.884914)
@@ -2712,7 +2787,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig56" unique_id=1328140886 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig57" type="Node3D" parent="Plants" unique_id=1628936637]
 transform = Transform3D(-0.83224624, 0, 0.6136605, 0, 1.0340276, 0, -0.6136605, 0, -0.83224624, 2.101356, 3.5153947, 7.960774)
@@ -2720,7 +2795,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig57" unique_id=1271939994 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig58" type="Node3D" parent="Plants" unique_id=749896200]
 transform = Transform3D(-0.80627674, 0, -0.5497004, 0, 0.97583437, 0, 0.5497004, 0, -0.80627674, 4.0296926, 3.5153947, 10.8796215)
@@ -2728,7 +2803,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig58" unique_id=1632927532 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig59" type="Node3D" parent="Plants" unique_id=457475271]
 transform = Transform3D(-0.7409956, 0, 0.5295064, 0, 0.9107422, 0, -0.5295064, 0, -0.7409956, 10.710379, 3.5153947, 8.182057)
@@ -2736,7 +2811,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig59" unique_id=1752373659 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig60" type="Node3D" parent="Plants" unique_id=1541811604]
 transform = Transform3D(-0.80431557, 0, 0.1994142, 0, 0.82866734, 0, -0.1994142, 0, -0.80431557, 11.532292, 3.5153947, 13.113542)
@@ -2744,7 +2819,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig60" unique_id=524621453 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig61" type="Node3D" parent="Plants" unique_id=1436787220]
 transform = Transform3D(-0.98141146, 0, 0.22974426, 0, 1.0079439, 0, -0.22974426, 0, -0.98141146, 13.944432, 3.5153947, 8.382568)
@@ -2752,7 +2827,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig61" unique_id=121319714 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig62" type="Node3D" parent="Plants" unique_id=1925749118]
 transform = Transform3D(1.1333503, 0, -0.20237578, 0, 1.151277, 0, 0.20237578, 0, 1.1333503, 14.67151, 3.5153947, 9.436304)
@@ -2760,7 +2835,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig62" unique_id=143157611 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig63" type="Node3D" parent="Plants" unique_id=354484903]
 transform = Transform3D(0.4609342, 0, 0.84452754, 0, 0.9621264, 0, -0.84452754, 0, 0.4609342, 13.702073, 3.5153947, 5.7166157)
@@ -2768,7 +2843,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig63" unique_id=1965160541 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig64" type="Node3D" parent="Plants" unique_id=903139193]
 transform = Transform3D(-1.0078262, 0, 0.1837643, 0, 1.0244428, 0, -0.1837643, 0, -1.0078262, 13.702073, 3.5153947, 5.7166157)
@@ -2776,7 +2851,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig64" unique_id=1882238548 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig14" type="Node3D" parent="Plants" unique_id=1553075583]
 transform = Transform3D(-0.10269613, 0, -1.0712827, 0, 1.0761938, 0, 1.0712827, 0, -0.10269613, -7.347321, 0, 0.6358129)
@@ -2784,7 +2859,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig14" unique_id=565429432 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig15" type="Node3D" parent="Plants" unique_id=1638617143]
 transform = Transform3D(0.77528393, 0, -0.7052296, 0, 1.0480524, 0, 0.7052296, 0, 0.77528393, -12.454824, 0, -0.5369384)
@@ -2792,7 +2867,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig15" unique_id=138100992 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig20" type="Node3D" parent="Plants" unique_id=1920344197]
 transform = Transform3D(-0.04245458, 0, 1.0263902, 0, 1.0272678, 0, -1.0263902, 0, -0.04245458, -13.54401, 0, -3.252097)
@@ -2800,7 +2875,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig20" unique_id=818841095 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig16" type="Node3D" parent="Plants" unique_id=1289003766]
 transform = Transform3D(-0.18160065, 0, 0.79788494, 0, 0.81829035, 0, -0.79788494, 0, -0.18160065, -9.831899, 0, 0.5820285)
@@ -2808,7 +2883,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig16" unique_id=1903418535 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig17" type="Node3D" parent="Plants" unique_id=1418182237]
 transform = Transform3D(-0.44705847, 0, -0.8746703, 0, 0.9822981, 0, 0.8746703, 0, -0.44705847, -5.31459, 0, -0.9475374)
@@ -2816,7 +2891,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig17" unique_id=339443828 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig18" type="Node3D" parent="Plants" unique_id=279152689]
 transform = Transform3D(0.4604972, 0, 0.7184521, 0, 0.8533646, 0, -0.7184521, 0, 0.4604972, -3.4160345, 0, -4.192069)
@@ -2824,7 +2899,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig18" unique_id=820999595 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig22" type="Node3D" parent="Plants" unique_id=660400690]
 transform = Transform3D(-1.2184268, 0, 0.204141, 0, 1.2354099, 0, -0.204141, 0, -1.2184268, -1.2674668, 0, -8.506441)
@@ -2832,7 +2907,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig22" unique_id=1868767461 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig23" type="Node3D" parent="Plants" unique_id=426825172]
 transform = Transform3D(-1.0412881, 0, 0.5672671, 0, 1.1857795, 0, -0.5672671, 0, -1.0412881, 0.19882345, 0, -6.639557)
@@ -2840,7 +2915,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig23" unique_id=1376221733 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig24" type="Node3D" parent="Plants" unique_id=694419324]
 transform = Transform3D(-0.7548596, 0, 0.6529575, 0, 0.99808145, 0, -0.6529575, 0, -0.7548596, -3.7443757, 0, -10.145304)
@@ -2848,7 +2923,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig24" unique_id=724942114 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig25" type="Node3D" parent="Plants" unique_id=49932777]
 transform = Transform3D(-0.049311217, 0, 1.1600034, 0, 1.161051, 0, -1.1600034, 0, -0.049311217, 0.3391509, 0, -10.804275)
@@ -2856,7 +2931,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig25" unique_id=693233494 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig26" type="Node3D" parent="Plants" unique_id=820744640]
 transform = Transform3D(0.12728484, 0, 0.8918521, 0, 0.90088934, 0, -0.8918521, 0, 0.12728484, 5.1583185, 0, -10.968315)
@@ -2864,7 +2939,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig26" unique_id=1130932389 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig27" type="Node3D" parent="Plants" unique_id=1452211820]
 transform = Transform3D(0.92591685, 0, -0.121342786, 0, 0.93383414, 0, 0.121342786, 0, 0.92591685, 6.7134066, 0, -7.5404296)
@@ -2872,7 +2947,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig27" unique_id=1374740526 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-0.78959286, 0, 0.6136311, 0, 1, 0, -0.6136311, 0, -0.78959286, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig28" type="Node3D" parent="Plants" unique_id=609749158]
 transform = Transform3D(1.0699395, 0, 0.4208493, 0, 1.1497325, 0, -0.4208493, 0, 1.0699395, 8.134727, 0, -6.6876383)
@@ -2880,7 +2955,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig28" unique_id=1872882692 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig29" type="Node3D" parent="Plants" unique_id=1019893729]
 transform = Transform3D(0.75376403, 0, -0.777729, 0, 1.0830617, 0, 0.777729, 0, 0.75376403, 6.044553, 0, -6.23616)
@@ -2888,7 +2963,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig29" unique_id=1649493282 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig36" type="Node3D" parent="Plants" unique_id=959017466]
 transform = Transform3D(-0.4795386, 0, 0.69534427, 0, 0.8446661, 0, -0.69534427, 0, -0.4795386, 12.407435, 0, -13.313112)
@@ -2896,7 +2971,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig36" unique_id=615295395 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig37" type="Node3D" parent="Plants" unique_id=1077490413]
 transform = Transform3D(1.0026301, 0, 0.4872184, 0, 1.1147417, 0, -0.4872184, 0, 1.0026301, 13.407435, 0, -11.313112)
@@ -2904,7 +2979,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig37" unique_id=805880945 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig38" type="Node3D" parent="Plants" unique_id=1481180665]
 transform = Transform3D(0.7438435, 0, -0.87285453, 0, 1.1468122, 0, 0.87285453, 0, 0.7438435, 13.243131, 0, -9.891907)
@@ -2912,7 +2987,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig38" unique_id=355809305 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig39" type="Node3D" parent="Plants" unique_id=1349021208]
 transform = Transform3D(-0.42581776, 0, -1.0324624, 0, 1.1168256, 0, 1.0324624, 0, -0.42581776, 12.026347, 0, -11.944462)
@@ -2920,7 +2995,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig39" unique_id=855622759 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig40" type="Node3D" parent="Plants" unique_id=571207734]
 transform = Transform3D(0.37487206, 0, -0.9357013, 0, 1.008001, 0, 0.9357013, 0, 0.37487206, 7.3312817, 0, -11.268471)
@@ -2928,7 +3003,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig40" unique_id=404194087 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig41" type="Node3D" parent="Plants" unique_id=1193765886]
 transform = Transform3D(-0.4344468, 0, -0.8089019, 0, 0.9181864, 0, 0.8089019, 0, -0.4344468, 12.837538, 0, -5.676181)
@@ -2936,7 +3011,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig41" unique_id=854431438 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig42" type="Node3D" parent="Plants" unique_id=414196458]
 transform = Transform3D(-0.48389354, 0, 0.646373, 0, 0.8074348, 0, -0.646373, 0, -0.48389354, 14.435334, 0, -2.296225)
@@ -2944,7 +3019,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig42" unique_id=1296225227 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig43" type="Node3D" parent="Plants" unique_id=696363912]
 transform = Transform3D(-0.77668303, 0, -0.18063106, 0, 0.7974109, 0, 0.18063106, 0, -0.77668303, 11.620753, 0, -2.4682953)
@@ -2952,7 +3027,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig43" unique_id=1958002919 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig44" type="Node3D" parent="Plants" unique_id=2038689541]
 transform = Transform3D(-0.8695161, 0, 0.05874501, 0, 0.8714983, 0, -0.05874501, 0, -0.8695161, 3.2753353, 0, -4.3979425)
@@ -2960,7 +3035,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig44" unique_id=1118796817 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig45" type="Node3D" parent="Plants" unique_id=823012628]
 transform = Transform3D(0.2449112, 0, 0.92214507, 0, 0.9541137, 0, -0.92214507, 0, 0.2449112, 7.4296083, 0, -5.4180746)
@@ -2968,7 +3043,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig45" unique_id=1798182848 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig46" type="Node3D" parent="Plants" unique_id=1901107009]
 transform = Transform3D(-1.0294403, 0, -0.17865963, 0, 1.0448284, 0, 0.17865963, 0, -1.0294403, 8.388287, 0, -2.2347713)
@@ -2976,7 +3051,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig46" unique_id=461653430 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig47" type="Node3D" parent="Plants" unique_id=1656405167]
 transform = Transform3D(-0.9476109, 0, -0.32260585, 0, 1.00102, 0, 0.32260585, 0, -0.9476109, 12.823156, 0, -3.2759109)
@@ -2984,7 +3059,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig47" unique_id=1611900614 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig30" type="Node3D" parent="Plants" unique_id=636066835]
 transform = Transform3D(-0.4256408, 0, 0.64652586, 0, 0.774058, 0, -0.64652586, 0, -0.4256408, -2.115488, 0, -10.918151)
@@ -2992,7 +3067,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig30" unique_id=1745097370 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig31" type="Node3D" parent="Plants" unique_id=184836622]
 transform = Transform3D(0.801431, 0, 0.5531808, 0, 0.97380733, 0, -0.5531808, 0, 0.801431, 5.1583195, 0, -12.506683)
@@ -3000,7 +3075,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig31" unique_id=626873485 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig32" type="Node3D" parent="Plants" unique_id=479954310]
 transform = Transform3D(0.5792441, 0, -0.6853341, 0, 0.897333, 0, 0.6853341, 0, 0.5792441, 6.211767, 0, -11.87127)
@@ -3008,7 +3083,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig32" unique_id=1243222308 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig33" type="Node3D" parent="Plants" unique_id=1642355713]
 transform = Transform3D(0.8078915, 0, 0.9427394, 0, 1.24155, 0, -0.9427394, 0, 0.8078915, -5.0584545, 0, -11.453235)
@@ -3016,7 +3091,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig33" unique_id=1179123208 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig48" type="Node3D" parent="Plants" unique_id=1287474480]
 transform = Transform3D(0.68605137, 0, 0.5232384, 0, 0.8628122, 0, -0.5232384, 0, 0.68605137, 0.83054256, 0, -12.251317)
@@ -3024,7 +3099,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig48" unique_id=1582033525 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig49" type="Node3D" parent="Plants" unique_id=1189605490]
 transform = Transform3D(-1.0620621, 0, 0.5916734, 0, 1.2157522, 0, -0.5916734, 0, -1.0620621, -5.8120813, 0, -9.195995)
@@ -3032,7 +3107,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig49" unique_id=539165949 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig50" type="Node3D" parent="Plants" unique_id=1916395139]
 transform = Transform3D(0.8248279, 0, -0.025149548, 0, 0.8252112, 0, 0.025149548, 0, 0.8248279, -5.4818034, 2.3841858e-07, -8.229757)
@@ -3040,7 +3115,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig50" unique_id=1094699715 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig51" type="Node3D" parent="Plants" unique_id=1953690643]
 transform = Transform3D(0.26835763, 0, -1.036642, 0, 1.0708139, 0, 1.036642, 0, 0.26835763, -6.9160285, 2.3841858e-07, -9.496885)
@@ -3048,7 +3123,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig51" unique_id=1787471387 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig52" type="Node3D" parent="Plants" unique_id=1061874865]
 transform = Transform3D(0.7045441, 0, -0.49861506, 0, 0.8631335, 0, 0.49861506, 0, 0.7045441, -6.70313, 2.3841858e-07, -8.164166)
@@ -3056,7 +3131,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig52" unique_id=1587147305 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig34" type="Node3D" parent="Plants" unique_id=1362954090]
 transform = Transform3D(0.6886483, 0, -1.018817, 0, 1.2297254, 0, 1.018817, 0, 0.6886483, -3.536807, 0, -11.587006)
@@ -3064,7 +3139,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig34" unique_id=1034616104 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig35" type="Node3D" parent="Plants" unique_id=443772841]
 transform = Transform3D(0.81887037, 0, -0.44513533, 0, 0.93203765, 0, 0.44513533, 0, 0.81887037, -5.3594394, 0, -4.32992)
@@ -3072,7 +3147,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig35" unique_id=973625362 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig19" type="Node3D" parent="Plants" unique_id=907008241]
 transform = Transform3D(0.6848291, 0, -0.79808444, 0, 1.0516319, 0, 0.79808444, 0, 0.6848291, -8.113586, 0, -1.2032077)
@@ -3080,7 +3155,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig19" unique_id=212977928 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig21" type="Node3D" parent="Plants" unique_id=1822748715]
 transform = Transform3D(0.22517511, 0, 0.85527354, 0, 0.88441885, 0, -0.85527354, 0, 0.22517511, -6.548431, 0, -1.4944155)
@@ -3088,7 +3163,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig21" unique_id=450419708 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig13" type="Node3D" parent="Plants" unique_id=1085390387]
 transform = Transform3D(0.77489066, 0, 0.16552743, 0, 0.79237294, 0, -0.16552743, 0, 0.77489066, -13.760412, 2.0000005, 7.1130905)
@@ -3096,7 +3171,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig13" unique_id=2095693249 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FernBig9" type="Node3D" parent="Plants" unique_id=1667181258]
 transform = Transform3D(-1.0345823, 0, 0.4697345, 0, 1.1362267, 0, -0.4697345, 0, -1.0345823, -7.860755, 2.0000005, 7.6768837)
@@ -3104,7 +3179,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FernBig9" unique_id=935635131 instance=ExtResource("29_i8sri")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall" type="Node3D" parent="Plants" unique_id=330501854]
 transform = Transform3D(-0.4907796, 0, -0.8740573, 0, 1.0024174, 0, 0.8740573, 0, -0.4907796, -4.8402023, 2.0000005, 7.6768837)
@@ -3112,7 +3187,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall" unique_id=1086793343 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall2" type="Node3D" parent="Plants" unique_id=1127940575]
 transform = Transform3D(0.47078207, 0, -0.5994701, 0, 0.7622336, 0, 0.5994701, 0, 0.47078207, -6.8402023, 2.0000005, 9.676884)
@@ -3120,7 +3195,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall2" unique_id=944610945 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall3" type="Node3D" parent="Plants" unique_id=359711342]
 transform = Transform3D(0.5010631, 0, 0.92572623, 0, 1.0526316, 0, -0.92572623, 0, 0.5010631, -8.473494, 2.0000005, 4.587337)
@@ -3128,7 +3203,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall3" unique_id=351164190 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall4" type="Node3D" parent="Plants" unique_id=1257913512]
 transform = Transform3D(0.6543504, 0, 0.5751729, 0, 0.8712051, 0, -0.5751729, 0, 0.6543504, -1.2975492, 2.0000005, 3.2807045)
@@ -3136,7 +3211,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall4" unique_id=405321590 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall5" type="Node3D" parent="Plants" unique_id=1691182222]
 transform = Transform3D(0.75438905, 0, -0.5102721, 0, 0.9107582, 0, 0.5102721, 0, 0.75438905, -12.382857, 2.0000005, 6.0731063)
@@ -3144,7 +3219,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall5" unique_id=637358320 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall6" type="Node3D" parent="Plants" unique_id=182291197]
 transform = Transform3D(0.97633094, 0, -0.6520061, 0, 1.1740247, 0, 0.6520061, 0, 0.97633094, -13.752714, 2.0000005, 5.0931315)
@@ -3152,7 +3227,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall6" unique_id=1508735469 instance=ExtResource("32_echeo")]
-transform = Transform3D(-0.8397665, 0, 0.5429477, 0, 1, 0, -0.5429477, 0, -0.8397665, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall7" type="Node3D" parent="Plants" unique_id=1140888932]
 transform = Transform3D(-1.1612537, 0, 0.18364184, 0, 1.1756847, 0, -0.18364184, 0, -1.1612537, -7.2616987, 2.0000005, 5.62)
@@ -3160,7 +3235,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall7" unique_id=1815975277 instance=ExtResource("32_echeo")]
-transform = Transform3D(-0.78959286, 0, 0.6136311, 0, 1, 0, -0.6136311, 0, -0.78959286, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall8" type="Node3D" parent="Plants" unique_id=1163844711]
 transform = Transform3D(-0.9599134, 0, -0.07596797, 0, 0.96291476, 0, 0.07596797, 0, -0.9599134, -5.006234, 2.0000005, 1.825511)
@@ -3168,7 +3243,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall8" unique_id=1607305925 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall9" type="Node3D" parent="Plants" unique_id=1747013102]
 transform = Transform3D(-0.9900789, 0, -0.5386535, 0, 1.1271219, 0, 0.5386535, 0, -0.9900789, -6.442297, 0, -5.3179407)
@@ -3176,7 +3251,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall9" unique_id=1764432459 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall10" type="Node3D" parent="Plants" unique_id=1038960857]
 transform = Transform3D(0.7842564, 0, 0.9540389, 0, 1.2350094, 0, -0.9540389, 0, 0.7842564, -7.4391646, 0, -2.1596074)
@@ -3184,7 +3259,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall10" unique_id=1582226795 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall11" type="Node3D" parent="Plants" unique_id=1775512254]
 transform = Transform3D(-0.4691194, 0, -1.0303141, 0, 1.1320866, 0, 1.0303141, 0, -0.4691194, -1.4223328, 0, -7.2392015)
@@ -3192,7 +3267,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall11" unique_id=1734447836 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall12" type="Node3D" parent="Plants" unique_id=1621665883]
 transform = Transform3D(0.8296235, 0, 0.013371549, 0, 0.8297313, 0, -0.013371549, 0, 0.8296235, -8.738099, 0.11718869, 0.57798624)
@@ -3200,7 +3275,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall12" unique_id=570652168 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall13" type="Node3D" parent="Plants" unique_id=983117033]
 transform = Transform3D(0.29725778, 0, -1.0537381, 0, 1.0948635, 0, 1.0537381, 0, 0.29725778, -10.646518, 0.21564674, 0.57798624)
@@ -3208,7 +3283,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall13" unique_id=435808201 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall14" type="Node3D" parent="Plants" unique_id=1486408028]
 transform = Transform3D(-0.11176577, 0, -1.103427, 0, 1.1090729, 0, 1.103427, 0, -0.11176577, -5.6936283, 0.27019143, 0.57798624)
@@ -3216,7 +3291,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall14" unique_id=1445380719 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall15" type="Node3D" parent="Plants" unique_id=1936393910]
 transform = Transform3D(0.49687243, 0, 0.93863183, 0, 1.062032, 0, -0.93863183, 0, 0.49687243, -8.904952, 0.27019095, -4.4335165)
@@ -3224,7 +3299,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall15" unique_id=1989051149 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="FermSmall16" type="Node3D" parent="Plants" unique_id=2105593023]
 transform = Transform3D(0.8463135, 0, 0.24444889, 0, 0.8809096, 0, -0.24444889, 0, 0.8463135, -6.5884867, 0.27019095, -3.3718817)
@@ -3232,7 +3307,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/FermSmall16" unique_id=268934460 instance=ExtResource("32_echeo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly" type="Node3D" parent="Plants" unique_id=1253139532]
 transform = Transform3D(0.84493554, 0, 0.89429796, 0, 1.230319, 0, -0.89429796, 0, 0.84493554, -1.5067947, 2.0000005, 4.973033)
@@ -3240,7 +3315,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly" unique_id=1087804243 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly2" type="Node3D" parent="Plants" unique_id=1718155462]
 transform = Transform3D(0.6962462, 0, 0.5362536, 0, 0.87882113, 0, -0.5362536, 0, 0.6962462, -1.4475582, 2.0000005, 13.166144)
@@ -3248,7 +3323,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly2" unique_id=1036778790 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly3" type="Node3D" parent="Plants" unique_id=1277341213]
 transform = Transform3D(0.3638103, 0, -0.9961316, 0, 1.0604886, 0, 0.9961316, 0, 0.3638103, -11.310628, 2.0000005, 7.0017257)
@@ -3256,7 +3331,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly3" unique_id=1482036142 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly5" type="Node3D" parent="Plants" unique_id=348792156]
 transform = Transform3D(-0.7519568, 0, -0.7846079, 0, 1.0867606, 0, 0.7846079, 0, -0.7519568, -14.476144, 0, -2.5255938)
@@ -3264,7 +3339,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly5" unique_id=967673420 instance=ExtResource("33_idahi")]
-transform = Transform3D(-0.9742438, 0, 0.22549723, 0, 1, 0, -0.22549723, 0, -0.9742438, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly8" type="Node3D" parent="Plants" unique_id=1024079085]
 transform = Transform3D(0.88311857, 0, -0.27043515, 0, 0.9235982, 0, 0.27043515, 0, 0.88311857, -5.375595, 0, -2.756909)
@@ -3272,7 +3347,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly8" unique_id=2144080728 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly16" type="Node3D" parent="Plants" unique_id=1400653113]
 transform = Transform3D(0.88167745, 0, 0.6386414, 0, 1.0886772, 0, -0.6386414, 0, 0.88167745, -2.0924919, 0, -4.489334)
@@ -3280,7 +3355,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly16" unique_id=1215890042 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly9" type="Node3D" parent="Plants" unique_id=716297835]
 transform = Transform3D(-0.525459, 0, 0.84400177, 0, 0.9942063, 0, -0.84400177, 0, -0.525459, -3.2686996, 0, -8.325134)
@@ -3288,7 +3363,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly9" unique_id=121013625 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly10" type="Node3D" parent="Plants" unique_id=943371618]
 transform = Transform3D(0.84895676, 0, 0.5484407, 0, 1.0107001, 0, -0.5484407, 0, 0.84895676, -0.8273754, 0, -12.505483)
@@ -3296,7 +3371,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly10" unique_id=1631323066 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly11" type="Node3D" parent="Plants" unique_id=1430890558]
 transform = Transform3D(-0.38756305, 0, 0.3888392, 0, 0.549, 0, -0.3888392, 0, -0.38756305, 7.4998817, 0, -9.9303875)
@@ -3304,7 +3379,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly11" unique_id=299987147 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly15" type="Node3D" parent="Plants" unique_id=121768402]
 transform = Transform3D(0.29841918, 0, -1.1417106, 0, 1.1800666, 0, 1.1417106, 0, 0.29841918, 13.211663, 0, -14.070285)
@@ -3312,7 +3387,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly15" unique_id=1062295447 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly12" type="Node3D" parent="Plants" unique_id=1375311347]
 transform = Transform3D(0.20469017, 0, 0.8220812, 0, 0.84718096, 0, -0.8220812, 0, 0.20469017, 4.389702, 0, -5.265118)
@@ -3320,7 +3395,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly12" unique_id=412344651 instance=ExtResource("33_idahi")]
-transform = Transform3D(-0.92087996, 0, 0.3898463, 0, 1, 0, -0.3898463, 0, -0.92087996, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly13" type="Node3D" parent="Plants" unique_id=1604049882]
 transform = Transform3D(-1.0181259, 0, -0.3833547, 0, 1.0879068, 0, 0.3833547, 0, -1.0181259, 2.5336285, 0, -13.040569)
@@ -3328,7 +3403,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly13" unique_id=1213460647 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly14" type="Node3D" parent="Plants" unique_id=795140077]
 transform = Transform3D(0.09873166, 0, 0.8935716, 0, 0.8990095, 0, -0.8935716, 0, 0.09873166, 6.9480762, 0, -12.57237)
@@ -3336,7 +3411,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly14" unique_id=12206252 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly6" type="Node3D" parent="Plants" unique_id=764429370]
 transform = Transform3D(-0.96285516, 0, -0.37290028, 0, 1.0325428, 0, 0.37290028, 0, -0.96285516, -13.340885, 0, -1.4092638)
@@ -3344,7 +3419,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly6" unique_id=316965882 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly7" type="Node3D" parent="Plants" unique_id=726451154]
 transform = Transform3D(-0.80834824, 0, -0.25469607, 0, 0.84752405, 0, 0.25469607, 0, -0.80834824, -13.475544, 0, -4.0611286)
@@ -3352,7 +3427,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly7" unique_id=2042611863 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Curly4" type="Node3D" parent="Plants" unique_id=731094317]
 transform = Transform3D(0.101857476, 0, -0.84224975, 0, 0.84838647, 0, 0.84224975, 0, 0.101857476, -11.444882, 2.0000005, 12.10454)
@@ -3360,7 +3435,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Curly4" unique_id=1306970412 instance=ExtResource("33_idahi")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm" type="Node3D" parent="Plants" unique_id=304092514]
 transform = Transform3D(0.6881696, 0, -0.9658242, 0, 1.1859148, 0, 0.9658242, 0, 0.6881696, -4.081089, 2.0000005, 10.2391615)
@@ -3368,7 +3443,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm" unique_id=1495396213 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm4" type="Node3D" parent="Plants" unique_id=1176677201]
 transform = Transform3D(0.2988343, 0, 0.7300591, 0, 0.78885245, 0, -0.7300591, 0, 0.2988343, -10.188164, 2.0000005, 14.167187)
@@ -3376,7 +3451,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm4" unique_id=1713038838 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm5" type="Node3D" parent="Plants" unique_id=869966817]
 transform = Transform3D(-0.37362796, 0, 0.7857601, 0, 0.8700671, 0, -0.7857601, 0, -0.37362796, -12.180847, 2.0000005, 12.2461815)
@@ -3384,7 +3459,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm5" unique_id=1787415772 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm8" type="Node3D" parent="Plants" unique_id=537827942]
 transform = Transform3D(-0.8418006, 0, 0.30846947, 0, 0.8965387, 0, -0.30846947, 0, -0.8418006, -13.987902, 0, -0.8939997)
@@ -3392,7 +3467,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm8" unique_id=1435417805 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm9" type="Node3D" parent="Plants" unique_id=639806996]
 transform = Transform3D(0.0154382195, 0, -1.1674169, 0, 1.167519, 0, 1.1674169, 0, 0.0154382195, 13.93958, 0, -3.6413937)
@@ -3400,7 +3475,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm9" unique_id=991164457 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm14" type="Node3D" parent="Plants" unique_id=993566148]
 transform = Transform3D(0.21102734, 0, -0.7222856, 0, 0.75248194, 0, 0.7222856, 0, 0.21102734, 14.103244, 3.4, 13.319923)
@@ -3408,7 +3483,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm14" unique_id=573332460 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm15" type="Node3D" parent="Plants" unique_id=1488202588]
 transform = Transform3D(-0.831242, 0, -0.87423545, 0, 1.2063378, 0, 0.87423545, 0, -0.831242, 11.657366, 3.4, 11.1037655)
@@ -3416,7 +3491,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm15" unique_id=2094811879 instance=ExtResource("34_421ad")]
-transform = Transform3D(-0.9900045, 0, 0.14103597, 0, 1, 0, -0.14103597, 0, -0.9900045, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm21" type="Node3D" parent="Plants" unique_id=1345252007]
 transform = Transform3D(1.2081665, 0, -0.042765237, 0, 1.2089231, 0, 0.042765237, 0, 1.2081665, 10.897214, 3.4, 5.9910717)
@@ -3424,7 +3499,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm21" unique_id=1815717287 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm22" type="Node3D" parent="Plants" unique_id=818163934]
 transform = Transform3D(-0.26620984, 0, -1.2198398, 0, 1.2485499, 0, 1.2198398, 0, -0.26620984, 6.6410875, 3.4, 5.920731)
@@ -3432,7 +3507,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm22" unique_id=820061027 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm23" type="Node3D" parent="Plants" unique_id=151974533]
 transform = Transform3D(-1.122789, 0, -0.11285617, 0, 1.1284466, 0, 0.11285617, 0, -1.122789, 2.7013645, 3.4, 5.5400577)
@@ -3440,7 +3515,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm23" unique_id=1266728721 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm16" type="Node3D" parent="Plants" unique_id=1963554604]
 transform = Transform3D(-0.99990976, 0, 0.3085289, 0, 1.046427, 0, -0.3085289, 0, -0.99990976, 9.4408455, 3.4, 13.523096)
@@ -3448,7 +3523,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm16" unique_id=1869918461 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm17" type="Node3D" parent="Plants" unique_id=1253016500]
 transform = Transform3D(0.4999915, 0, 0.9796553, 0, 1.0998709, 0, -0.9796553, 0, 0.4999915, 6.5312047, 3.4, 11.110775)
@@ -3456,7 +3531,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm17" unique_id=2131795554 instance=ExtResource("34_421ad")]
-transform = Transform3D(-0.9952141, 0, 0.097718365, 0, 1, 0, -0.097718365, 0, -0.9952141, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm18" type="Node3D" parent="Plants" unique_id=95985319]
 transform = Transform3D(-0.37221864, 0, 1.1145895, 0, 1.1750984, 0, -1.1145895, 0, -0.37221864, 4.6287756, 3.4, 13.207034)
@@ -3464,7 +3539,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm18" unique_id=1840139579 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm19" type="Node3D" parent="Plants" unique_id=128265829]
 transform = Transform3D(1.0090512, 0, 0.03390247, 0, 1.0096205, 0, -0.03390247, 0, 1.0090512, 1.21879, 3.4, 13.7004385)
@@ -3472,7 +3547,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm19" unique_id=1967763830 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm20" type="Node3D" parent="Plants" unique_id=612298927]
 transform = Transform3D(0.86252856, 0, 0.1764447, 0, 0.880391, 0, -0.1764447, 0, 0.86252856, 13.872587, 3.4, 9.70985)
@@ -3480,7 +3555,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm20" unique_id=58998834 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm10" type="Node3D" parent="Plants" unique_id=1205889703]
 transform = Transform3D(-0.9716137, 0, -0.7485122, 0, 1.2265006, 0, 0.7485122, 0, -0.9716137, 14.444039, 0, -6.453321)
@@ -3488,7 +3563,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm10" unique_id=2077967849 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.57197475, 0, 0.5535326)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0.57197475, 0, 0.5535326)
 
 [node name="Palm11" type="Node3D" parent="Plants" unique_id=688744544]
 transform = Transform3D(-0.8763812, 0, -0.12686384, 0, 0.8855159, 0, 0.12686384, 0, -0.8763812, 14.786299, 0, -7.7639346)
@@ -3496,7 +3571,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm11" unique_id=907530210 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.6519165, 0, 0.6718707)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0.6519165, 0, 0.6718707)
 
 [node name="Palm12" type="Node3D" parent="Plants" unique_id=2069063822]
 transform = Transform3D(1.100295, 0, 0.32632345, 0, 1.1476654, 0, -0.32632345, 0, 1.100295, 13.752725, 0, -10.037285)
@@ -3504,7 +3579,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm12" unique_id=486209499 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm13" type="Node3D" parent="Plants" unique_id=1689778668]
 transform = Transform3D(-0.7590406, 0, 0.8755528, 0, 1.1587645, 0, -0.8755528, 0, -0.7590406, 13.972825, 0, -12.779945)
@@ -3512,7 +3587,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm13" unique_id=1526146768 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm6" type="Node3D" parent="Plants" unique_id=207676692]
 transform = Transform3D(1.072764, 0, 0.08667572, 0, 1.0762599, 0, -0.08667572, 0, 1.072764, -14.101851, 2.0000005, 13.651095)
@@ -3520,7 +3595,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm6" unique_id=1723894433 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm7" type="Node3D" parent="Plants" unique_id=397033226]
 transform = Transform3D(-0.78378063, 0, -0.16071013, 0, 0.8000874, 0, 0.16071013, 0, -0.78378063, -6.962595, 2.0000005, 14.167186)
@@ -3528,7 +3603,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm7" unique_id=1900184641 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm2" type="Node3D" parent="Plants" unique_id=1677884808]
 transform = Transform3D(1.133627, 0, 0.38521835, 0, 1.1972901, 0, -0.38521835, 0, 1.133627, -0.68118525, 2.0000005, 11.911581)
@@ -3536,7 +3611,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm2" unique_id=2131544359 instance=ExtResource("34_421ad")]
-transform = Transform3D(-0.733465, 0, 0.6797272, 0, 1, 0, -0.6797272, 0, -0.733465, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm3" type="Node3D" parent="Plants" unique_id=473700914]
 transform = Transform3D(0.37335604, 0, -1.0360141, 0, 1.1012356, 0, 1.0360141, 0, 0.37335604, -3.4086492, 2.0000005, 13.478182)
@@ -3544,7 +3619,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm3" unique_id=50013999 instance=ExtResource("34_421ad")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail" type="Node3D" parent="Plants" unique_id=1350842818]
 transform = Transform3D(0.25307354, 0, -1.053713, 0, 1.0836776, 0, 1.053713, 0, 0.25307354, -0.34384418, -0.50096065, -8.36618)
@@ -3552,7 +3627,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail" unique_id=1515682550 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail2" type="Node3D" parent="Plants" unique_id=753945815]
 transform = Transform3D(-0.8069235, 0, 0.095974855, 0, 0.81261104, 0, -0.095974855, 0, -0.8069235, -0.15837336, -0.50096065, -8.014763)
@@ -3560,7 +3635,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail2" unique_id=863836179 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail3" type="Node3D" parent="Plants" unique_id=14730174]
 transform = Transform3D(-0.7306573, 0, -0.68915623, 0, 1.0043886, 0, 0.68915623, 0, -0.7306573, -0.041234016, -0.50096065, -8.356419)
@@ -3568,7 +3643,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail3" unique_id=600319302 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail4" type="Node3D" parent="Plants" unique_id=1216454551]
 transform = Transform3D(-0.06927507, 0, -0.8630187, 0, 0.8657946, 0, 0.8630187, 0, -0.06927507, -0.20718169, -0.50096065, -8.727361)
@@ -3576,7 +3651,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail4" unique_id=427535284 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail5" type="Node3D" parent="Plants" unique_id=1504382254]
 transform = Transform3D(0.8856202, 0, -0.72302985, 0, 1.1432827, 0, 0.72302985, 0, 0.8856202, 0.24673367, -0.50096065, -9.727927)
@@ -3584,7 +3659,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail5" unique_id=287354726 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail6" type="Node3D" parent="Plants" unique_id=1360994523]
 transform = Transform3D(0.49051315, 0, -0.6293155, 0, 0.79789793, 0, 0.6293155, 0, 0.49051315, 0.6371987, -0.50096065, -9.898756)
@@ -3592,7 +3667,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail6" unique_id=582665893 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail7" type="Node3D" parent="Plants" unique_id=618807426]
 transform = Transform3D(0.6590032, 0, -1.0376723, 0, 1.2292473, 0, 1.0376723, 0, 0.6590032, 0.54934406, -0.50096065, -9.610788)
@@ -3600,7 +3675,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail7" unique_id=177063808 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail8" type="Node3D" parent="Plants" unique_id=1528808850]
 transform = Transform3D(-1.1519179, 0, 0.27821425, 0, 1.1850393, 0, -0.27821425, 0, -1.1519179, 1.2228961, -0.50096065, -10.440526)
@@ -3608,7 +3683,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail8" unique_id=1096710320 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail9" type="Node3D" parent="Plants" unique_id=1680324529]
 transform = Transform3D(0.6807261, 0, -0.6685328, 0, 0.9541091, 0, 0.6685328, 0, 0.6807261, 1.4474134, -0.50096065, -10.933487)
@@ -3616,7 +3691,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail9" unique_id=1930399226 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail10" type="Node3D" parent="Plants" unique_id=1146273975]
 transform = Transform3D(-1.2308233, 0, 0.17530228, 0, 1.2432444, 0, -0.17530228, 0, -1.2308233, 1.7012155, -0.50096065, -11.358118)
@@ -3624,7 +3699,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail10" unique_id=1109923696 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail11" type="Node3D" parent="Plants" unique_id=1732729550]
 transform = Transform3D(-0.4312034, 0, -0.8313251, 0, 0.936503, 0, 0.8313251, 0, -0.4312034, 1.715858, -0.50096065, -11.035984)
@@ -3632,7 +3707,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail11" unique_id=1681487685 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail12" type="Node3D" parent="Plants" unique_id=1912498648]
 transform = Transform3D(0.37377578, 0, 0.72181875, 0, 0.8128534, 0, -0.72181875, 0, 0.37377578, 1.4278903, -0.50096065, -10.630877)
@@ -3640,7 +3715,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail12" unique_id=1897923767 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail13" type="Node3D" parent="Plants" unique_id=1305681473]
 transform = Transform3D(-0.72937536, 0, -0.5278234, 0, 0.9003255, 0, 0.5278234, 0, -0.72937536, 1.5157447, -0.50096065, -10.250174)
@@ -3648,7 +3723,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail13" unique_id=1261653890 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail14" type="Node3D" parent="Plants" unique_id=1268412678]
 transform = Transform3D(-0.4694447, 0, -0.9672531, 0, 1.0751543, 0, 0.9672531, 0, -0.4694447, 1.3009889, -0.50096065, -9.293534)
@@ -3656,7 +3731,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail14" unique_id=554286274 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail15" type="Node3D" parent="Plants" unique_id=1997813602]
 transform = Transform3D(0.7812468, 0, -0.0023828917, 0, 0.7812504, 0, 0.0023828917, 0, 0.7812468, 1.3009889, -0.50096065, -9.293534)
@@ -3664,7 +3739,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail15" unique_id=147024086 instance=ExtResource("35_qubia")]
-transform = Transform3D(-0.76223963, 0, 0.6472949, 0, 1, 0, -0.6472949, 0, -0.76223963, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail16" type="Node3D" parent="Plants" unique_id=1725579659]
 transform = Transform3D(-0.40458483, 0, -0.97114396, 0, 1.0520501, 0, 0.97114396, 0, -0.40458483, 1.1903722, -0.50096065, -6.036494)
@@ -3672,7 +3747,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail16" unique_id=1986685238 instance=ExtResource("35_qubia")]
-transform = Transform3D(-0.9636416, 0, 0.2671982, 0, 1, 0, -0.2671982, 0, -0.9636416, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail17" type="Node3D" parent="Plants" unique_id=67611355]
 transform = Transform3D(1.0470015, 0, -0.13836072, 0, 1.0561041, 0, 0.13836072, 0, 1.0470015, 1.5718019, -0.50096065, -6.2015905)
@@ -3680,7 +3755,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail17" unique_id=153996760 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail18" type="Node3D" parent="Plants" unique_id=1082663618]
 transform = Transform3D(-0.15360956, 0, 1.0190319, 0, 1.0305444, 0, -1.0190319, 0, -0.15360956, 1.1049774, -0.50096065, -6.42931)
@@ -3688,7 +3763,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail18" unique_id=773648479 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail19" type="Node3D" parent="Plants" unique_id=1966831547]
 transform = Transform3D(0.019670218, 0, 1.0095656, 0, 1.0097573, 0, -1.0095656, 0, 0.019670218, 1.5319507, -0.50096065, -5.8486257)
@@ -3696,7 +3771,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail19" unique_id=825403799 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail20" type="Node3D" parent="Plants" unique_id=66647413]
 transform = Transform3D(0.7438719, 0, 0.21492554, 0, 0.77429867, 0, -0.21492554, 0, 0.7438719, 1.4807141, -0.50096065, -6.657029)
@@ -3704,7 +3779,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail20" unique_id=2040427252 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail21" type="Node3D" parent="Plants" unique_id=1020446504]
 transform = Transform3D(0.021591008, 0, -1.095013, 0, 1.0952258, 0, 1.095013, 0, 0.021591008, 1.3725474, -0.50096065, -6.417924)
@@ -3712,7 +3787,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail21" unique_id=870357933 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail22" type="Node3D" parent="Plants" unique_id=71121668]
 transform = Transform3D(0.15646921, 0, 0.8243172, 0, 0.83903605, 0, -0.8243172, 0, 0.15646921, 2.0955553, -0.50096065, -5.888477)
@@ -3720,7 +3795,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail22" unique_id=1343876671 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail23" type="Node3D" parent="Plants" unique_id=540025509]
 transform = Transform3D(0.67242265, 0, 0.4721977, 0, 0.8216586, 0, -0.4721977, 0, 0.67242265, 4.3784394, -0.50096065, -6.5488625)
@@ -3728,7 +3803,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail23" unique_id=89155413 instance=ExtResource("35_qubia")]
-transform = Transform3D(-0.92087996, 0, 0.3898463, 0, 1, 0, -0.3898463, 0, -0.92087996, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail24" type="Node3D" parent="Plants" unique_id=1738749905]
 transform = Transform3D(-0.1951332, 0, -0.7579062, 0, 0.782623, 0, 0.7579062, 0, -0.1951332, 4.646009, -0.50096065, -6.947371)
@@ -3736,7 +3811,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail24" unique_id=1993098196 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail25" type="Node3D" parent="Plants" unique_id=583376092]
 transform = Transform3D(0.8702788, 0, 0.7676562, 0, 1.160466, 0, -0.7676562, 0, 0.8702788, 5.9936795, -0.50096065, -8.054939)
@@ -3744,7 +3819,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail25" unique_id=815313935 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail26" type="Node3D" parent="Plants" unique_id=981977979]
 transform = Transform3D(0.5037644, 0, 0.8852242, 0, 1.0185286, 0, -0.8852242, 0, 0.5037644, 6.071132, -0.50096065, -9.20898)
@@ -3752,7 +3827,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail26" unique_id=190097736 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail27" type="Node3D" parent="Plants" unique_id=632560288]
 transform = Transform3D(0.055773053, 0, 1.0120565, 0, 1.0135921, 0, -1.0120565, 0, 0.055773053, 5.8929925, -0.50096065, -9.472318)
@@ -3760,7 +3835,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail27" unique_id=1316096381 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail28" type="Node3D" parent="Plants" unique_id=1614542984]
 transform = Transform3D(0.4109393, 0, -1.1652654, 0, 1.235603, 0, 1.1652654, 0, 0.4109393, 5.8929925, -0.50096065, -9.472318)
@@ -3768,7 +3843,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail28" unique_id=1102042535 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail29" type="Node3D" parent="Plants" unique_id=1572722245]
 transform = Transform3D(-1.1836115, 0, -0.04622971, 0, 1.184514, 0, 0.04622971, 0, -1.1836115, 5.645145, -0.50096065, -9.216725)
@@ -3776,7 +3851,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail29" unique_id=484255833 instance=ExtResource("35_qubia")]
-transform = Transform3D(-0.8154388, 0, 0.5788433, 0, 1, 0, -0.5788433, 0, -0.8154388, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail30" type="Node3D" parent="Plants" unique_id=1050379385]
 transform = Transform3D(0.71749973, 0, -0.9024207, 0, 1.1528959, 0, 0.9024207, 0, 0.71749973, 5.6838717, -0.50096065, -9.968013)
@@ -3784,7 +3859,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail30" unique_id=1656174847 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail31" type="Node3D" parent="Plants" unique_id=2059721161]
 transform = Transform3D(0.29007742, 0, -0.80209774, 0, 0.8529394, 0, 0.80209774, 0, 0.29007742, 5.149451, -0.50096065, -10.1461525)
@@ -3792,7 +3867,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail31" unique_id=2135987252 instance=ExtResource("35_qubia")]
-transform = Transform3D(-0.5902446, 0, 0.71025044, 0, 0.9234957, 0, -0.71025044, 0, -0.5902446, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail32" type="Node3D" parent="Plants" unique_id=1672493612]
 transform = Transform3D(-0.90579563, 0, -0.37149164, 0, 0.9790157, 0, 0.37149164, 0, -0.90579563, 4.878368, -0.50096065, -9.410356)
@@ -3800,7 +3875,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail32" unique_id=125887154 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Cattail33" type="Node3D" parent="Plants" unique_id=899061778]
 transform = Transform3D(0.44609267, 0, -0.89577585, 0, 1.0007063, 0, 0.89577585, 0, 0.44609267, 4.878368, -0.50096065, -9.410356)
@@ -3808,7 +3883,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Cattail33" unique_id=2017485787 instance=ExtResource("35_qubia")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly" type="Node3D" parent="Plants" unique_id=646071832]
 transform = Transform3D(-0.059497528, 0, -0.9294513, 0, 0.9313537, 0, 0.9294513, 0, -0.059497528, 2.3971214, 0.020848244, -8.750294)
@@ -3816,7 +3891,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly" unique_id=2070409124 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly2" type="Node3D" parent="Plants" unique_id=1353474952]
 transform = Transform3D(0.8478443, 0, -0.69172436, 0, 1.0942223, 0, 0.69172436, 0, 0.8478443, 2.9005623, 0.020848244, -8.130676)
@@ -3824,7 +3899,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly2" unique_id=603175459 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly3" type="Node3D" parent="Plants" unique_id=1011715435]
 transform = Transform3D(1.0007907, 0, 0.20158142, 0, 1.0208904, 0, -0.20158142, 0, 1.0007907, 3.1716452, 0.020848244, -8.951672)
@@ -3832,7 +3907,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly3" unique_id=1152244623 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-0.9636416, 0, 0.2671982, 0, 1, 0, -0.2671982, 0, -0.9636416, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly4" type="Node3D" parent="Plants" unique_id=488254232]
 transform = Transform3D(-0.32727763, 0, -1.194275, 0, 1.2383068, 0, 1.194275, 0, -0.32727763, 0.7009144, 0.020848244, -7.503313)
@@ -3840,7 +3915,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly4" unique_id=791994184 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly5" type="Node3D" parent="Plants" unique_id=253234628]
 transform = Transform3D(0.39659983, 0, 0.9238789, 0, 1.0054072, 0, -0.9238789, 0, 0.39659983, 2.397121, 0.020848244, -11.375931)
@@ -3848,7 +3923,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly5" unique_id=1465357176 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly6" type="Node3D" parent="Plants" unique_id=235821982]
 transform = Transform3D(0.74411994, 0, -0.55925196, 0, 0.93084764, 0, 0.55925196, 0, 0.74411994, 4.4108825, 0.020848244, -10.097966)
@@ -3856,7 +3931,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly6" unique_id=1055724107 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly7" type="Node3D" parent="Plants" unique_id=915938967]
 transform = Transform3D(-0.07734175, 0, 1.0572157, 0, 1.060041, 0, -1.0572157, 0, -0.07734175, 5.332566, 0.020848244, -7.4645853)
@@ -3864,7 +3939,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly7" unique_id=1784627028 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly8" type="Node3D" parent="Plants" unique_id=1327783341]
 transform = Transform3D(0.2829472, 0, -1.1831287, 0, 1.2164919, 0, 1.1831287, 0, 0.2829472, 2.7379107, 0.020848244, -5.985245)
@@ -3872,7 +3947,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly8" unique_id=469882239 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly9" type="Node3D" parent="Plants" unique_id=1819950829]
 transform = Transform3D(-0.17657442, 0, 0.9605727, 0, 0.976667, 0, -0.9605727, 0, -0.17657442, 2.0330944, 0.020848244, -6.46545)
@@ -3880,7 +3955,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly9" unique_id=690206007 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-0.9511712, 0, 0.30866373, 0, 1, 0, -0.30866373, 0, -0.9511712, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Lilly10" type="Node3D" parent="Plants" unique_id=431618520]
 transform = Transform3D(0.14085491, 0, -0.973505, 0, 0.9836423, 0, 0.973505, 0, 0.14085491, 1.1733732, 0.020848244, -9.811393)
@@ -3888,7 +3963,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Lilly10" unique_id=1720530567 instance=ExtResource("36_ouovd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Deco" type="Node3D" parent="." unique_id=1352724838]
 

@@ -79,23 +79,28 @@ mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="fullscreen" parent="root/vpos/rootButtons/vpos" unique_id=1584076471 instance=ExtResource("1_5aubx")]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 toggle_mode = true
 text = "Fullscreen"
 
 [node name="start" parent="root/vpos/rootButtons/vpos" unique_id=1788893900 instance=ExtResource("1_5aubx")]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 text = "Start"
 
 [node name="settings" parent="root/vpos/rootButtons/vpos" unique_id=596878436 instance=ExtResource("1_5aubx")]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 text = "Settings"
 
 [node name="credits" parent="root/vpos/rootButtons/vpos" unique_id=537092526 instance=ExtResource("1_5aubx")]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 text = "Credits"
 
 [node name="exit" parent="root/vpos/rootButtons/vpos" unique_id=32177567 instance=ExtResource("1_5aubx")]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 text = "Exit"
 
