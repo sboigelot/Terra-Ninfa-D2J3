@@ -61,7 +61,7 @@ var _last_mouse_world_position = Vector3.ZERO
 
 @onready var size_requested : float = size # UNIT: m
 
-const zoom_tween_duration:float = 0.1
+const zoom_tween_duration:float = 0.05
 var _zoom_tween:Tween
 var _size_last : float = size # UNIT: m
 
@@ -70,6 +70,7 @@ var _mouse_wheel: float
 @export_category("Camera Movement")
 @export var allow_pivot_movement: bool = true
 @export var camera_move_mouse_speed:float = 5
+@export var max_frame_drag_distance: float = 2.0
 @export var min_pivot_center: Vector3 = Vector3(-15, 0, -15)
 @export var max_pivot_center: Vector3 = Vector3(15, 0, 15)
 
@@ -91,11 +92,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 func _process_zoom(delta : float) -> void:
 	
-	size_requested -= _mouse_wheel * delta * zoom_speed_mouse
+	size_requested -= _mouse_wheel * zoom_speed_mouse
 	_mouse_wheel = 0.0
 		
 	if Input.is_action_pressed("camera_zoom_in"):
-		size_requested -= delta * zoom_speed_mouse
+		size_requested -= delta * zoom_speed_keyboard
 		
 	if Input.is_action_pressed("camera_zoom_out"):
 		size_requested += delta * zoom_speed_keyboard
@@ -140,6 +141,7 @@ func _process_movement(_delta : float) -> void:
 			var mouse_world_position = get_mouse_world_position()
 			if mouse_world_position != Vector3.ZERO:
 				var mouse_movement:Vector3 = _last_mouse_world_position - mouse_world_position
+				mouse_movement = mouse_movement.clampf(-max_frame_drag_distance/2.0, max_frame_drag_distance/2.0)
 				position = Vector3(
 					clamp(position.x + mouse_movement.x, min_pivot_center.x, max_pivot_center.x),
 					clamp(position.y + mouse_movement.y, min_pivot_center.y, max_pivot_center.y),

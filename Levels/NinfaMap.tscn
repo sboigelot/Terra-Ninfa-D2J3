@@ -49,12 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://o2uahkg552wj" path="res://Assets/Models/stairs.glb" id="47_spvdf"]
 [ext_resource type="PackedScene" uid="uid://d330mgmo6f40i" path="res://Assets/Models/column.glb" id="48_7hax0"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_dqxci"]
-viewport_path = NodePath("ControlInfos/TV/SubViewport")
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wsxap"]
-sky_top_color = Color(0.6388706, 0.70131785, 0.7848583, 1)
-sky_horizon_color = Color(0.7182, 0.72508216, 0.7388414, 1)
 energy_multiplier = 2.0
 
 [sub_resource type="Sky" id="Sky_jdvys"]
@@ -62,10 +57,13 @@ sky_material = SubResource("ProceduralSkyMaterial_wsxap")
 
 [sub_resource type="Environment" id="Environment_j6adh"]
 background_mode = 1
-background_color = Color(0.30588236, 0.39607844, 0.5254902, 1)
+background_color = Color(0.3791409, 0.47878253, 0.62175643, 1)
 sky = SubResource("Sky_jdvys")
 ambient_light_source = 3
 ambient_light_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dqxci"]
+viewport_path = NodePath("ControlInfos/TV/SubViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_elb2t"]
 size = Vector3(28, 1, 14)
@@ -325,13 +323,43 @@ control_info = NodePath("ControlInfos")
 tvui = NodePath("ControlInfos/TV/SubViewport/TvUi")
 plants_placeholder = NodePath("Plants")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1593695015]
+transform = Transform3D(-0.54595923, 0.68716425, -0.4793056, -0.06373587, 0.53636914, 0.8415735, 0.83538395, 0.49001378, -0.24903849, 0, 10.435978, 0)
+light_color = Color(1, 0.96862745, 1, 1)
+directional_shadow_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1944224997]
+environment = SubResource("Environment_j6adh")
+
+[node name="NinfaCameraController" type="Node3D" parent="." unique_id=359219323 node_paths=PackedStringArray("camera")]
+transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, 0, 0, 0)
+script = ExtResource("2_elb2t")
+camera = NodePath("ToolCamera3D2")
+camera_position = Vector3(63.866, 40, -12.279)
+camera_rotation = Vector3(0.61086524, -1.7627826, 0)
+size_max = 50.0
+size = 25.0
+camera_rotation_keyboard_speed = 1.5
+allow_pivot_movement = false
+max_frame_drag_distance = null
+min_pivot_center = Vector3(-30, 0, -30)
+max_pivot_center = Vector3(30, 0, 30)
+metadata/_custom_type_script = "uid://co0xkfphq1e30"
+
+[node name="ToolCamera3D2" type="Camera3D" parent="NinfaCameraController" unique_id=1897780768]
+transform = Transform3D(-0.19080903, -0.56303823, 0.8041019, 0, 0.81915206, 0.57357645, -0.98162717, 0.10944357, -0.1563016, 63.866, 40, -12.279)
+fov = 25.0
+size = 30.0
+script = ExtResource("3_8rtkp")
+metadata/_custom_type_script = "uid://bjsf6caogbjsg"
+
 [node name="ControlInfos" type="Node3D" parent="." unique_id=1631137494]
 
 [node name="Label3D" type="Label3D" parent="ControlInfos" unique_id=45746856]
 transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, 8.742278e-08, 4.371139e-08, 1, 0, 1, -4.371139e-08, 0, -7.1, -20.6414)
 text = "LMB: Move camera 
 MMW: Zoom (+/-)
-RMB: Rotate (a/e)
+RMB: Rotate (q/e)
 Click: Interract"
 font_size = 256
 outline_size = 24
@@ -360,34 +388,6 @@ material = ExtResource("7_yku8m")
 [node name="Sprite3D" type="Sprite3D" parent="ControlInfos/TV" unique_id=1013036091]
 transform = Transform3D(-0.625, 0, 9.4372375e-08, 0, 0.625, 0, -9.4372375e-08, 0, -0.625, 0, 0, -0.1)
 texture = SubResource("ViewportTexture_dqxci")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1944224997]
-environment = SubResource("Environment_j6adh")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=1593695015]
-transform = Transform3D(0.5245804, 0.64234495, -0.5587561, 0, 0.6563093, 0.7544919, 0.8513609, -0.39579168, 0.344287, 0, 10.435978, 0)
-
-[node name="NinfaCameraController" type="Node3D" parent="." unique_id=359219323 node_paths=PackedStringArray("camera")]
-transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, 0, 0, 0)
-script = ExtResource("2_elb2t")
-camera = NodePath("ToolCamera3D2")
-camera_position = Vector3(63.866, 40, -12.279)
-camera_rotation = Vector3(0.61086524, -1.7627826, 0)
-size_max = 50.0
-size = 25.0
-zoom_speed_mouse = 20.0
-camera_rotation_keyboard_speed = 1.5
-allow_pivot_movement = false
-min_pivot_center = Vector3(-30, 0, -30)
-max_pivot_center = Vector3(30, 0, 30)
-metadata/_custom_type_script = "uid://co0xkfphq1e30"
-
-[node name="ToolCamera3D2" type="Camera3D" parent="NinfaCameraController" unique_id=1897780768]
-transform = Transform3D(-0.19080903, -0.56303823, 0.8041019, 0, 0.81915206, 0.57357645, -0.98162717, 0.10944357, -0.1563016, 63.866, 40, -12.279)
-fov = 25.0
-size = 30.0
-script = ExtResource("3_8rtkp")
-metadata/_custom_type_script = "uid://bjsf6caogbjsg"
 
 [node name="Mouse3DCursor" type="CSGSphere3D" parent="." unique_id=1911056028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.257654, 0)
@@ -1020,7 +1020,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D9" unique_id=1900577168 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D4/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig14"), NodePath("../../../../../Plants/FernBig17"), NodePath("../../../../../Plants/FernBig21"), NodePath("../../../../../Plants/FermSmall14")]
+plants = [NodePath("../../../../../Plants/FernBig14"), NodePath("../../../../../Plants/FernBig17"), NodePath("../../../../../Plants/FernBig21"), NodePath("../../../../../Plants/FermSmall8"), NodePath("../../../../../Plants/FermSmall14")]
 water_size = Vector3(0.75166017, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1053,8 +1053,9 @@ transform = Transform3D(1, 0, 1.10766614e-07, 0, 1, 0, -1.10766614e-07, 0, 1, -1
 size = Vector3(6, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="pump_up_water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D12" unique_id=1731346736 node_paths=PackedStringArray("mechanisms")]
+[node name="pump_up_water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D12" unique_id=1731346736 node_paths=PackedStringArray("downstream", "mechanisms")]
 script = ExtResource("8_22r32")
+downstream = [NodePath("../../FallOffMap/water_node")]
 mechanisms = [NodePath("../../../../../Mecanisms/FrontHill/T2GateWaterWheel")]
 water_size = Vector3(6, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
@@ -1093,7 +1094,7 @@ material = ExtResource("7_6a6ga")
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../FallOffMap5/water_node")]
 mechanisms = [NodePath("../../../../../Mecanisms/LowLandEast/DrawBridgeWaterWheel")]
-plants = [NodePath("../../../../../Plants/FernBig36"), NodePath("../../../../../Plants/FernBig37"), NodePath("../../../../../Plants/FernBig38"), NodePath("../../../../../Plants/FernBig39"), NodePath("../../../../../Plants/FernBig41"), NodePath("../../../../../Plants/Curly15"), NodePath("../../../../../Plants/Palm10"), NodePath("../../../../../Plants/Palm11"), NodePath("../../../../../Plants/Palm12"), NodePath("../../../../../Plants/Palm13")]
+plants = [NodePath("../../../../../Plants/FernBig36"), NodePath("../../../../../Plants/FernBig37"), NodePath("../../../../../Plants/FernBig38"), NodePath("../../../../../Plants/FernBig39"), NodePath("../../../../../Plants/FernBig41"), NodePath("../../../../../Plants/FernBig47"), NodePath("../../../../../Plants/Curly15"), NodePath("../../../../../Plants/Palm9"), NodePath("../../../../../Plants/Palm10"), NodePath("../../../../../Plants/Palm11"), NodePath("../../../../../Plants/Palm12"), NodePath("../../../../../Plants/Palm13")]
 water_size = Vector3(14, 0.15, 1.9)
 material = ExtResource("9_pjmpm")
 
@@ -1127,7 +1128,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D5" unique_id=1516884490 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D36/water_node")]
-plants = [NodePath("../../../../../Plants/Curly"), NodePath("../../../../../Plants/Palm23")]
+plants = [NodePath("../../../../../Plants/FernBig4"), NodePath("../../../../../Plants/FermSmall4"), NodePath("../../../../../Plants/Curly"), NodePath("../../../../../Plants/Palm23")]
 water_size = Vector3(5.7216034, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1172,9 +1173,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.8
 size = Vector3(1.7, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D22" unique_id=1206407175 node_paths=PackedStringArray("downstream")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D22" unique_id=1206407175 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Fall8/water_node")]
+plants = [NodePath("../../../../../Plants/FernBig63"), NodePath("../../../../../Plants/FernBig64"), NodePath("../../../../../Plants/Palm21")]
 water_size = Vector3(1.7, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1240,9 +1242,10 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9.86
 size = Vector3(0.73269653, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D27" unique_id=1559447987 node_paths=PackedStringArray("downstream")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D27" unique_id=1559447987 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Fall5/water_node")]
+plants = [NodePath("../../../../../Plants/FernBig42"), NodePath("../../../../../Plants/FernBig43"), NodePath("../../../../../Plants/FernBig46")]
 water_size = Vector3(0.73269653, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1266,7 +1269,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D19" unique_id=1192992458 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../FallOffMap7/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig58"), NodePath("../../../../../Plants/Palm18"), NodePath("../../../../../Plants/Palm19")]
+plants = [NodePath("../../../../../Plants/FernBig57"), NodePath("../../../../../Plants/FernBig58"), NodePath("../../../../../Plants/Palm18"), NodePath("../../../../../Plants/Palm19")]
 water_size = Vector3(7.5, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1340,7 +1343,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D15" unique_id=572942229 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../Fall9/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig27"), NodePath("../../../../../Plants/FernBig28"), NodePath("../../../../../Plants/FernBig29"), NodePath("../../../../../Plants/FernBig40"), NodePath("../../../../../Plants/FernBig45"), NodePath("../../../../../Plants/Curly11"), NodePath("../../../../../Plants/Cattail23"), NodePath("../../../../../Plants/Cattail24"), NodePath("../../../../../Plants/Cattail25"), NodePath("../../../../../Plants/Cattail26"), NodePath("../../../../../Plants/Cattail27"), NodePath("../../../../../Plants/Cattail28"), NodePath("../../../../../Plants/Cattail29"), NodePath("../../../../../Plants/Cattail30"), NodePath("../../../../../Plants/Cattail31"), NodePath("../../../../../Plants/Cattail32"), NodePath("../../../../../Plants/Cattail33"), NodePath("../../../../../Plants/Lilly2"), NodePath("../../../../../Plants/Lilly3"), NodePath("../../../../../Plants/Lilly7")]
+plants = [NodePath("../../../../../Plants/FernBig27"), NodePath("../../../../../Plants/FernBig28"), NodePath("../../../../../Plants/FernBig29"), NodePath("../../../../../Plants/FernBig40"), NodePath("../../../../../Plants/FernBig45"), NodePath("../../../../../Plants/Curly11"), NodePath("../../../../../Plants/Curly12"), NodePath("../../../../../Plants/Cattail23"), NodePath("../../../../../Plants/Cattail24"), NodePath("../../../../../Plants/Cattail25"), NodePath("../../../../../Plants/Cattail26"), NodePath("../../../../../Plants/Cattail27"), NodePath("../../../../../Plants/Cattail28"), NodePath("../../../../../Plants/Cattail29"), NodePath("../../../../../Plants/Cattail30"), NodePath("../../../../../Plants/Cattail31"), NodePath("../../../../../Plants/Cattail32"), NodePath("../../../../../Plants/Cattail33"), NodePath("../../../../../Plants/Lilly2"), NodePath("../../../../../Plants/Lilly3"), NodePath("../../../../../Plants/Lilly7")]
 water_size = Vector3(2.8851562, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1376,7 +1379,7 @@ material = ExtResource("7_6a6ga")
 [node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D18" unique_id=1360200137 node_paths=PackedStringArray("downstream", "plants")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D34/water_node")]
-plants = [NodePath("../../../../../Plants/Cattail16"), NodePath("../../../../../Plants/Cattail17"), NodePath("../../../../../Plants/Cattail19"), NodePath("../../../../../Plants/Cattail22"), NodePath("../../../../../Plants/Lilly8"), NodePath("../../../../../Plants/Lilly9")]
+plants = [NodePath("../../../../../Plants/FernBig44"), NodePath("../../../../../Plants/Cattail16"), NodePath("../../../../../Plants/Cattail17"), NodePath("../../../../../Plants/Cattail19"), NodePath("../../../../../Plants/Cattail22"), NodePath("../../../../../Plants/Lilly8"), NodePath("../../../../../Plants/Lilly9")]
 water_size = Vector3(6.8, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 
@@ -1396,10 +1399,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.90
 size = Vector3(0.28620607, 0.31, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D21" unique_id=1462609814 node_paths=PackedStringArray("downstream", "plants")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/CSGBox3D21" unique_id=1462609814 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D18/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig44"), NodePath("../../../../../Plants/Curly12")]
 water_size = Vector3(0.28620607, 0.31, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1543,10 +1545,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.0
 size = Vector3(0.31, 2.2, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall7" unique_id=309071407 node_paths=PackedStringArray("downstream", "plants")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall7" unique_id=309071407 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D9/water_node")]
-plants = [NodePath("../../../../../Plants/FermSmall8")]
 water_size = Vector3(0.31, 2.2, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1568,10 +1569,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.87
 size = Vector3(0.31, 5.249316, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall5" unique_id=1963249701 node_paths=PackedStringArray("downstream", "plants")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall5" unique_id=1963249701 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D31/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig42"), NodePath("../../../../../Plants/FernBig43"), NodePath("../../../../../Plants/FernBig46"), NodePath("../../../../../Plants/FernBig47"), NodePath("../../../../../Plants/Palm9")]
 water_size = Vector3(0.31, 5.249316, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1617,10 +1617,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3
 size = Vector3(0.31, 3.3, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall4" unique_id=1007071644 node_paths=PackedStringArray("downstream", "plants")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall4" unique_id=1007071644 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D5/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig4"), NodePath("../../../../../Plants/FermSmall4")]
 water_size = Vector3(0.31, 3.3, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1630,10 +1629,9 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.15
 size = Vector3(0.31, 1.8000001, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall6" unique_id=523854150 node_paths=PackedStringArray("downstream", "plants")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall6" unique_id=523854150 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D5/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig57")]
 water_size = Vector3(0.31, 1.8000001, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1643,10 +1641,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.8
 size = Vector3(0.31, 1.0631714, 0.6)
 material = ExtResource("7_6a6ga")
 
-[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall8" unique_id=1613268776 node_paths=PackedStringArray("downstream", "plants")]
+[node name="water_node" type="Node3D" parent="Terrain/CSGCombiner3D/Canals/Fall8" unique_id=1613268776 node_paths=PackedStringArray("downstream")]
 script = ExtResource("8_22r32")
 downstream = [NodePath("../../CSGBox3D16/water_node")]
-plants = [NodePath("../../../../../Plants/FernBig63"), NodePath("../../../../../Plants/FernBig64"), NodePath("../../../../../Plants/Palm21")]
 water_size = Vector3(0.31, 1.0631714, 0.6)
 material = ExtResource("9_pjmpm")
 falling_water = true
@@ -1826,11 +1823,13 @@ metadata/_custom_type_script = "uid://crrnkhbt4x72v"
 
 [node name="Plateau" type="Node3D" parent="Mecanisms" unique_id=329332037]
 
-[node name="WaterGate2" type="Node3D" parent="Mecanisms/Plateau" unique_id=1562748716 node_paths=PackedStringArray("downstream", "gate_visual_open")]
+[node name="WaterGate2" type="Node3D" parent="Mecanisms/Plateau" unique_id=1562748716 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4780471, 1.9459068, 8.480103)
 script = ExtResource("10_tnwec")
 downstream = [NodePath("../../../Terrain/CSGCombiner3D/Canals/CSGBox3D6/plateau_exit_water_node")]
 gate_visual_open = NodePath("Area3D/OpenedVisual")
+gate_visual_close = NodePath("Area3D/ClosedVisual")
+mouse_control_area = NodePath("Area3D")
 metadata/_custom_type_script = "uid://u7qd4pgx4od8"
 
 [node name="Area3D" type="Area3D" parent="Mecanisms/Plateau/WaterGate2" unique_id=1674120313]
@@ -1878,13 +1877,14 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012725353, 0)
 shape = SubResource("CylinderShape3D_mkd14")
 
-[node name="WaterGate3" type="Node3D" parent="Mecanisms/Plateau" unique_id=1891602498 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close")]
+[node name="WaterGate3" type="Node3D" parent="Mecanisms/Plateau" unique_id=1891602498 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.099999, 2, 8.867652)
 script = ExtResource("10_tnwec")
 open_on_player_click = false
 downstream = [NodePath("../../../Terrain/CSGCombiner3D/Canals/CSGBox3D8/water_node")]
 gate_visual_open = NodePath("Area3D/OpenedVisual")
 gate_visual_close = NodePath("Area3D/ClosedVisual")
+mouse_control_area = NodePath("Area3D")
 metadata/_custom_type_script = "uid://u7qd4pgx4od8"
 
 [node name="Area3D" type="Area3D" parent="Mecanisms/Plateau/WaterGate3" unique_id=921783144]
@@ -1915,13 +1915,14 @@ metadata/_custom_type_script = "uid://bx6piiv1nqig0"
 
 [node name="blockbench_export" parent="Mecanisms/Plateau/WaterGate4WaterWheel" unique_id=1742672789 instance=ExtResource("16_m7op7")]
 
-[node name="WaterGate4" type="Node3D" parent="Mecanisms/Plateau" unique_id=2037741049 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close")]
+[node name="WaterGate4" type="Node3D" parent="Mecanisms/Plateau" unique_id=2037741049 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.07659, 1.9, 8.133901)
 script = ExtResource("10_tnwec")
 open_on_player_click = false
 downstream = [NodePath("../../../Terrain/CSGCombiner3D/Canals/CSGBox3D7/water_node")]
 gate_visual_open = NodePath("Area3D/OpenedVisual")
 gate_visual_close = NodePath("Area3D/ClosedVisual")
+mouse_control_area = NodePath("Area3D")
 metadata/_custom_type_script = "uid://u7qd4pgx4od8"
 
 [node name="Area3D" type="Area3D" parent="Mecanisms/Plateau/WaterGate4" unique_id=1965099789]
@@ -1971,13 +1972,14 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mecanisms/LowLandsWest/Boulder/Area3D" unique_id=1224347465]
 shape = SubResource("SphereShape3D_0y02o")
 
-[node name="ManualPumpPushButton3D" type="Node3D" parent="Mecanisms/LowLandsWest" unique_id=1630050639 node_paths=PackedStringArray("pressed_visual", "released_visual", "controlled_mechanisms")]
+[node name="ManualPumpPushButton3D" type="Node3D" parent="Mecanisms/LowLandsWest" unique_id=1630050639 node_paths=PackedStringArray("pressed_visual", "released_visual", "controlled_mechanisms", "mouse_control_area")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.059246, 0.11834395, -11.604465)
 script = ExtResource("17_r4rhq")
 release_delay = 1.5
 pressed_visual = NodePath("PressedVisual")
 released_visual = NodePath("ReleasedVisual")
 controlled_mechanisms = [NodePath("../ManualPump")]
+mouse_control_area = NodePath("Area3D")
 metadata/_custom_type_script = "uid://cbwwrx07v5ddy"
 
 [node name="PressedVisual" type="Node3D" parent="Mecanisms/LowLandsWest/ManualPumpPushButton3D" unique_id=662176005]
@@ -2203,12 +2205,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4, 0, 3.350418)
 [node name="blockbench_export" parent="Mecanisms/Aquaduct/Part4" unique_id=1402576480 instance=ExtResource("17_unkgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 0, 0, 0)
 
-[node name="WaterGateEnd" type="Node3D" parent="Mecanisms/Aquaduct" unique_id=1283156601 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close")]
+[node name="WaterGateEnd" type="Node3D" parent="Mecanisms/Aquaduct" unique_id=1283156601 node_paths=PackedStringArray("downstream", "gate_visual_open", "gate_visual_close", "mouse_control_area")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.392035, 4.433067, 3.3827095)
 script = ExtResource("10_tnwec")
 downstream = [NodePath("../../../Terrain/CSGCombiner3D/Canals/CSGBox3D22/water_node")]
 gate_visual_open = NodePath("Area3D/OpenedVisual")
 gate_visual_close = NodePath("Area3D/ClosedVisual")
+mouse_control_area = NodePath("Area3D")
 metadata/_custom_type_script = "uid://u7qd4pgx4od8"
 
 [node name="Area3D" type="Area3D" parent="Mecanisms/Aquaduct/WaterGateEnd" unique_id=1278856116]
@@ -2277,10 +2280,12 @@ visible = false
 [node name="CSGBox3D8" type="CSGBox3D" parent="Mecanisms/LowLandEast" unique_id=1980053347]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.013774, 0.026110172, -10.516675)
 size = Vector3(0.05, 0.05, 0.5574951)
+material = ExtResource("30_po8ik")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Mecanisms/LowLandEast" unique_id=839617222]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11.262057, 0.026110172, -7.6185503)
 size = Vector3(0.05, 0.05, 5.796356)
+material = ExtResource("30_po8ik")
 
 [node name="ShovelDelivery" type="Node3D" parent="Mecanisms/LowLandEast" unique_id=1377014614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -4.6)
@@ -3163,7 +3168,7 @@ script = ExtResource("30_uqxxu")
 metadata/_custom_type_script = "uid://s08fxfxe44nw"
 
 [node name="blockbench_export" parent="Plants/Palm8" unique_id=1435417805 instance=ExtResource("34_421ad")]
-transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, -0.00060653687, 0, 0.40104204)
+transform = Transform3D(-0.001, 0, -8.742278e-11, 0, 0.001, 0, 8.742278e-11, 0, -0.001, 0, 0, 0)
 
 [node name="Palm9" type="Node3D" parent="Plants" unique_id=639806996]
 transform = Transform3D(-0.11456726, 0, -1.0531926, 0, 1.0594057, 0, 1.0531926, 0, -0.11456726, 14.503243, 0, -3.580078)

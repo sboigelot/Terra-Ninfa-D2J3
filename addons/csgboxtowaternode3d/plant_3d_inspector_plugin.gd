@@ -60,7 +60,9 @@ func _relink_plant(plant:Plant3D, all_water_nodes:Array[WaterNode3D]) -> void:
 		while water_node.plants.has(plant):
 			output += "\tunlink %s/%s\n"  % [water_node.get_parent().name, water_node.name]
 			water_node.plants.erase(plant)
-			
+		
+		if water_node.falling_water:
+			continue
 		var distance = plant.global_position.distance_to(water_node.global_position)
 		if (closest_water_node == null or
 			closest_distance > distance):

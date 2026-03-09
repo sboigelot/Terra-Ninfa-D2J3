@@ -5,7 +5,7 @@ extends Node3D
 @export var tvui: TvUi
 @export var plants_placeholder: Node3D
 
-const min_time_during_update_plant_count: float = 1.0
+const min_time_during_update_plant_count: float = 5.0
 var time_since_update_plant_count:float
 var plant_count_invalidated:bool = false
 
@@ -21,9 +21,9 @@ func _ready() -> void:
 		)
 		
 func _process(delta: float) -> void:
-	time_since_update_plant_count += delta
-	if (plant_count_invalidated and
-		time_since_update_plant_count >= min_time_during_update_plant_count):
+	if plant_count_invalidated:
+		time_since_update_plant_count += delta
+		if time_since_update_plant_count >= min_time_during_update_plant_count:
 			update_irrigation_progress() 
 	
 func _on_menu_menu_active_changed(menu_active:bool) -> void:
