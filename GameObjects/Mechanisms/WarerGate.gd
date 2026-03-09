@@ -40,11 +40,14 @@ func propagate_water_downstream() -> void:
 		water_node.set_upstream_flow(self, water_activated)
 
 func _on_player_click() -> void:
-	SfxManager.play("click")
+	SfxManager.play("stone_door")
 	if open_on_player_click:
 		gate_open = not gate_open
 	else:
 		refuse_opening.emit()
 
 func on_mechanism_activated(activated: bool) -> void:
+	if gate_open == activated:
+		return
+	SfxManager.play("stone_door")
 	gate_open = activated

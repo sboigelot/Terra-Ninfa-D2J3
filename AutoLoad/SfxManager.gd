@@ -15,6 +15,8 @@ var active_players: = {}														# List of AudioStreamPlayer playing sample
 
 @export_category("Ambiance")
 @export var ambiance_collection: Array[String]
+@export var ambiance_first_min_ferquency_sec: float = 3.0
+@export var ambiance_first_max_ferquency_sec: float = 3.0
 @export var ambiance_min_ferquency_sec: float = 3.0
 @export var ambiance_max_ferquency_sec: float = 20.0
 var current_ambiance_delay_msec:float = -1.0
@@ -28,7 +30,7 @@ func add_players(value:int)->void:
 
 func _ready():																	# Add to database all samples preloaded in the Inspector
 	for i in sample_collection.size():
-		var sample:AudioStreamOggVorbis = sample_collection[i]						# RefCounted sample
+		var sample:AudioStream = sample_collection[i]						# RefCounted sample
 		sample_dictionary[sample.get_path().get_file().get_basename()] = i		# Create entry with file name to reference index in array
 	add_players(start_player_count)												# Add some players to start with
 
@@ -64,6 +66,9 @@ func sample_finished(sample_name:String)->void:									# Triggered when player 
 
 func _process(delta: float) -> void:
 	if ambiance_collection.size() > 0:
+		if current_ambiance_delay_msec == -1:
+			current_ambiance_delay_msec = randf_range(ambiance_first_min_ferquency_sec, ambiance_first_max_ferquency_sec)
+			return
 		if current_ambiance_delay_msec <= 0:
 			current_ambiance_delay_msec = randf_range(ambiance_min_ferquency_sec, ambiance_max_ferquency_sec)
 			return

@@ -16,6 +16,7 @@ signal irrigated_changed(plant:Plant3D)
 @export var tween_duration: float = 0.5
 
 var tween:Tween
+var disable_sfx:bool = false
 
 func _on_irrigated_changed() -> void:
 	start_tween()
@@ -33,6 +34,9 @@ func start_tween() -> void:
 		var visual = get_child(0)
 		var delay = randf_range(0.0, 2.0)
 		await get_tree().create_timer(delay).timeout
+		
+		if not disable_sfx:
+			SfxManager.play("plants_grow")
 		
 		tween = create_tween()
 		tween.set_parallel(true)

@@ -30,6 +30,7 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		event.button_index == MOUSE_BUTTON_LEFT and 
 		event.pressed):
 		if pickable:
+			SfxManager.play("item_pickup")
 			picked = true
 			_picked_up_time = Time.get_ticks_msec()
 			picked_up.emit(self)
@@ -53,6 +54,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			var mouse_release_position = get_viewport().get_mouse_position()
 			var mouse_move = _mouse_pressed_position.distance_to(mouse_release_position)
 			if mouse_move < max_mouse_move_for_drop:
+				SfxManager.play("item_pickup")
 				picked = false
 				dropped_down.emit(self)
 				get_viewport().set_input_as_handled()

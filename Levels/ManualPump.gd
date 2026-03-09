@@ -36,6 +36,7 @@ func start_pumping_animation() -> void:
 	if tween != null and tween.is_running():
 		tween.stop()
 		
+	SfxManager.play("waterpump_loop")
 	tween = create_tween()
 	tween.tween_property(bucket_follow_path, "progress_ratio", 1.0, pumping_duration)
 	tween.finished.connect(func():

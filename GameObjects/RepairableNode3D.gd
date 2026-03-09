@@ -9,6 +9,7 @@ signal broken_changed()
 		if broken == value:
 			return
 		broken = value
+		SfxManager.play(broken_sfx if broken else repaired_sfx)
 		propagate_broken_state()
 		broken_changed.emit()
 
@@ -17,6 +18,9 @@ signal broken_changed()
 
 @export var prevent_flowing_when_broken: Array[WaterNode3D]
 @export var prevent_flowing_when_repaired: Array[WaterNode3D]
+
+@export var broken_sfx:String = "ruin_destroy"
+@export var repaired_sfx:String = "achievement"
 
 func _ready() -> void:
 	propagate_broken_state()

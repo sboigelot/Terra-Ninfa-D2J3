@@ -1,7 +1,9 @@
 @tool
 class_name WaterNode3D
 extends ProceduralWaterShape
-		
+
+signal flowing_changed()
+
 @export var flowing:bool:
 	set(value):
 		var new_value = not prevent_flowing and value
@@ -14,7 +16,9 @@ extends ProceduralWaterShape
 			start_flowing_tween()
 		else:
 			stop_flowing_tween()
-
+		
+		flowing_changed.emit()
+		
 	get():
 		return flowing
 

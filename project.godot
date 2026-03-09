@@ -13,6 +13,7 @@ config_version=5
 config/name="D2J03"
 run/main_scene="uid://dqq7gwpjgt0re"
 config/features=PackedStringArray("4.6")
+boot_splash/image="uid://bmqj4ca7fuxsq"
 config/icon="res://icon.svg"
 
 [audio]

@@ -16,6 +16,7 @@ signal deactivated(object_pedestal:PickableObjectPedestal)
 		is_activated = value
 		
 		if is_activated:
+			SfxManager.play(activated_sfx)
 			if activation_visual != null:
 				activation_visual.material = activated_material
 			activated_no_params.emit()
@@ -25,6 +26,8 @@ signal deactivated(object_pedestal:PickableObjectPedestal)
 			deactivated_no_params.emit()
 		
 		propagate_activation()
+
+@export var activated_sfx:String = "achievement"
 
 @export var detection_area3d: Area3D:
 	set(value):

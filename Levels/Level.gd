@@ -6,6 +6,7 @@ extends Node3D
 @export var hud_progress_bar: ProgressBar
 @export var plants_placeholder: Node3D
 @export var camera: Camera3D
+@export var lake_water_node:WaterNode3D
 
 var irrigated_plants:Array[Plant3D]
 var max_plants:int
@@ -27,6 +28,8 @@ func _ready() -> void:
 	hud_progress_bar.max_value = max_plants
 	
 	update_irrigation_progress()
+	
+	lake_water_node.flowing_changed.connect(_on_lake_water_node_flowing_changed)
 	
 func _on_menu_menu_active_changed(menu_active:bool) -> void:
 	set_pause(menu_active)
@@ -68,4 +71,12 @@ func update_irrigation_progress() -> void:
 		victory()
 		
 func victory():
+	SfxManager.play("achievement")
 	Gui.trigger_victory()
+
+func _on_lake_water_node_flowing_changed() -> void:
+	if lake_water_node.flowing:
+		if not SfxManager.ambiance_collection.has("ambiance_pond_filled_loop"):
+			SfxManager.ambiance_collection.append("ambiance_pond_filled_loop")
+		else:
+			SfxManager.ambiance_collection.erase("ambiance_pond_filled_loop")

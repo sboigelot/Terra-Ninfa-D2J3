@@ -12,6 +12,7 @@ signal powered_down()
 			
 		powered = value
 		if value:
+			SfxManager.play("achievement")
 			powered_up.emit()
 		else:
 			powered_down.emit()

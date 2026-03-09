@@ -4,8 +4,24 @@
 [ext_resource type="AudioStream" uid="uid://l1ud7r3p5wkr" path="res://Assets/SoundFx/click.ogg" id="2_mq01n"]
 [ext_resource type="AudioStream" uid="uid://drdwgl2rfwt72" path="res://Assets/SoundFx/drop_003.ogg" id="3_s041m"]
 [ext_resource type="AudioStream" uid="uid://du2wdyc6ooqn7" path="res://Assets/SoundFx/switch_005.ogg" id="4_gxvsj"]
+[ext_resource type="AudioStream" uid="uid://bw3ux54prwwtx" path="res://Assets/SoundFx/ambiance/pond/ambiance_pond_filled_loop.wav" id="5_rnf1x"]
+[ext_resource type="AudioStream" uid="uid://d0y44t685aea1" path="res://Assets/SoundFx/interactions/item_pickup.wav" id="6_83qlj"]
+[ext_resource type="AudioStream" uid="uid://cd8lbawvs1j2a" path="res://Assets/SoundFx/notifications/achievement.wav" id="7_y4g05"]
+[ext_resource type="AudioStream" uid="uid://0g63jsqxd4fa" path="res://Assets/SoundFx/notifications/plants_grow.wav" id="8_gqb14"]
+[ext_resource type="AudioStream" uid="uid://h82olatdgqpy" path="res://Assets/SoundFx/objects/metalGate.wav" id="9_ilsao"]
+[ext_resource type="AudioStream" uid="uid://ddip6qgooq6g" path="res://Assets/SoundFx/objects/ruin_destroy.wav" id="10_2qdq5"]
+[ext_resource type="AudioStream" uid="uid://bhefpklewwvip" path="res://Assets/SoundFx/objects/stone_door.ogg" id="11_xa5va"]
+[ext_resource type="AudioStream" uid="uid://bxdqnero7bs36" path="res://Assets/SoundFx/objects/waterpump_loop.wav" id="12_w1q08"]
+[ext_resource type="AudioStream" uid="uid://bifpcuf2fk0o4" path="res://Assets/SoundFx/objects/waterwheel/waterwheel_running_loop.wav" id="13_taapa"]
+[ext_resource type="AudioStream" uid="uid://cq55jve4eqw2s" path="res://Assets/SoundFx/water/stream/water_stream_flow_variant1_loop.wav" id="14_r3ret"]
+[ext_resource type="AudioStream" uid="uid://15ljd3cn2sba" path="res://Assets/SoundFx/water/waterfall/waterfall_flowing_loop.wav" id="15_fbpgx"]
+[ext_resource type="AudioStream" uid="uid://bfkkjtb6qx5p1" path="res://Assets/SoundFx/explosion.ogg" id="16_83qlj"]
 
 [node name="SfxManager" type="Node" unique_id=561477171]
 process_mode = 3
 script = ExtResource("1")
-sample_collection = Array[AudioStream]([ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("4_gxvsj")])
+sample_collection = Array[AudioStream]([ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("4_gxvsj"), ExtResource("5_rnf1x"), ExtResource("2_mq01n"), ExtResource("3_s041m"), ExtResource("6_83qlj"), ExtResource("7_y4g05"), ExtResource("8_gqb14"), ExtResource("9_ilsao"), ExtResource("10_2qdq5"), ExtResource("11_xa5va"), ExtResource("12_w1q08"), ExtResource("13_taapa"), ExtResource("4_gxvsj"), ExtResource("14_r3ret"), ExtResource("15_fbpgx"), ExtResource("16_83qlj")])
+ambiance_first_min_ferquency_sec = 10.0
+ambiance_first_max_ferquency_sec = 25.0
+ambiance_min_ferquency_sec = 120.0
+ambiance_max_ferquency_sec = 280.0
